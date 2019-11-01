@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>KOGA Forside</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="" alt="logo">
+
+        <nav>
+
+
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="overskrift"></h1>
+        <section class="liste">
+        </section>
+
+
+    </main>
+
+
+    <main id="single">
+        <button class="luk">Tilbage</button>
+        <section class="indhold">
+            <article class="infoCykler">
+                <h2></h2>
+                <img src="" alt="">
+                <p class="pris">kr</p>
+                <p class="lang"></p>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Kontaktoplysninger</p>
+        <p>Adresse</p>
+        /** SOME **/
+
+    </footer>
+
+    <script>
+        let urlParams = new URLSearchParams(window.location.search);
+        let navn = urlParams.get("navn");
+        let personer;
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            hentNav();
+            getJson();
+        }
+
+        async function hentNav() {
+            const response = await fetch("inc/nav.html");
+            const inclusion = await response.text();
+            document.querySelector("nav").innerHTML = inclusion;
+            console.log(inclusion);
+        }
+
+        async function getJson() {
+
+            let jsondata = await fetch("https://esauka.dk/koga/wordpress/wp-json/wp/v2/koga");
+
+            personer = await jsondata.json();
+            visJson();
+
+
+        }
+
+        function visJson() {
+
+            personer.forEach((person) => {
+
+                if (person.title.rendered == navn) {
+                    document.querySelector("h2").textContent = person.navn;
+
+                    document.querySelector("img").src = person.billede.guid;
+                    document.querySelector(".pris").textContent += person.pris;
+
+                    document.querySelector(".lang").innerHTML = person.lang_tekst;
+
+                }
+
+            })
+        }
+
+        document.querySelector(".luk").addEventListener("click", () => {
+            history.back();
+        })
+
+    </script>
+</body>
+
+</html>
