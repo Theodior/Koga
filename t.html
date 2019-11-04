@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .item-a {
+            grid-area: header;
+            background: skyblue;
+        }
+
+        .item-b {
+            grid-area: main;
+            background: gold;
+        }
+
+        .item-c {
+            grid-area: footer;
+            background: lightseagreen;
+        }
+
+        .container>div {
+            padding: 3rem;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas:
+                "header"
+                "main"
+                "footer";
+        }
+
+        /* Mobile */
+        @media screen and (min-width:550px) {
+            .container {
+                grid-template-areas:
+                    " header header"
+                    " main main"
+                    "footer footer";
+            }
+        }
+
+        /* tablet*/
+        @media screen and (min-width:800px) {
+            .container {
+                grid-template-areas:
+                    "header"
+                    "main"
+                    "footer";
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item-a">
+            <p>header</p>
+        </div>
+        <div class="item-b">
+            <p>main</p>
+        </div>
+
+        <div class="item-c">
+            <p>footer</p>
+        </div>
+    </div>
+
+</body></html>
