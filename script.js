@@ -1,5 +1,5 @@
         let cykler = [];
-        const url = "https://esauka.dk/koga/wordpress/wp-json/wp/v2/koga";
+        const url = "https://esauka.dk/koga/wordpress/wp-json/wp/v2/koga?per_page=100";
 
         const modtagerKloner = document.querySelector(".liste");
 
