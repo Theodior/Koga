@@ -2,3 +2,38 @@ body {
     padding: 0;
     margin: 0;
 }
+
+#velkomst img {
+    width: 200px;
+    height: 200px;
+}
+
+
+#header {
+    grid-area: header;
+    background: skyblue;
+}
+
+#splashvideo {
+    grid-area: main;
+    background: gold;
+}
+
+#velkomst {
+    grid-area: sidebar;
+    background: tomato;
+}
+
+#footer {
+    grid-area: footer;
+    background: lightseagreen;
+}
+
+.testcontainer {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "sidebar"
+        "main"
+        "footer";
+}
