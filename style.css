@@ -3,6 +3,52 @@ body {
     margin: 0;
 }
 
+<<<<<<< HEAD
+
+img {
+    width: 80vw;
+}
+
+
+
+
+.cykler {
+    margin-left: 3vw;
+    margin-right: 3vw;
+    display: grid;
+
+
+
+}
+@media screen and (min-width:700px) {
+
+    .cykler {
+         margin-left: 3vw;
+    margin-right: 3vw;
+    display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 5vw 35vw;
+    }
+
+    .title {grid-column: 1/span 2;}
+
+    img {grid-column: 1/span 2;
+    width: 55vw;}
+
+    .pris {grid-column: 3/span 1;
+    grid-row: 2/span 1;
+        margin-top: 17vw;
+    }
+
+    .beskrivelse {grid-column: 3;
+    grid-row: 2/span 2;
+    margin-top: 6vw;}
+
+
+
+
+
+=======
 #velkomst img {
     width: 200px;
     height: 200px;
@@ -36,4 +82,5 @@ body {
         "sidebar"
         "main"
         "footer";
+>>>>>>> origin/master
 }
