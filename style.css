@@ -51,37 +51,84 @@ img {
     /*******            Index.html           ******/
 
 
-    #velkomst img {
-        width: 200px;
-        height: 200px;
-    }
-
-
-    #header {
+    header {
         grid-area: header;
         background: skyblue;
     }
 
-    #splashvideo {
-        grid-area: main;
+    .splashvideo {
+        grid-area: splash;
         background: gold;
     }
 
-    #velkomst {
-        grid-area: sidebar;
-        background: tomato;
+    .velkomst {
+        grid-area: indhold;
+        background: tomat;
     }
 
-    #footer {
+    footer {
         grid-area: footer;
         background: lightseagreen;
     }
 
-    .index_container {
+    #index_container {
         display: grid;
         grid-template-areas:
             "header"
-            "sidebar"
-            "main"
+            "splash"
+            "indhold"
             "footer";
+    }
+
+    /* Grid i velkomst  */
+
+
+    #index_container .velkomst > div {
+        padding: 3rem;
+    }
+
+    #index_container .velkomst {
+        display: grid;
+        grid-template-areas:
+            "vh2"
+            "vp"
+            "img1"
+            "img2"
+            "sh2"
+            "sp";
+    }
+
+    #index_container .velkomst .velkomst_h2 {
+        grid-area: vh2;
+        background-color: aqua;
+
+
+    }
+
+    #index_container .velkomst .velkomst_p {
+        grid-area: vp;
+        background-color: red;
+
+    }
+
+    #index_container .velkomst .img1 {
+        grid-area: img1;
+        width: 30rem;
+    }
+
+    #index_container .velkomst .img2 {
+        grid-area: img2;
+        width: 30rem;
+    }
+
+    #index_container .velkomst .service_h2 {
+        grid-area: sh2;
+        background-color: fuchsia;
+
+    }
+
+    #index_container .velkomst .service_p {
+        grid-area: sp;
+        background-color: gold;
+
     }
