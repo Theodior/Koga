@@ -37,7 +37,7 @@
                 klon.querySelector(".pris").textContent += cykel.pris;
                 klon.querySelector("img").src = cykel.billede.guid;
                 klon.querySelector("img").alt = "billede af" + cykel.title.rendered;
-                klon.querySelector(".beskrivelse").innerHTML = cykel.lang_tekst;
+                klon.querySelector(".beskrivelse").innerHTML = cykel.kort_tekst;
                 liste.appendChild(klon);
                 modtagerKloner.lastElementChild.addEventListener("click", () => {
                     location.href = `cykelinfo.html?navn=${cykel.navn}`
