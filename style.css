@@ -145,6 +145,6 @@ img {
     #index_container .velkomst .service_p2 {
         grid-area: sp2;
         background-color: gold;
-        grid-column: 2;
+        grid-column: 4;
 
     }
