@@ -3,13 +3,10 @@ body {
     margin: 0;
 }
 
-<<<<<<< HEAD
 
 img {
     width: 80vw;
 }
-
-
 
 
 .cykler {
@@ -17,70 +14,72 @@ img {
     margin-right: 3vw;
     display: grid;
 
-
-
 }
+
 @media screen and (min-width:700px) {
 
     .cykler {
-         margin-left: 3vw;
-    margin-right: 3vw;
-    display: grid;
+        margin-left: 3vw;
+        margin-right: 3vw;
+        display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 5vw 35vw;
     }
 
-    .title {grid-column: 1/span 2;}
+    .title {
+        grid-column: 1/span 2;
+    }
 
-    img {grid-column: 1/span 2;
-    width: 55vw;}
+    img {
+        grid-column: 1/span 2;
+        width: 55vw;
+    }
 
-    .pris {grid-column: 3/span 1;
-    grid-row: 2/span 1;
+    .pris {
+        grid-column: 3/span 1;
+        grid-row: 2/span 1;
         margin-top: 17vw;
     }
 
-    .beskrivelse {grid-column: 3;
-    grid-row: 2/span 2;
-    margin-top: 6vw;}
+    .beskrivelse {
+        grid-column: 3;
+        grid-row: 2/span 2;
+        margin-top: 6vw;
+    }
 
 
 
+    #velkomst img {
+        width: 200px;
+        height: 200px;
+    }
 
 
-=======
-#velkomst img {
-    width: 200px;
-    height: 200px;
-}
+    #header {
+        grid-area: header;
+        background: skyblue;
+    }
 
+    #splashvideo {
+        grid-area: main;
+        background: gold;
+    }
 
-#header {
-    grid-area: header;
-    background: skyblue;
-}
+    #velkomst {
+        grid-area: sidebar;
+        background: tomato;
+    }
 
-#splashvideo {
-    grid-area: main;
-    background: gold;
-}
+    #footer {
+        grid-area: footer;
+        background: lightseagreen;
+    }
 
-#velkomst {
-    grid-area: sidebar;
-    background: tomato;
-}
-
-#footer {
-    grid-area: footer;
-    background: lightseagreen;
-}
-
-.testcontainer {
-    display: grid;
-    grid-template-areas:
-        "header"
-        "sidebar"
-        "main"
-        "footer";
->>>>>>> origin/master
-}
+    .testcontainer {
+        display: grid;
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+    }
