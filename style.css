@@ -48,6 +48,8 @@ img {
     }
 
 
+    /*******            Index.html           ******/
+
 
     #velkomst img {
         width: 200px;
@@ -75,7 +77,7 @@ img {
         background: lightseagreen;
     }
 
-    .testcontainer {
+    .index_container {
         display: grid;
         grid-template-areas:
             "header"
