@@ -3,34 +3,144 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Historie</title>
+    <title>KOGA Historie</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /*******            historie.html           ******/
 
+        @media screen and (min-width:700px) {
+            header {
+                grid-area: op;
+                background: skyblue;
+            }
+
+            .splash_historie {
+                grid-area: splashbillede;
+                background: purple;
+                height: 500px;
+                ;
+                width: 100%;
+            }
+
+            .historie {
+                grid-area: indholdhistorie;
+            }
+
+            footer {
+                grid-area: footer;
+                background: lightseagreen;
+            }
+
+            #historie_container {
+                display: grid;
+                grid-template-areas:
+                    "op"
+                    "splashbillede"
+                    "indholdhistorie"
+                    "footer";
+            }
+
+            /* Selve grid til historie.html */
+
+
+            #historie_container .historie {
+                display: grid;
+                width: 100%;
+                grid-auto-columns: 1fr;
+                grid-template-areas:
+                    ". . Historie_h2 . ."
+                    ". historie_p . historie_p2 ."
+                    ". pic1 . pic2 ."
+                    ". . timeline_h2 . ."
+                    ". timeline_p . timeline_p2 .";
+
+            }
+
+            #historie_container .historie .historie_h2 {
+                grid-area: Historie_h2;
+                background-color: red;
+            }
+
+            #historie_container .historie .historie_p {
+                grid-area: historie_p;
+                background-color: blue;
+                grid-column: 2;
+                max-width: 20rem;
+            }
+
+            #historie_container .historie .historie_p2 {
+                grid-area: historie_p2;
+                background-color: blue;
+                grid-column: 4;
+                max-width: 20rem;
+            }
+
+            #historie_container .historie .billede1 {
+                grid-area: pic1;
+                width: 502px;
+            }
+
+            #historie_container .historie .billede2 {
+                grid-area: pic2;
+                width: 502px;
+
+            }
+
+            #historie_container .historie .timeline_h2 {
+                grid-area: timeline_h2;
+                background-color: yellow;
+
+            }
+
+            #historie_container .historie .timeline_p {
+                grid-area: timeline_p;
+                background-color: deeppink;
+                grid-column: 2;
+            }
+
+            #historie_container .historie .timeline_p2 {
+                grid-area: timeline_p2;
+                background-color: deeppink;
+                grid-column: 4;
+
+            }
+        }
+
+    </style>
 </head>
 
-<body>
+<body id="historie_container">
     <header>
         <img class="logo" src="" alt="logo">
 
         <nav>
 
+
         </nav>
     </header>
 
-    <section id="kogahistorie">
+    <div class="splash_historie">
+
         <img class="splashbillede" src="" alt="">
 
-        <h2>KOGA historie</h2>
-        <p></p>
+    </div>
+
+    <section class="historie">
+        <h2 class="historie_h2">Historie</h2>
+        <p class="historie_p"> Det her er en koga historie tekst -- Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien. Lorem Ipsum har været standard fyldtekst siden 1500-tallet, hvor en ukendt trykker sammensatte en tilfældig spalte for at trykke en bog til sammenligning af forskellige skrifttyper. Lorem Ipsum har ikke alene overlevet fem århundreder, men har også vundet indpas i elektronisk typografi uden væsentlige ændringer. </p>
+
+        <p class="historie_p2"> det her er koga historie tekst nummer 2 -- Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien. Lorem Ipsum har været standard fyldtekst siden 1500-tallet, hvor en ukendt trykker sammensatte en tilfældig spalte for at trykke en bog til sammenligning af forskellige skrifttyper. Lorem Ipsum har ikke alene overlevet fem århundreder, men har også vundet indpas i elektronisk typografi uden væsentlige ændringer. </p>
 
 
-        <img class="billede" src="" alt="">
+        <img class="billede1" src="img/bike1.jpg" alt="bike">
+        <img class="billede2" src="img/bike2.jpg" alt="bike">
 
+        <h2 class="timeline_h2">Timeline</h2>
+        <p class="timeline_p"> Det her er en timeline tekst -- Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien. Lorem Ipsum har været standard fyldtekst siden 1500-tallet, hvor en ukendt trykker sammensatte en tilfældig spalte for at trykke en bog til sammenligning af forskellige skrifttyper. Lorem Ipsum har ikke alene overlevet fem århundreder, men har også vundet indpas i elektronisk typografi uden væsentlige ændringer. </p>
 
-        <h2>Timeline</h2>
-        <p></p>
+        <p class="timeline_p2">Det her er en timeline tekst nummer 2 -- Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien. Lorem Ipsum har været standard fyldtekst siden 1500-tallet, hvor en ukendt trykker sammensatte en tilfældig spalte for at trykke en bog til sammenligning af forskellige skrifttyper. Lorem Ipsum har ikke alene overlevet fem århundreder, men har også vundet indpas i elektronisk typografi uden væsentlige ændringer. </p>
+
     </section>
-
 
 
     <footer>
@@ -41,4 +151,6 @@
     </footer>
 
     <script src="script.js"></script>
-</body></html>
+</body>
+
+</html>
