@@ -7,6 +7,7 @@
 
         function start() {
             hentNav();
+            hentFooter();
             hentJson();
         }
 
@@ -14,6 +15,13 @@
             const response = await fetch("inc/nav.html");
             const inclusion = await response.text();
             document.querySelector("nav").innerHTML = inclusion;
+            console.log(inclusion);
+        }
+
+        async function hentFooter() {
+            const response = await fetch("inc/footer.html");
+            const inclusion = await response.text();
+            document.querySelector("footer").innerHTML = inclusion;
             console.log(inclusion);
         }
 
