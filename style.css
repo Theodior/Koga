@@ -1,3 +1,44 @@
+
+
+.hjul {
+    animation-name: rotation_kf;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+
+
+}
+
+@keyframes rotation_kf {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(3600deg);
+    }
+
+}
+
+#hjul_container {
+    position: absolute;
+    top: 1vw;
+    left: 26vw;
+
+}
+
+#hjul_sprite {
+    background-image: url(hjul.png);
+    width: 50vw;
+    height: 50vw;
+    background-size: 100%;
+    cursor: pointer;
+
+
+}
+
+
+
 body {
     padding: 0;
     margin: 0;
@@ -82,6 +123,12 @@ footer {
         "footer";
 
 }
+
+
+
+
+
+
 
 /* Grid i velkomst  */
 
@@ -346,3 +393,5 @@ footer {
 
 
 }
+
+
