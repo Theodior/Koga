@@ -1,3 +1,43 @@
+.hjul {
+    animation-name: rotation_kf;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+
+
+}
+
+@keyframes rotation_kf {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(1080deg);
+    }
+
+}
+
+#hjul_container {
+    position: absolute;
+    top: 1vw;
+    left: 26vw;
+
+}
+
+#hjul_sprite {
+    background-image: url(hjul.png);
+    width: 50vw;
+    height: 50vw;
+    background-size: 100%;
+    cursor: pointer;
+    z-index: 1;
+
+
+}
+
+
+
 body {
     padding: 0;
     margin: 0;
@@ -70,6 +110,12 @@ footer {
         "footer";
 
 }
+
+
+
+
+
+
 
 /* Grid i velkomst  */
 
@@ -221,6 +267,11 @@ footer {
         display: none;
     }
 
+    #body_container .splash_billede img {
+        width: 100vw;
+    }
+
+
 }
 
 @media screen and (min-width:700px) {
@@ -332,3 +383,64 @@ footer {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+
+footer {
+    border-top: 2px solid #1b5728;
+    /*    background-color: #1b5728;*/
+    color: #191E26;
+}
+
+
+.footer_billeder {
+    display: flex;
+    justify-content: center;
+}
+
+footer img {
+    width: 30px;
+    height: 30px;
+    border: 0px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+footer img:hover {
+    transform: scale(1.2);
+}
+
+footer .tekst {
+    display: flex;
+}
+
+footer .left {
+    padding: 0px 20px 20px 20px;
+    flex-grow: 1;
+    flex-basis: 300px;
+}
+
+footer .right {
+    flex-grow: 1;
+    flex-basis: 300px;
+    padding: 0px 20px 20px 20px;
+    text-align: right;
+}
+
+/************************************************************************/
