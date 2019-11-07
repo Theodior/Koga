@@ -43,18 +43,14 @@ body {
     padding: 0;
     margin: 0;
     border: 0;
-
 }
-
 
 
 
 
 h2 {
     font-family: futura-pt, sans-serif;
-
     font-weight: 400;
-
     font-style: normal;
 }
 
@@ -65,23 +61,17 @@ p {
 
 a {
     font-family: futura-pt, sans-serif;
-
     font-weight: 400;
-
     font-style: normal;
 }
 
 div.beskrivelse {
-
     font-family: 'Open Sans', sans-serif;
-
 }
 
 dropdown {
     font-family: futura-pt, sans-serif;
-
     font-weight: 400;
-
     font-style: normal;
 }
 
@@ -98,8 +88,6 @@ header {
     grid-area: splash;
 
 }
-
-
 
 .splash .button:hover {
     opacity: 90%;
@@ -192,8 +180,6 @@ footer {
     text-decoration: none;
     padding-left: 20px;
     line-height: 80px;
-
-
 }
 
 .topnav a:hover {
@@ -281,6 +267,11 @@ footer {
     .topnav {
         display: none;
     }
+
+    #body_container .splash_billede img {
+        width: 100vw;
+    }
+
 
 }
 
@@ -370,8 +361,6 @@ footer {
 
 
     .splash .kontakt_knap {
-        /*        position: absolute;*/
-
         display: flex;
         justify-content: center;
 
@@ -379,7 +368,7 @@ footer {
 
     .splash .button {
         position: absolute;
-        top: 10vw;
+        top: 25vw;
         background-color: black;
         border: none;
         color: white;
@@ -388,6 +377,8 @@ footer {
         font-size: 16px;
         cursor: pointer;
     }
+
+
 
     /********************************************************************/
 
