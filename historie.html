@@ -61,7 +61,6 @@
                 grid-template-areas:
                     ". . Historie_h2 . ."
                     ". historie_p . historie_p2 ."
-                    ". historie_p3 . historie_p4 ."
                     ". pic1 . pic2 ."
                     ". . timeline_h2 . ."
                     ". timeline_p . timeline_p2 .";
@@ -87,19 +86,6 @@
 
             }
 
-            #historie_container .historie .historie_p3 {
-                grid-area: historie_p;
-                background-color: yellow;
-                grid-column: 2;
-
-            }
-
-            #historie_container .historie .historie_p4 {
-                grid-area: historie_p;
-                background-color: blue;
-                grid-column: 2;
-
-            }
 
             #historie_container .historie .billede1 {
                 grid-area: pic1;
@@ -131,41 +117,122 @@
                 grid-column: 4;
 
             }
+
+            #historie_container .billede3 {
+                width: 1000px;
+                margin-bottom: 20px;
+            }
+
+            #historie_container .splashbillede {
+                width: 100%;
+                height: 550px;
+            }
+
+            #historie_container .historie_h2 {
+                position: relative;
+                top: -300px;
+            }
+
+            #historie_container .historie_p {
+                margin-bottom: 150px;
+            }
+
+            #historie_container .historie_p2 {
+                margin-bottom: 150px;
+            }
+
+            #historie_container .billede1 {
+                margin-bottom: 100px;
+            }
+
+            #historie_container .billede2 {
+                margin-bottom: 100px;
+            }
         }
 
 
 
         /*Grid for historie færdig*/
 
+        /*mobile historie*/
+        @media screen and (max-width:700px) {
+            #historie_container img {
+                width: 100%;
+            }
+
+            #historie_container .splashbillede {
+                height: 300px;
+            }
+
+            .billede3 {
+                width: 100px;
+            }
+
+            #historie_container .historie_h2 {
+                display: flex;
+                position: relative;
+                top: -200px;
+                justify-content: center;
+                color: deeppink;
+            }
+
+            #historie_container .historie_p {
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-bottom: 20px;
+            }
+
+            #historie_container .historie_p2 {
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-bottom: 20px;
+            }
+
+            #historie_container .timeline_h2 {
+                display: flex;
+                justify-content: center;
+                color: deeppink;
+            }
+
+            #historie_container .timeline_p {
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-bottom: 20px;
+            }
+
+            #historie_container .timeline_p2 {
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-bottom: 20px;
+            }
+
+
+
+            #historie_container .billede1 {
+                width: 90%;
+                margin-left: 5vw;
+                margin-bottom: 3vw;
+            }
+
+            #historie_container .billede2 {
+                width: 90%;
+                margin-left: 5vw;
+                margin-bottom: 5vw;
+            }
+        }
+
         /*STYLING af indhold HISTORIE*/
 
-        .splashbillede {
-            width: 100%;
-            height: 500px;
-        }
 
-        .billede1 {
-            margin-bottom: 150px;
-        }
 
-        .billede2 {
-            margin-bottom: 150px;
-        }
 
-        .billede3 {
-            width: 1000px;
-            margin-bottom: 20px;
-        }
 
-        .historie_p {
-            margin-bottom: 150px;
-        }
 
-        .historie_p2 {
-            margin-bottom: 150px;
-        }
 
-        /*STYLING af indhold HISTORIE slut*/
+
+
+        /*****************************************************/
+
     </style>
 </head>
 
@@ -186,9 +253,9 @@
 
     <section class="historie">
         <h2 class="historie_h2">Historie</h2>
-        <p class="historie_p"> I 1974 er der mere tid til fritidsaktiviteter på grund af ankomsten af en forkortet arbejdsuge. For at reagere på denne tendens introduceres Koga til markedet som en ny spiller. Andries Gaastra, tidligere salgsdirektør hos Batavus startede hos Koga BV, da far Gerrit solgte Batavus-virksomheden. Han fusionerede de første bogstaver i efternavnet til sin kone Marion Kowallik med dem med sit eget efternavn til mærkenavnet Koga.</p>
+        <p class="historie_p"> I 1974 er der mere tid til fritidsaktiviteter på grund af ankomsten af en forkortet arbejdsuge. For at reagere på denne tendens introduceres Koga til markedet som en ny spiller. Andries Gaastra, tidligere salgsdirektør hos Batavus startede hos Koga BV, da far Gerrit solgte Batavus-virksomheden. Han fusionerede de første bogstaver i efternavnet til sin kone Marion Kowallik med dem med sit eget efternavn til mærkenavnet Koga.
 
-        <p class="historie_p3">Som mål satte Gaastra en eksklusiv linje med lette cykler på markedet. Andries Gaastra samlet den allerførste Koga i sit hus i Oranjewoud nær Heerenveen. Gaastra vælger snart at outsource aktiviteter for at imødekomme eksklusivitetsønsker. Når Koga bliver en importør af Shimano-dele, oprettes et netværk med andre japanske cykelproducenter. Dette er også tilfældet med Miyata, et firma, der på det tidspunkt har produceret cykelrammer i 80 år. Indtil 2010 blev rammer produceret af Miyata, og mærkenavnet blev brugt som tilføjelse til Miyata. </p>
+            Som mål satte Gaastra en eksklusiv linje med lette cykler på markedet. Andries Gaastra samlet den allerførste Koga i sit hus i Oranjewoud nær Heerenveen. Gaastra vælger snart at outsource aktiviteter for at imødekomme eksklusivitetsønsker. Når Koga bliver en importør af Shimano-dele, oprettes et netværk med andre japanske cykelproducenter. Dette er også tilfældet med Miyata, et firma, der på det tidspunkt har produceret cykelrammer i 80 år. Indtil 2010 blev rammer produceret af Miyata, og mærkenavnet blev brugt som tilføjelse til Miyata. </p>
 
         <p class="historie_p2">
             Tour de France i 1980 var en stor succes for IJsboerke Koga Miyata-holdet. Køreren Rudi Pevenage vandt anden etape over 276 km fra Frankfurt til Metz. I slutningen af denne fase fik han lov til at tage på den gule trøje.
@@ -225,4 +292,6 @@
     </footer>
 
     <script src="script.js"></script>
-</body></html>
+</body>
+
+</html>
