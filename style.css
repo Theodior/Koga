@@ -11,6 +11,39 @@ body {
 /*******            Index.html           ******/
 
 
+<<<<<<< HEAD
+=======
+h2 {
+    font-family: futura-pt, sans-serif;
+
+    font-weight: 400;
+
+    font-style: normal;
+}
+
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    font-family: futura-pt, sans-serif;
+
+    font-weight: 400;
+
+    font-style: normal;
+}
+
+dropdown {
+    font-family: futura-pt, sans-serif;
+
+    font-weight: 400;
+
+    font-style: normal;
+}
+
+
+>>>>>>> origin/master
 header {
     grid-area: header;
     background: skyblue;
@@ -128,7 +161,6 @@ footer {
     font-size: 16px;
     border: none;
     outline: none;
-    font-family: inherit;
     line-height: 80px;
     display: flex;
 }
