@@ -132,6 +132,27 @@ footer {
     text-decoration: none;
 }
 
+<<<<<<< HEAD
+#index_container .velkomst .img1 {
+    grid-area: img1;
+    width: 40px;
+    height: 40px;
+}
+
+#index_container .velkomst .img2 {
+    grid-area: img2;
+    width: 40px;
+    height: 40px;
+    width: 502px;
+
+}
+
+#index_container .velkomst .service_h2 {
+    grid-area: sh2;
+    width: 40px;
+    height: 40px;
+    background-color: fuchsia;
+=======
 #menu a:hover {
     transform: scale(1.2);
 }
@@ -151,6 +172,7 @@ footer {
 .topnav a:hover {
     color: red;
 }
+>>>>>>> origin/master
 
 .burgermenu {
     display: flex;
