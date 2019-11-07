@@ -233,8 +233,6 @@ footer {
 @media only screen and (max-width: 700px) {
     .topnav {
         display: none;
-
-
     }
 
 }
@@ -275,14 +273,12 @@ footer {
     #body_container .velkomst .velkomst_p {
         grid-area: vp;
         background-color: red;
-
         max-width: 30rem;
     }
 
     #body_container .velkomst .velkomst_p2 {
         grid-area: vp2;
         background-color: red;
-
         max-width: 30rem;
     }
 
@@ -315,7 +311,6 @@ footer {
 
     }
 
-    #body_container .splashvideo .video {}
 
     .splash .slogan {
         position: relative;
@@ -327,10 +322,17 @@ footer {
     }
 
 
+    .splash .kontakt_knap {
+        /*        position: absolute;*/
+
+        display: flex;
+        justify-content: center;
+
+    }
+
     .splash .button {
-        position: relative;
-        right: -37.4vw;
-        top: -24rem;
+        position: absolute;
+        top: 10vw;
         background-color: black;
         border: none;
         color: white;
