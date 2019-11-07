@@ -221,6 +221,11 @@ footer {
         display: none;
     }
 
+    #body_container .splash_billede img {
+        width: 100vw;
+    }
+
+
 }
 
 @media screen and (min-width:700px) {
