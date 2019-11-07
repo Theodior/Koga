@@ -1,22 +1,67 @@
 body {
     padding: 0;
     margin: 0;
+    border: 0;
+
 }
 
 
 
 
-/*******            Index.html           ******/
 
+h2 {
+    font-family: futura-pt, sans-serif;
+
+    font-weight: 400;
+
+    font-style: normal;
+}
+
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    font-family: futura-pt, sans-serif;
+
+    font-weight: 400;
+
+    font-style: normal;
+}
+
+div.beskrivelse {
+
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+dropdown {
+    font-family: futura-pt, sans-serif;
+
+    font-weight: 400;
+
+    font-style: normal;
+}
+
+/*******            Index.html           ******/
 
 header {
     grid-area: header;
-    background: skyblue;
+    position: absolute;
+    right: 0;
+
 }
 
 .splashvideo {
     grid-area: splash;
-    background: gold;
+
+}
+
+
+
+.splash .button:hover {
+    opacity: 90%;
 }
 
 .velkomst {
@@ -28,13 +73,14 @@ footer {
     background: lightseagreen;
 }
 
-#index_container {
+#body_container {
     display: grid;
     grid-template-areas:
         "header"
         "splash"
         "indhold"
         "footer";
+
 }
 
 /* Grid i velkomst  */
@@ -46,37 +92,47 @@ footer {
     }
 */
 
-#index_container .velkomst {
-    display: grid;
-    width: 100%;
-    grid-auto-columns: 1fr;
-    grid-template-areas:
-        ". . vh2 . ."
-        ". vp . vp2 ."
-        ". img1 . img2 ."
-        ". . sh2 . ."
-        ". sp . sp2 .";
+
+/** NAV & BURGERMENU **/
+
+.hidden {
+    display: none;
 }
 
-#index_container .velkomst .velkomst_h2 {
-    grid-area: vh2;
-    background-color: aqua;
+#menu .hidden {
+    display: none;
+    transform: scale(0);
+    transform: translateX(-100%);
+    opacity: 0;
 }
 
-#index_container .velkomst .velkomst_p {
-    grid-area: vp;
-    background-color: red;
-    grid-column: 2;
-    max-width: 20rem;
+#menuknap {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: black;
+
 }
 
-#index_container .velkomst .velkomst_p2 {
-    grid-area: vp2;
-    background-color: red;
-    grid-column: 4;
-    max-width: 20rem;
+#menu {
+    padding-top: 50px;
+    position: relative;
+    list-style-type: none;
+    background-color: #1B84C5;
+    width: 100vw;
+
 }
 
+#menu a {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+<<<<<<< HEAD
 #index_container .velkomst .img1 {
     grid-area: img1;
     width: 40px;
@@ -96,18 +152,216 @@ footer {
     width: 40px;
     height: 40px;
     background-color: fuchsia;
+=======
+#menu a:hover {
+    transform: scale(1.2);
+}
+
+
+
+.topnav a {
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+    padding-left: 20px;
+    line-height: 80px;
+
 
 }
 
-#index_container .velkomst .service_p {
-    grid-area: sp;
-    background-color: gold;
-    grid-column: 2;
+.topnav a:hover {
+    color: red;
+}
+>>>>>>> origin/master
+
+.burgermenu {
+    display: flex;
+    align-items: flex-end;
+    text-align: right;
+    justify-content: flex-end;
 }
 
-#index_container .velkomst .service_p2 {
-    grid-area: sp2;
-    background-color: gold;
-    grid-column: 4;
+.topnav {
+    overflow: hidden;
+    justify-content: flex-end;
+    display: flex;
+    margin-right: 40px;
+
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbutton {
+    background-color: inherit;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    line-height: 80px;
+    display: flex;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    padding: 0;
+}
+
+.dropdown-content a {
+    padding: 0px;
+    margin: 0px;
+    float: none;
+    display: block;
+    color: black;
+    text-align: left;
+    font-size: 1rem;
+    background-color: #1B84C5;
+    line-height: 40px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/***********************************************************/
+
+
+@media screen and (min-width:960px) {
+    #menuknap {
+        display: none;
+    }
+
+    #menu.hidden {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    #menu li {
+        display: inline-block;
+    }
+
+    .topnav {
+        height: 80px;
+    }
+
+
+}
+
+@media only screen and (max-width: 700px) {
+    .topnav {
+        display: none;
+
+
+    }
+
+}
+
+@media screen and (min-width:700px) {
+
+
+    /*******                  index.html                  ******/
+
+    header {
+        position: absolute;
+        right: 0;
+    }
+
+    #body_container .velkomst {
+        display: grid;
+        width: 100%;
+        max-width: 90vw;
+        margin: auto;
+
+        grid-template-areas:
+            " . vh2 . "
+            " vp . vp2 "
+            " img1 . img2 "
+            " . sh2 . "
+            " sp . sp2 ";
+    }
+
+    #body_container .velkomst .velkomst_h2 {
+        grid-area: vh2;
+        background-color: aqua;
+        font-size: 36px;
+        min-width: 15rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    #body_container .velkomst .velkomst_p {
+        grid-area: vp;
+        background-color: red;
+
+        max-width: 30rem;
+    }
+
+    #body_container .velkomst .velkomst_p2 {
+        grid-area: vp2;
+        background-color: red;
+
+        max-width: 30rem;
+    }
+
+    #body_container .velkomst .img1 {
+        grid-area: img1;
+        width: 502px;
+    }
+
+    #body_container .velkomst .img2 {
+        grid-area: img2;
+        width: 502px;
+
+    }
+
+    #body_container .velkomst .service_h2 {
+        grid-area: sh2;
+        background-color: fuchsia;
+
+    }
+
+    #body_container .velkomst .service_p {
+        grid-area: sp;
+        background-color: gold;
+
+    }
+
+    #body_container .velkomst .service_p2 {
+        grid-area: sp2;
+        background-color: gold;
+
+    }
+
+    #body_container .splashvideo .video {}
+
+    .splash .slogan {
+        position: relative;
+        top: -25rem;
+        text-align: center;
+        color: #FAFAFA;
+        text-transform: uppercase;
+        font-size: 36px;
+    }
+
+
+    .splash .button {
+        position: relative;
+        right: -37.4vw;
+        top: -24rem;
+        background-color: black;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-decoration: none;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    /********************************************************************/
+
 
 }
