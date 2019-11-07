@@ -243,7 +243,7 @@ footer {
 
     /*******                  index.html                  ******/
 
-    header {
+    #body_container header {
         position: absolute;
         right: 0;
     }
