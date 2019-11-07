@@ -1,7 +1,7 @@
         let cykler = [];
         const url = "https://esauka.dk/koga/wordpress/wp-json/wp/v2/koga?per_page=100";
 
-        const modtagerKloner = document.querySelector(".liste");
+        const liste = document.querySelector(".liste");
 
         document.addEventListener("DOMContentLoaded", start);
 
@@ -37,7 +37,7 @@
             const skabelon = document.querySelector("template");
             const liste = document.querySelector(".liste");
 
-            modtagerKloner.innerHTML = "";
+            liste.innerHTML = "";
 
             cykler.forEach(cykel => {
                 const klon = skabelon.cloneNode(true).content;
@@ -47,7 +47,7 @@
                 klon.querySelector("img").alt = "billede af" + cykel.title.rendered;
                 klon.querySelector(".beskrivelse").innerHTML = cykel.kort_tekst;
                 liste.appendChild(klon);
-                modtagerKloner.lastElementChild.addEventListener("click", () => {
+                liste.lastElementChild.addEventListener("click", () => {
                     location.href = `cykelinfo.html?navn=${cykel.navn}`
                 });
             });
