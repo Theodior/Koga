@@ -2,7 +2,7 @@
 
 .hjul {
     animation-name: rotation_kf;
-    animation-duration: 5s;
+    animation-duration: 4s;
     animation-iteration-count: 1;
 
 
@@ -15,7 +15,7 @@
     }
 
     100% {
-        transform: rotate(3600deg);
+        transform: rotate(1050deg);
     }
 
 }
