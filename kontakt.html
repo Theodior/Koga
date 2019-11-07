@@ -13,6 +13,9 @@
 
             .kontakt {
                 grid-area: indhold;
+                margin: 0 auto;
+                width: 90vw;
+
 
             }
 
@@ -35,52 +38,54 @@
             #kontakt_container .kontakt {
                 display: grid;
                 width: 100%;
-                grid-auto-columns: 1fr;
+                max-width: 90vw;
+
                 grid-template-areas:
-                    ". . kh2 . ."
-                    ". kp1 . k_p ."
-                    ". kp2 . map ."
-                    ". . sh2 . ."
-                    ". img1 img2 img3 ."
-                    ". . oh2 . ."
-                    ". . vp . ."
-                    ". . hp . .";
+                    " . . . kh2 . "
+                    " kp1 . . . k_p "
+                    " kp2 . . . map "
+                    " . . . sh2 . "
+                    " . . . some . "
+                    " . . . oh2 . "
+                    " . . . vp . "
+                    " . . . hp . ";
 
             }
 
             #kontakt_container .kontakt .kontakt_h2 {
                 grid-area: kh2;
                 font-size: 3rem;
-                text-align: center;
-
             }
 
             #kontakt_container .kontakt .kontakt_p1 {
                 grid-area: kp1;
-                grid-column: 2;
-                max-width: 20rem;
+
+
+
             }
 
             #kontakt_container .kontakt .kontakt_p2 {
                 grid-area: kp2;
-                grid-column: 2;
-                width: 400px;
+
+
+
             }
 
             #kontakt_container .kontakt .map {
                 grid-area: map;
-                width: 400px;
             }
+
+
 
             #kontakt_container .kontakt .karta_p {
                 grid-area: k_p;
-
 
             }
 
             #kontakt_container .kontakt .social_h2 {
                 text-align: center;
                 grid-area: sh2;
+
 
             }
 
@@ -103,25 +108,36 @@
                 height: 100px;
             }
 
+            #kontakt_container .kontakt .some {
+                grid-area: some;
+                display: flex;
+                justify-content: space-between;
+                max-width: 50vw;
+                align-content: center;
+
+            }
+
             #kontakt_container .kontakt .open_h2 {
                 grid-area: oh2;
                 text-align: center;
+
             }
 
             #kontakt_container .kontakt .vardag_p {
                 grid-area: vp;
                 text-align: center;
+
             }
 
             #kontakt_container .kontakt .helg_p {
                 grid-area: hp;
                 text-align: center;
+
             }
 
 
 
         }
-
     </style>
 
     <link rel="stylesheet" href="style.css">
@@ -151,21 +167,25 @@
 
 
 
-        <p class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.562423351001!2d12.514784315861364!3d55.67920900513303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465253c0f812fc99%3A0xbad7fb89d5bd5f06!2sKOGA%20Center%20Copenhagen!5e0!3m2!1sda!2sdk!4v1573113883137!5m2!1sda!2sdk" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe></p>
+
+        <p class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.562423351001!2d12.514784315861364!3d55.67920900513303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465253c0f812fc99%3A0xbad7fb89d5bd5f06!2sKOGA%20Center%20Copenhagen!5e0!3m2!1sda!2sdk!4v1573113883137!5m2!1sda!2sdk" width="500" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe></p>
 
         <p class="karta_p">
             Adresse:
             Peter Bangsvej 18, 2000 Frederiksberg </p>
 
         <h2 class="social_h2">Social Media</h2>
+        <div class="some">
+            <img class="img1" src="img/facebook.png" alt="facebook">
+            <img class="img2" src="img/instagram.png" alt="instagram">
+            <img class="img3" src="img/email.png" alt="email">
 
-        <img class="img1" src="img/facebook.png" alt="facebook">
-        <img class="img2" src="img/instagram.png" alt="instagram">
-        <img class="img3" src="img/email.png" alt="email">
+        </div>
+
 
         <h2 class="open_h2">Åbningstider</h2>
 
-        <p class="vardag_p">Mån-Fre 11.00-18.00</p>
+        <p class="vardag_p">Man-Fre 11.00-18.00</p>
         <p class="helg_p">Lørdag 09.00-14.00</p>
 
     </section>
