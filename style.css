@@ -1,5 +1,3 @@
-
-
 .hjul {
     animation-name: rotation_kf;
     animation-duration: 4s;
@@ -386,3 +384,62 @@ footer {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+
+footer {
+    border-top: 2px solid #1b5728;
+    /*    background-color: #1b5728;*/
+    color: #191E26;
+}
+
+
+.footer_billeder {
+    display: flex;
+    justify-content: center;
+}
+
+footer img {
+    width: 30px;
+    height: 30px;
+    border: 0px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+footer img:hover {
+    transform: scale(1.2);
+}
+
+footer .tekst {
+    display: flex;
+}
+
+footer .left {
+    padding: 0px 20px 20px 20px;
+    flex-grow: 1;
+    flex-basis: 300px;
+}
+
+footer .right {
+    flex-grow: 1;
+    flex-basis: 300px;
+    padding: 0px 20px 20px 20px;
+    text-align: right;
+}
+
+/************************************************************************/
