@@ -48,6 +48,152 @@ footer {
     }
 */
 
+
+/** NAV & BURGERMENU **/
+
+.hidden {
+    display: none;
+}
+
+#menu .hidden {
+    display: none;
+    transform: scale(0);
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+#menuknap {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: black;
+
+}
+
+#menu {
+    padding-top: 50px;
+    position: relative;
+    list-style-type: none;
+    background-color: #1B84C5;
+    width: 100vw;
+
+}
+
+#menu a {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#menu a:hover {
+    transform: scale(1.2);
+}
+
+
+
+.topnav a {
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+    padding-left: 20px;
+    line-height: 80px;
+
+
+}
+
+.topnav a:hover {
+    color: red;
+}
+
+.burgermenu {
+    display: flex;
+    align-items: flex-end;
+    text-align: right;
+    justify-content: flex-end;
+}
+
+.topnav {
+    overflow: hidden;
+    justify-content: flex-end;
+    display: flex;
+    margin-right: 40px;
+
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbutton {
+    background-color: inherit;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    line-height: 80px;
+    display: flex;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    padding: 0;
+}
+
+.dropdown-content a {
+    padding: 0px;
+    margin: 0px;
+    float: none;
+    display: block;
+    color: black;
+    text-align: left;
+    font-size: 1rem;
+    background-color: #1B84C5;
+    line-height: 40px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+@media screen and (min-width:960px) {
+    #menuknap {
+        display: none;
+    }
+
+    #menu.hidden {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    #menu li {
+        display: inline-block;
+    }
+
+    .topnav {
+        height: 80px;
+    }
+
+
+}
+
+@media only screen and (max-width: 700px) {
+    .topnav {
+        display: none;
+
+
+    }
+
+}
+
 @media screen and (min-width:700px) {
 
     #index_container .velkomst {
