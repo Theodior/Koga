@@ -1,15 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
+
 
 <head>
     <meta charset="UTF-8">
     <title>KOGA Forside</title>
     <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://use.typekit.net/zvb6klh.css">
+    <link rel="stylesheet" href="https://use.typekit.net/zvb6klh.css">
 
 </head>
 
 <body>
+    <style>
+        .infoCykler img {
+            width: 100vw;
+            height: 50vw;
+        }
+
+        .infoCykler p {
+            margin-left: 20px;
+            margin-right: 25px;
+
+        }
+
+        .infoCykler h2 {
+            margin-left: 5vw;
+            display: flex;
+            justify-content: center;
+        }
+
+        .infoCykler {}
+
+        @media screen and (min-width:700px) {}
+    </style>
     <header>
         <nav>
 
@@ -43,6 +66,7 @@
     <footer>
     </footer>
 
+
     <script>
         let urlParams = new URLSearchParams(window.location.search);
         let navn = urlParams.get("navn");
@@ -64,7 +88,7 @@
 
         async function getJson() {
 
-            let jsondata = await fetch("https://esauka.dk/koga/wordpress/wp-json/wp/v2/koga");
+            let jsondata = await fetch("https://esauka.dk/koga/wordpress/wp-json/wp/v2/koga?per_page=100");
 
             personer = await jsondata.json();
             visJson();
