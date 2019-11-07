@@ -32,7 +32,7 @@ a {
 
 div.beskrivelse {
 
-        font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 
 }
 
@@ -80,8 +80,7 @@ footer {
         "splash"
         "indhold"
         "footer";
-    max-width: 80vw;
-    margin: auto;
+
 }
 
 /* Grid i velkomst  */
@@ -252,6 +251,8 @@ footer {
     #body_container .velkomst {
         display: grid;
         width: 100%;
+        max-width: 90vw;
+        margin: auto;
 
         grid-template-areas:
             " . vh2 . "
