@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>KOGA Forside</title>
     <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://use.typekit.net/zvb6klh.css">
+    <link rel="stylesheet" href="https://use.typekit.net/zvb6klh.css">
 
 </head>
 
@@ -19,17 +19,36 @@
         margin-left: 3vw;
         margin-right: 3vw;
 
+
     }
 
     @media screen and (min-width:700px) {
 
         .liste {
             display: grid;
-            grid-template-columns: 22vw 22vw 22vw;
-            margin-left: 15vw;
-            margin-right: 16vw;
-            grid-gap: 16px;
+            grid-template-columns: 30vw 30vw 30vw;
+            grid-template-rows: 33vw 33vw 33vw 33vw 33vw 33vw 33vw 33vw;
+            margin-left: 4vw;
+            margin-right: 5vw;
+            margin-top: 3vw;
 
+            background-color: white;
+
+
+
+        }
+
+        h2.title,
+        p.pris,
+        div.beskrivelse {
+            margin-left: 2vw;
+            margin-right: 2vw;
+        }
+
+
+
+        body {
+            background-color: lightgray;
         }
 
 
@@ -37,10 +56,20 @@
 
         img {
             width: 20vw;
+            min-height: 11em;
+            margin-left: 3vw;
+            margin-top: 2vw;
+        }
+
+        .cykler {
+            padding: 10px;
+            border: 10px solid lightgrey;
+            margin: 0;
         }
 
 
     }
+
 </style>
 
 <body>
@@ -55,8 +84,9 @@
     <div id="single">
         <section class="liste">
             <article class="beskrivelse">
-                <h2></h2>
+
                 <img class="billede" src="" alt="">
+                <h2></h2>
 
                 <p class="pris">kr</p>
             </article>
@@ -67,8 +97,9 @@
 
     <template>
         <article class="cykler">
-            <h2 class="title"></h2>
+
             <img src="" alt="">
+            <h2 class="title"></h2>
             <p class="pris">kr</p>
             <div class="beskrivelse"></div>
 
@@ -81,4 +112,6 @@
     </footer>
 
     <script src="script.js"></script>
-</body></html>
+</body>
+
+</html>
