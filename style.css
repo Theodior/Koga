@@ -8,11 +8,7 @@ body {
 
 
 
-/*******            Index.html           ******/
 
-
-<<<<<<< HEAD
-=======
 h2 {
     font-family: futura-pt, sans-serif;
 
@@ -34,6 +30,12 @@ a {
     font-style: normal;
 }
 
+div.beskrivelse {
+
+    font-family: 'Open Sans', sans-serif;
+
+}
+
 dropdown {
     font-family: futura-pt, sans-serif;
 
@@ -42,16 +44,24 @@ dropdown {
     font-style: normal;
 }
 
+/*******            Index.html           ******/
 
->>>>>>> origin/master
 header {
     grid-area: header;
-    background: skyblue;
+    position: absolute;
+    right: 0;
+
 }
 
-.splash {
+.splashvideo {
     grid-area: splash;
 
+}
+
+
+
+.splash .button:hover {
+    opacity: 90%;
 }
 
 .velkomst {
@@ -70,11 +80,17 @@ footer {
         "splash"
         "indhold"
         "footer";
+
 }
 
+/* Grid i velkomst  */
 
 
-/******************************************************************************/
+/*
+    .velkomst > div {
+        padding: 3rem;
+    }
+*/
 
 
 /** NAV & BURGERMENU **/
@@ -189,6 +205,7 @@ footer {
     display: block;
 }
 
+/***********************************************************/
 
 
 @media screen and (min-width:960px) {
@@ -223,10 +240,18 @@ footer {
 
 @media screen and (min-width:700px) {
 
+
+    /*******                  index.html                  ******/
+
+    header {
+        position: absolute;
+        right: 0;
+    }
+
     #body_container .velkomst {
         display: grid;
         width: 100%;
-        max-width: 80vw;
+        max-width: 90vw;
         margin: auto;
 
         grid-template-areas:
@@ -240,6 +265,10 @@ footer {
     #body_container .velkomst .velkomst_h2 {
         grid-area: vh2;
         background-color: aqua;
+        font-size: 36px;
+        min-width: 15rem;
+        font-weight: bold;
+        text-transform: uppercase;
     }
 
     #body_container .velkomst .velkomst_p {
@@ -285,9 +314,32 @@ footer {
 
     }
 
-    #body_container .splash {
-        width: 100vw;
+    #body_container .splashvideo .video {}
 
+    .splash .slogan {
+        position: relative;
+        top: -25rem;
+        text-align: center;
+        color: #FAFAFA;
+        text-transform: uppercase;
+        font-size: 36px;
     }
+
+
+    .splash .button {
+        position: relative;
+        right: -37.4vw;
+        top: -24rem;
+        background-color: black;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-decoration: none;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    /********************************************************************/
+
 
 }
