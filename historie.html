@@ -5,21 +5,22 @@
     <meta charset="UTF-8">
     <title>KOGA Historie</title>
     <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://use.typekit.net/zvb6klh.css">
+    <link rel="stylesheet" href="https://use.typekit.net/zvb6klh.css">
 
     <style>
         /*******            historie.html           ******/
 
         @media screen and (min-width:700px) {
-            header {
+            #historie_container header {
                 grid-area: op;
-                background: skyblue;
+                position: absolute;
+                right: 0;
             }
 
             .splash_historie {
                 grid-area: splashbillede;
                 background: purple;
-                height: 500px;
+                height: 520px;
                 width: 100%;
             }
 
@@ -34,7 +35,6 @@
                 justify-content: center;
 
             }
-
 
             footer {
                 grid-area: footer;
@@ -69,19 +69,24 @@
 
             #historie_container .historie .historie_h2 {
                 grid-area: Historie_h2;
-                background-color: red;
+                color: white;
+                font-size: 36px;
+                text-shadow: 2px 2px #ff0000;
+
+
             }
+
 
             #historie_container .historie .historie_p {
                 grid-area: historie_p;
-                background-color: blue;
+
                 grid-column: 2;
 
             }
 
             #historie_container .historie .historie_p2 {
                 grid-area: historie_p2;
-                background-color: blue;
+
                 grid-column: 4;
 
             }
@@ -100,28 +105,34 @@
 
             #historie_container .historie .timeline_h2 {
                 grid-area: timeline_h2;
-                background-color: yellow;
-
+                font-size: 36px;
+                font-family: futura-pt, sans-serif
             }
 
             #historie_container .historie .timeline_p {
                 grid-area: timeline_p;
-                background-color: deeppink;
+
                 grid-column: 2;
 
             }
 
             #historie_container .historie .timeline_p2 {
                 grid-area: timeline_p2;
-                background-color: deeppink;
+
                 grid-column: 4;
 
             }
 
-            #historie_container .billede3 {
+            /*#historie_container .billede3 {
                 width: 1000px;
                 margin-bottom: 20px;
+            }*/
+            #historie_container .billede3 {
+                width: 1200px;
+                height: 373px;
+                margin-bottom: 20px;
             }
+
 
             #historie_container .splashbillede {
                 width: 100%;
@@ -131,6 +142,8 @@
             #historie_container .historie_h2 {
                 position: relative;
                 top: -300px;
+                font-family: futura-pt, sans-serif;
+
             }
 
             #historie_container .historie_p {
@@ -148,11 +161,11 @@
             #historie_container .billede2 {
                 margin-bottom: 100px;
             }
+
+
         }
 
-
-
-        /*Grid for historie færdig*/
+        /*Grid -DESKTOP- for historie færdig*/
 
         /*mobile historie*/
         @media screen and (max-width:700px) {
@@ -165,15 +178,19 @@
             }
 
             .billede3 {
-                width: 100px;
+                width: 100vw;
+                height: 200px;
             }
 
             #historie_container .historie_h2 {
                 display: flex;
                 position: relative;
+                font-size: 36px;
+                color: white;
                 top: -200px;
                 justify-content: center;
-                color: deeppink;
+                font-family: futura-pt, sans-serif;
+                text-shadow: 2px 2px #ff0000;
             }
 
             #historie_container .historie_p {
@@ -191,7 +208,8 @@
             #historie_container .timeline_h2 {
                 display: flex;
                 justify-content: center;
-                color: deeppink;
+                font-size: 36px;
+                font-family: futura-pt, sans-serif
             }
 
             #historie_container .timeline_p {
@@ -221,14 +239,6 @@
             }
         }
 
-        /*STYLING af indhold HISTORIE*/
-
-
-
-
-
-
-
 
 
         /*****************************************************/
@@ -247,15 +257,18 @@
 
     <div class="splash_historie">
 
-        <img class="splashbillede" src="img/splash_historie2.jpg" alt="">
+        <img class="splashbillede" src="img/splash_historie3.jpg" alt="">
 
     </div>
 
     <section class="historie">
         <h2 class="historie_h2">Historie</h2>
-        <p class="historie_p"> I 1974 er der mere tid til fritidsaktiviteter på grund af ankomsten af en forkortet arbejdsuge. For at reagere på denne tendens introduceres Koga til markedet som en ny spiller. Andries Gaastra, tidligere salgsdirektør hos Batavus startede hos Koga BV, da far Gerrit solgte Batavus-virksomheden. Han fusionerede de første bogstaver i efternavnet til sin kone Marion Kowallik med dem med sit eget efternavn til mærkenavnet Koga.
 
-            Som mål satte Gaastra en eksklusiv linje med lette cykler på markedet. Andries Gaastra samlet den allerførste Koga i sit hus i Oranjewoud nær Heerenveen. Gaastra vælger snart at outsource aktiviteter for at imødekomme eksklusivitetsønsker. Når Koga bliver en importør af Shimano-dele, oprettes et netværk med andre japanske cykelproducenter. Dette er også tilfældet med Miyata, et firma, der på det tidspunkt har produceret cykelrammer i 80 år. Indtil 2010 blev rammer produceret af Miyata, og mærkenavnet blev brugt som tilføjelse til Miyata. </p>
+        <p class="historie_p">
+            I 1974 er der mere tid til fritidsaktiviteter på grund af ankomsten af en forkortet arbejdsuge. For at reagere på denne tendens introduceres Koga til markedet som en ny spiller. Andries Gaastra, tidligere salgsdirektør hos Batavus startede hos Koga BV, da far Gerrit solgte Batavus-virksomheden. Han fusionerede de første bogstaver i efternavnet til sin kone Marion Kowallik med dem med sit eget efternavn til mærkenavnet Koga.
+
+            Som mål satte Gaastra en eksklusiv linje med lette cykler på markedet. Andries Gaastra samlet den allerførste Koga i sit hus i Oranjewoud nær Heerenveen. Gaastra vælger snart at outsource aktiviteter for at imødekomme eksklusivitetsønsker. Når Koga bliver en importør af Shimano-dele, oprettes et netværk med andre japanske cykelproducenter. Dette er også tilfældet med Miyata, et firma, der på det tidspunkt har produceret cykelrammer i 80 år. Indtil 2010 blev rammer produceret af Miyata, og mærkenavnet blev brugt som tilføjelse til Miyata.
+        </p>
 
         <p class="historie_p2">
             Tour de France i 1980 var en stor succes for IJsboerke Koga Miyata-holdet. Køreren Rudi Pevenage vandt anden etape over 276 km fra Frankfurt til Metz. I slutningen af denne fase fik han lov til at tage på den gule trøje.
@@ -276,14 +289,23 @@
         <img class="billede2" src="img/koga_historie2.jpg" alt="bike">
 
         <h2 class="timeline_h2">Timeline</h2>
-        <p class="timeline_p"> Det her er en timeline tekst -- Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien. Lorem Ipsum har været standard fyldtekst siden 1500-tallet, hvor en ukendt trykker sammensatte en tilfældig spalte for at trykke en bog til sammenligning af forskellige skrifttyper. Lorem Ipsum har ikke alene overlevet fem århundreder, men har også vundet indpas i elektronisk typografi uden væsentlige ændringer. </p>
+        <p class="timeline_p"> Elis Ligtlee var meget succesrig lige fra starten i banecykling i 2011 og har været grossist i mange nationale og internationale titler. Hendes specialiteter var sprinten, 500 meter lang prøve og keirin. Ved OL i 2016 overraskede hun ven og fjende ved at vinde olympisk guld fra sin side, keirin.
 
-        <p class="timeline_p2">Det her er en timeline tekst nummer 2 -- Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien. Lorem Ipsum har været standard fyldtekst siden 1500-tallet, hvor en ukendt trykker sammensatte en tilfældig spalte for at trykke en bog til sammenligning af forskellige skrifttyper. Lorem Ipsum har ikke alene overlevet fem århundreder, men har også vundet indpas i elektronisk typografi uden væsentlige ændringer. </p>
+
+
+            Matthijs Büchli har taget sølv på keirin-delen. Efter en god slutspurt endte hollænderen snævert bag den hushøjeste favorit Jason Kenny. Forud for den en bisarre scene. Keirin-finalen startede hektisk. I en kort periode så det ud til, at efter at pacemakeren var gået for tidligt, blev en eller to ryttere sat ud af finalen, men juryen turde ikke tage en beslutning og valgte en genstart med alle ryttere på banen. Den anden start blev også fyret af, da der var et andet udseende som en tidlig passage fra derny. Igen blev der ikke truffet nogen beslutning. Derefter kørte han 9 dage i den gule trøje. Pevenage (det røde lys fra Moerbeke) var 41 point foran ireren Seán Kelly i Paris. </p>
+
+        <p class="timeline_p2">KNWU har arbejdet hårdt på en ny banecykel i samarbejde med KOGA, TU Delft, Actiflow og Pontis Engineering. Denne banecykel har mere end bevist sig selv, fordi der allerede er vundet flere medaljer på denne cykel. Det nye navn på banecyklen er oprettet på en legende måde. Ved KOGA fans får et nyt navn at huske for sporet cykel, kunne hun vinde en fuldt betalt tur til Olymische Tok Playing yo. Et endeligt valg blev taget fra mere end 1.700 indlæg. Den stolte Patrick De Roo kom via et anagram fra Geesink (som vandt i 1964) til navnet KOGA Kinsei. Frit oversatte betyder: lavet til guld.
+
+
+
+            Brand Manager for KOGA, Harald Troost, var et af de jurymedlemmer, som det vanskelige valg var at komme til en god beslutning. Til sidst blev KOGA Kinsei valgt, fordi det lyder meget godt, og det japanske navn har en meget klar forbindelse med Tokyo, hvor de olympiske lege finder sted. Nu er det op til de hollandske banecyklister at gå efter guld igen! </p>
 
 
     </section>
     <div class="timeline_pic">
-        <img class="billede3" src="img/timeline.png" alt="bike">
+        <!--        <img class="billede3" src="img/timeline.png" alt="bike">-->
+        <iframe class="billede3" src="https://xd.adobe.com/embed/ed00c0f1-6686-4984-5140-0c70dcce3997-9b31/" frameborder="0" allowfullscreen></iframe>
 
     </div>
 

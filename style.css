@@ -8,8 +8,6 @@ body {
 
 
 
-/*******            Index.html           ******/
-
 
 h2 {
     font-family: futura-pt, sans-serif;
@@ -34,7 +32,7 @@ a {
 
 div.beskrivelse {
 
-        font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 
 }
 
@@ -46,15 +44,24 @@ dropdown {
     font-style: normal;
 }
 
+/*******            Index.html           ******/
 
 header {
     grid-area: header;
-    background: skyblue;
+    position: absolute;
+    right: 0;
+
 }
 
 .splashvideo {
     grid-area: splash;
 
+}
+
+
+
+.splash .button:hover {
+    opacity: 90%;
 }
 
 .velkomst {
@@ -73,8 +80,7 @@ footer {
         "splash"
         "indhold"
         "footer";
-    max-width: 80vw;
-    margin: auto;
+
 }
 
 /* Grid i velkomst  */
@@ -125,6 +131,7 @@ footer {
     cursor: pointer;
     text-decoration: none;
 }
+
 
 #menu a:hover {
     transform: scale(1.2);
@@ -226,17 +233,25 @@ footer {
 @media only screen and (max-width: 700px) {
     .topnav {
         display: none;
-
-
     }
 
 }
 
 @media screen and (min-width:700px) {
 
+
+    /*******                  index.html                  ******/
+
+    #body_container header {
+        position: absolute;
+        right: 0;
+    }
+
     #body_container .velkomst {
         display: grid;
         width: 100%;
+        max-width: 90vw;
+        margin: auto;
 
         grid-template-areas:
             " . vh2 . "
@@ -249,19 +264,21 @@ footer {
     #body_container .velkomst .velkomst_h2 {
         grid-area: vh2;
         background-color: aqua;
+        font-size: 36px;
+        min-width: 15rem;
+        font-weight: bold;
+        text-transform: uppercase;
     }
 
     #body_container .velkomst .velkomst_p {
         grid-area: vp;
         background-color: red;
-
         max-width: 30rem;
     }
 
     #body_container .velkomst .velkomst_p2 {
         grid-area: vp2;
         background-color: red;
-
         max-width: 30rem;
     }
 
@@ -294,6 +311,38 @@ footer {
 
     }
 
-    #body_container .splashvideo .video {}
+
+    .splash .slogan {
+        position: relative;
+        top: -25rem;
+        text-align: center;
+        color: #FAFAFA;
+        text-transform: uppercase;
+        font-size: 36px;
+    }
+
+
+    .splash .kontakt_knap {
+        /*        position: absolute;*/
+
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .splash .button {
+        position: absolute;
+        top: 10vw;
+        background-color: black;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-decoration: none;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    /********************************************************************/
+
 
 }
