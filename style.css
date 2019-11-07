@@ -22,6 +22,7 @@
     position: absolute;
     top: 1vw;
     left: 26vw;
+    z-index: 1;
 
 }
 
