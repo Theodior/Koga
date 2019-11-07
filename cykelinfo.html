@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>KOGA Forside</title>
     <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://use.typekit.net/zvb6klh.css">
+    <link rel="stylesheet" href="https://use.typekit.net/zvb6klh.css">
 
 </head>
 
@@ -64,7 +64,7 @@
 
         async function getJson() {
 
-            let jsondata = await fetch("https://esauka.dk/koga/wordpress/wp-json/wp/v2/koga");
+            let jsondata = await fetch("https://esauka.dk/koga/wordpress/wp-json/wp/v2/koga?per_page=100");
 
             personer = await jsondata.json();
             visJson();
