@@ -11,12 +11,45 @@ body {
 /*******            Index.html           ******/
 
 
+<<<<<<< HEAD
+=======
+h2 {
+    font-family: futura-pt, sans-serif;
+
+    font-weight: 400;
+
+    font-style: normal;
+}
+
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    font-family: futura-pt, sans-serif;
+
+    font-weight: 400;
+
+    font-style: normal;
+}
+
+dropdown {
+    font-family: futura-pt, sans-serif;
+
+    font-weight: 400;
+
+    font-style: normal;
+}
+
+
+>>>>>>> origin/master
 header {
     grid-area: header;
     background: skyblue;
 }
 
-.splashvideo {
+.splash {
     grid-area: splash;
 
 }
@@ -37,18 +70,11 @@ footer {
         "splash"
         "indhold"
         "footer";
-    max-width: 80vw;
-    margin: auto;
 }
 
-/* Grid i velkomst  */
 
 
-/*
-    .velkomst > div {
-        padding: 3rem;
-    }
-*/
+/******************************************************************************/
 
 
 /** NAV & BURGERMENU **/
@@ -135,7 +161,6 @@ footer {
     font-size: 16px;
     border: none;
     outline: none;
-    font-family: inherit;
     line-height: 80px;
     display: flex;
 }
@@ -201,7 +226,9 @@ footer {
     #body_container .velkomst {
         display: grid;
         width: 100%;
-        /*        grid-auto-columns: 1fr;*/
+        max-width: 80vw;
+        margin: auto;
+
         grid-template-areas:
             " . vh2 . "
             " vp . vp2 "
@@ -218,14 +245,14 @@ footer {
     #body_container .velkomst .velkomst_p {
         grid-area: vp;
         background-color: red;
-        /*        grid-column: 2;*/
+
         max-width: 30rem;
     }
 
     #body_container .velkomst .velkomst_p2 {
         grid-area: vp2;
         background-color: red;
-        /*        grid-column: 4;*/
+
         max-width: 30rem;
     }
 
@@ -249,19 +276,18 @@ footer {
     #body_container .velkomst .service_p {
         grid-area: sp;
         background-color: gold;
-        /*        grid-column: 2;*/
+
     }
 
     #body_container .velkomst .service_p2 {
         grid-area: sp2;
         background-color: gold;
-        /*        grid-column: 4;*/
 
     }
 
-    #body_container .splashvideo .video {
-        display: block;
-        margin: auto;
+    #body_container .splash {
+        width: 100vw;
+
     }
 
 }
