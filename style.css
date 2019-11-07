@@ -11,8 +11,6 @@ body {
 /*******            Index.html           ******/
 
 
-<<<<<<< HEAD
-=======
 h2 {
     font-family: futura-pt, sans-serif;
 
@@ -34,6 +32,12 @@ a {
     font-style: normal;
 }
 
+div.beskrivelse {
+
+        font-family: 'Open Sans', sans-serif;
+
+}
+
 dropdown {
     font-family: futura-pt, sans-serif;
 
@@ -43,13 +47,12 @@ dropdown {
 }
 
 
->>>>>>> origin/master
 header {
     grid-area: header;
     background: skyblue;
 }
 
-.splash {
+.splashvideo {
     grid-area: splash;
 
 }
@@ -70,11 +73,18 @@ footer {
         "splash"
         "indhold"
         "footer";
+    max-width: 80vw;
+    margin: auto;
 }
 
+/* Grid i velkomst  */
 
 
-/******************************************************************************/
+/*
+    .velkomst > div {
+        padding: 3rem;
+    }
+*/
 
 
 /** NAV & BURGERMENU **/
@@ -189,6 +199,7 @@ footer {
     display: block;
 }
 
+/***********************************************************/
 
 
 @media screen and (min-width:960px) {
@@ -226,8 +237,6 @@ footer {
     #body_container .velkomst {
         display: grid;
         width: 100%;
-        max-width: 80vw;
-        margin: auto;
 
         grid-template-areas:
             " . vh2 . "
@@ -285,9 +294,6 @@ footer {
 
     }
 
-    #body_container .splash {
-        width: 100vw;
-
-    }
+    #body_container .splashvideo .video {}
 
 }
