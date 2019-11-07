@@ -2,7 +2,7 @@ body {
     padding: 0;
     margin: 0;
     border: 0;
-    vertical-align: baseline;
+
 }
 
 
@@ -30,13 +30,15 @@ footer {
     background: lightseagreen;
 }
 
-#index_container {
+#body_container {
     display: grid;
     grid-template-areas:
         "header"
         "splash"
         "indhold"
         "footer";
+    max-width: 80vw;
+    margin: auto;
 }
 
 /* Grid i velkomst  */
@@ -50,68 +52,68 @@ footer {
 
 @media screen and (min-width:700px) {
 
-    #index_container .velkomst {
+    #body_container .velkomst {
         display: grid;
         width: 100%;
-        grid-auto-columns: 1fr;
+        /*        grid-auto-columns: 1fr;*/
         grid-template-areas:
-            ". . vh2 . ."
-            ". vp . vp2 ."
-            ". img1 . img2 ."
-            ". . sh2 . ."
-            ". sp . sp2 .";
+            " . vh2 . "
+            " vp . vp2 "
+            " img1 . img2 "
+            " . sh2 . "
+            " sp . sp2 ";
     }
 
-    #index_container .velkomst .velkomst_h2 {
+    #body_container .velkomst .velkomst_h2 {
         grid-area: vh2;
         background-color: aqua;
     }
 
-    #index_container .velkomst .velkomst_p {
+    #body_container .velkomst .velkomst_p {
         grid-area: vp;
         background-color: red;
-        grid-column: 2;
+        /*        grid-column: 2;*/
         max-width: 30rem;
     }
 
-    #index_container .velkomst .velkomst_p2 {
+    #body_container .velkomst .velkomst_p2 {
         grid-area: vp2;
         background-color: red;
-        grid-column: 4;
+        /*        grid-column: 4;*/
         max-width: 30rem;
     }
 
-    #index_container .velkomst .img1 {
+    #body_container .velkomst .img1 {
         grid-area: img1;
         width: 502px;
     }
 
-    #index_container .velkomst .img2 {
+    #body_container .velkomst .img2 {
         grid-area: img2;
         width: 502px;
 
     }
 
-    #index_container .velkomst .service_h2 {
+    #body_container .velkomst .service_h2 {
         grid-area: sh2;
         background-color: fuchsia;
 
     }
 
-    #index_container .velkomst .service_p {
+    #body_container .velkomst .service_p {
         grid-area: sp;
         background-color: gold;
-        grid-column: 2;
+        /*        grid-column: 2;*/
     }
 
-    #index_container .velkomst .service_p2 {
+    #body_container .velkomst .service_p2 {
         grid-area: sp2;
         background-color: gold;
-        grid-column: 4;
+        /*        grid-column: 4;*/
 
     }
 
-    #index_container .splashvideo .video {
+    #body_container .splashvideo .video {
         display: block;
         margin: auto;
     }
