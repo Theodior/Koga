@@ -1,96 +1,134 @@
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
+<<<<<<< HEAD
+    <head>
+        <meta charset="UTF-8">
+        <title>KOGA Forside</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://use.typekit.net/zvb6klh.css">
+=======
 <head>
     <meta charset="UTF-8">
     <title>KOGA Forside</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/zvb6klh.css">
+>>>>>>> origin/master
 
-</head>
+    </head>
 
-<body>
-    <header>
-        <nav>
+    <body>
+        <style>
+            .infoCykler img {
+                width: 100vw;
+                height: 50vw;
+            }
+
+            .infoCykler p {
+                margin-left: 20px;
+                margin-right: 25px;
+
+            }
+
+            .infoCykler h2 {
+                margin-left: 5vw;
+                display: flex;
+                justify-content: center;
+            }
+
+            .infoCykler {}
+
+            @media screen and (min-width:700px) {}
+
+        </style>
+        <header>
+            <nav>
 
 
-        </nav>
-    </header>
+            </nav>
+        </header>
 
-    <main>
-        <h1 class="overskrift"></h1>
-        <section class="liste">
-        </section>
-
-
-    </main>
+        <main>
+            <h1 class="overskrift"></h1>
+            <section class="liste">
+            </section>
 
 
-    <main id="single">
-        <button class="luk">Tilbage</button>
-        <section class="indhold">
-            <article class="infoCykler">
-                <h2></h2>
-                <img src="" alt="">
-                <p class="pris">kr</p>
-                <p class="lang"></p>
-            </article>
+        </main>
 
-        </section>
 
-    </main>
+        <main id="single">
+            <button class="luk">Tilbage</button>
+            <section class="indhold">
+                <article class="infoCykler">
+                    <h2></h2>
+                    <img src="" alt="">
+                    <p class="pris">kr</p>
+                    <p class="lang"></p>
+                </article>
 
-    <footer>
-    </footer>
+            </section>
 
-    <script>
-        let urlParams = new URLSearchParams(window.location.search);
-        let navn = urlParams.get("navn");
-        let personer;
+        </main>
 
-        document.addEventListener("DOMContentLoaded", start);
-
-        function start() {
-            hentNav();
-            getJson();
-        }
-
-        async function hentNav() {
-            const response = await fetch("inc/nav.html");
-            const inclusion = await response.text();
-            document.querySelector("nav").innerHTML = inclusion;
-            console.log(inclusion);
-        }
-
-        async function getJson() {
-
+<<<<<<< HEAD
+        <footer>
+        </footer>
+=======
             let jsondata = await fetch("https://esauka.dk/koga/wordpress/wp-json/wp/v2/koga?per_page=100");
+>>>>>>> origin/master
 
-            personer = await jsondata.json();
-            visJson();
+        <script>
+            let urlParams = new URLSearchParams(window.location.search);
+            let navn = urlParams.get("navn");
+            let personer;
+
+            document.addEventListener("DOMContentLoaded", start);
+
+            function start() {
+                hentNav();
+                getJson();
+            }
+
+            async function hentNav() {
+                const response = await fetch("inc/nav.html");
+                const inclusion = await response.text();
+                document.querySelector("nav").innerHTML = inclusion;
+                console.log(inclusion);
+            }
+
+            async function getJson() {
+
+                let jsondata = await fetch("https://esauka.dk/koga/wordpress/wp-json/wp/v2/koga");
+
+                personer = await jsondata.json();
+                visJson();
 
 
-        }
+            }
 
-        function visJson() {
+            function visJson() {
 
-            personer.forEach((person) => {
+                personer.forEach((person) => {
 
-                if (person.title.rendered == navn) {
-                    document.querySelector("h2").textContent = person.navn;
+                    if (person.title.rendered == navn) {
+                        document.querySelector("h2").textContent = person.navn;
 
-                    document.querySelector("img").src = person.billede.guid;
-                    document.querySelector(".pris").textContent += person.pris;
+                        document.querySelector("img").src = person.billede.guid;
+                        document.querySelector(".pris").textContent += person.pris;
 
-                    document.querySelector(".lang").innerHTML = person.lang_tekst;
+                        document.querySelector(".lang").innerHTML = person.lang_tekst;
 
-                }
+                    }
 
+                })
+            }
+
+            document.querySelector(".luk").addEventListener("click", () => {
+                history.back();
             })
-        }
 
-        document.querySelector(".luk").addEventListener("click", () => {
-            history.back();
-        })
-    </script>
-</body></html>
+        </script>
+    </body>
+
+    </html>
