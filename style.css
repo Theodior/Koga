@@ -8,11 +8,7 @@ body {
 
 
 
-/*******            Index.html           ******/
 
-
-<<<<<<< HEAD
-=======
 h2 {
     font-family: futura-pt, sans-serif;
 
@@ -42,16 +38,24 @@ dropdown {
     font-style: normal;
 }
 
+/*******            Index.html           ******/
 
->>>>>>> origin/master
 header {
     grid-area: header;
-    background: skyblue;
+    position: absolute;
+    right: 0;
+
 }
 
 .splash {
     grid-area: splash;
 
+}
+
+
+
+.splash .button:hover {
+    opacity: 90%;
 }
 
 .velkomst {
@@ -223,6 +227,14 @@ footer {
 
 @media screen and (min-width:700px) {
 
+
+    /*******                  index.html                  ******/
+
+    header {
+        position: absolute;
+        right: 0;
+    }
+
     #body_container .velkomst {
         display: grid;
         width: 100%;
@@ -240,6 +252,10 @@ footer {
     #body_container .velkomst .velkomst_h2 {
         grid-area: vh2;
         background-color: aqua;
+        font-size: 36px;
+        min-width: 15rem;
+        font-weight: bold;
+        text-transform: uppercase;
     }
 
     #body_container .velkomst .velkomst_p {
@@ -289,5 +305,31 @@ footer {
         width: 100vw;
 
     }
+
+    .splash .slogan {
+        position: relative;
+        top: -25rem;
+        text-align: center;
+        color: #FAFAFA;
+        text-transform: uppercase;
+        font-size: 36px;
+    }
+
+
+    .splash .button {
+        position: relative;
+        right: -37.4vw;
+        top: -24rem;
+        background-color: black;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-decoration: none;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    /********************************************************************/
+
 
 }
