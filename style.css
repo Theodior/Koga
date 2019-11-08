@@ -98,7 +98,7 @@ header {
 
 footer {
     grid-area: footer;
-    background: lightseagreen;
+    background: #3fb4fd;
 }
 
 #body_container {
