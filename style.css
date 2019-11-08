@@ -275,7 +275,9 @@ footer {
 
 }
 
-@media screen and (min-width:700px) {
+/*   DESKTOP   */
+
+@media screen and (min-width:1000px) {
 
 
     /*******                  index.html                  ******/
@@ -307,8 +309,6 @@ footer {
         font-size: 36px;
         min-width: 15rem;
         font-weight: bold;
-        text-transform: uppercase;
-        padding: 2rem;
     }
 
     #body_container .velkomst .velkomst_p {
@@ -365,8 +365,6 @@ footer {
         letter-spacing: 2px;
         line-height: 1.8rem;
         padding: 2rem;
-
-
     }
 
     .splash .slogan {
@@ -398,11 +396,14 @@ footer {
     }
 
 
-
-    /********************************************************************/
-
-
 }
+
+/********************************************************************/
+
+
+/******  tablet  *****/
+
+@media screen and (min-width:1000px) {}
 
 
 /* Footer */
