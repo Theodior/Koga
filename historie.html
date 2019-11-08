@@ -10,7 +10,11 @@
     <style>
         /*******            historie.html           ******/
 
-        @media screen and (min-width:700px) {
+        /*DESKTOP*/
+
+        @media screen and (min-width:1000px) {
+
+            /*Desktop mediaquerry*/
             #historie_container header {
                 grid-area: op;
                 position: absolute;
@@ -19,9 +23,8 @@
 
             .splash_historie {
                 grid-area: splashbillede;
-                background: purple;
-                height: 520px;
-                width: 100%;
+                max-width: 100%;
+
             }
 
             .historie {
@@ -69,9 +72,9 @@
 
             #historie_container .historie .historie_h2 {
                 grid-area: Historie_h2;
-                color: white;
+
                 font-size: 36px;
-                text-shadow: 2px 2px #000000;
+
 
 
             }
@@ -95,11 +98,15 @@
             #historie_container .historie .billede1 {
                 grid-area: pic1;
                 width: 502px;
+                margin-left: 1vw;
+                margin-top: 3vw;
             }
 
             #historie_container .historie .billede2 {
                 grid-area: pic2;
                 width: 502px;
+                margin-left: 1vw;
+                margin-top: 3vw;
 
             }
 
@@ -123,14 +130,11 @@
 
             }
 
-            /*#historie_container .billede3 {
-                width: 1000px;
-                margin-bottom: 20px;
-            }*/
             #historie_container .billede3 {
                 width: 1200px;
                 height: 373px;
                 margin-bottom: 20px;
+                margin-top: 5vw;
             }
 
 
@@ -141,7 +145,6 @@
 
             #historie_container .historie_h2 {
                 position: relative;
-                top: -300px;
                 font-family: futura-pt, sans-serif;
 
             }
@@ -167,15 +170,93 @@
 
         /*Grid -DESKTOP- for historie færdig*/
 
-        /*mobile historie*/
+        /*tablet*/
+
         @media screen and (max-width:700px) {
+
+            /*Tablet mediaquerry*/
             #historie_container img {
                 width: 100%;
             }
 
             #historie_container .splashbillede {
-                height: 300px;
+                width: 100%;
             }
+
+            #historie_container .billede3 {
+                width: 100vw;
+                height: 200px;
+            }
+
+
+
+            #historie_container .historie_h2 {
+                display: flex;
+                position: relative;
+                font-size: 36px;
+
+
+                justify-content: center;
+                font-family: futura-pt, sans-serif;
+
+            }
+
+            #historie_container .historie_p {
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-bottom: 20px;
+            }
+
+            #historie_container .historie_p2 {
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-bottom: 20px;
+            }
+
+            #historie_container .timeline_h2 {
+                display: flex;
+                justify-content: center;
+                font-size: 36px;
+                font-family: futura-pt, sans-serif
+            }
+
+            #historie_container .timeline_p {
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-bottom: 20px;
+            }
+
+            #historie_container .timeline_p2 {
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-bottom: 20px;
+            }
+
+
+
+            #historie_container .billede1 {
+                width: 90%;
+                margin-left: 5vw;
+                margin-bottom: 3vw;
+            }
+
+            #historie_container .billede2 {
+                width: 90%;
+                margin-left: 5vw;
+                margin-bottom: 5vw;
+            }
+
+        }
+
+
+
+        /*mobile historie*/
+        @media screen and (min-width:700px) {
+            #historie_container img {
+                width: 100%;
+            }
+
+            #historie_container .splashbillede {}
 
             .billede3 {
                 width: 100vw;
@@ -186,11 +267,11 @@
                 display: flex;
                 position: relative;
                 font-size: 36px;
-                color: white;
-                top: -200px;
+
+
                 justify-content: center;
                 font-family: futura-pt, sans-serif;
-                text-shadow: 2px 2px #000000;
+
             }
 
             #historie_container .historie_p {
