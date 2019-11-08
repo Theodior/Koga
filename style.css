@@ -72,6 +72,7 @@ dropdown {
 }
 
 /*******            Index.html           ******/
+/*
 
 header {
     grid-area: header;
@@ -105,24 +106,129 @@ footer {
         "splash"
         "indhold"
         "footer";
+}
+*/
 
+.splash .splash_billede {
+    max-width: 30vw;
+}
+
+.splash .slogan {
+    position: relative;
+    top: -40rem;
+    text-align: center;
+    color: #FAFAFA;
+    text-transform: uppercase;
+    font-size: 36px;
+}
+
+
+.splash .kontakt_knap {
+    display: flex;
+    justify-content: center;
+
+}
+
+.splash .button {
+    position: absolute;
+    top: 25vw;
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+
+#body_container header {
+    position: absolute;
+    right: 0;
+}
+
+#body_container .velkomst {
+    display: grid;
+    width: 100%;
+    max-width: 90vw;
+    margin: auto;
+    padding: 2rem;
+    text-align: center;
+
+    grid-template-areas:
+        " vh2  "
+        " vp "
+        " img1"
+        "img2"
+        "simg "
+        " sh2  "
+        " sp ";
+}
+
+#body_container .velkomst .velkomst_h2 {
+    grid-area: vh2;
+    font-size: 36px;
+    min-width: 15rem;
+    font-weight: bold;
+}
+
+#body_container .velkomst .velkomst_p {
+    grid-area: vp;
+    position: relative;
+    left: 0;
+    max-width: 30rem;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 1.8rem;
+    padding: 2rem;
+}
+
+
+
+#body_container .velkomst .img1 {
+    grid-area: img1;
+    width: 100%;
+    padding: 1rem;
+}
+
+#body_container .velkomst .img2 {
+    grid-area: img2;
+    width: 100%;
+}
+
+#body_container .velkomst .service_img {
+    grid-area: simg;
+    width: 100%;
+
+}
+
+#body_container .velkomst .service_h2 {
+    grid-area: sh2;
+    font-size: 36px;
+    min-width: 15rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+
+
+}
+
+#body_container .velkomst .service_p {
+    grid-area: sp;
+    left: 0;
+    max-width: 30rem;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 1.8rem;
+    padding-bottom: 2rem;
 }
 
 
 
 
 
-
-
-/* Grid i velkomst  */
-
-
-/*
-    .velkomst > div {
-        padding: 3rem;
-    }
-*/
-
+/**********************************************************************/
 
 /** NAV & BURGERMENU **/
 
@@ -153,8 +259,6 @@ footer {
     width: 100vw;
     height: 80vw;
     z-index: 2;
-
-
 }
 
 
@@ -263,17 +367,15 @@ footer {
 
 }
 
-@media only screen and (max-width: 700px) {
-    .topnav {
-        display: none;
-    }
-
-    #body_container .splash_billede img {
-        width: 100vw;
-    }
 
 
+
+#body_container .splash_billede {
+    width: 100vw;
+    height: 100vh;
 }
+
+
 
 /*   DESKTOP   */
 
@@ -281,6 +383,38 @@ footer {
 
 
     /*******                  index.html                  ******/
+
+    #body_container .splash_billede {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .splash .slogan {
+        position: relative;
+        top: -25rem;
+        text-align: center;
+        color: #FAFAFA;
+        text-transform: uppercase;
+        font-size: 36px;
+    }
+
+
+    .splash .kontakt_knap {
+        display: flex;
+        justify-content: center;
+    }
+
+    .splash .button {
+        position: absolute;
+        top: 25vw;
+        background-color: black;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-decoration: none;
+        font-size: 16px;
+        cursor: pointer;
+    }
 
     #body_container header {
         position: absolute;
@@ -366,36 +500,6 @@ footer {
         line-height: 1.8rem;
         padding: 2rem;
     }
-
-    .splash .slogan {
-        position: relative;
-        top: -25rem;
-        text-align: center;
-        color: #FAFAFA;
-        text-transform: uppercase;
-        font-size: 36px;
-    }
-
-
-    .splash .kontakt_knap {
-        display: flex;
-        justify-content: center;
-
-    }
-
-    .splash .button {
-        position: absolute;
-        top: 25vw;
-        background-color: black;
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-decoration: none;
-        font-size: 16px;
-        cursor: pointer;
-    }
-
-
 }
 
 /********************************************************************/
