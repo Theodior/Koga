@@ -1,3 +1,4 @@
+/*
 .hjul {
     animation-name: rotation_kf;
     animation-duration: 4s;
@@ -32,10 +33,8 @@
     height: 50vw;
     background-size: 100%;
     cursor: pointer;
-
-
 }
-
+*/
 
 
 body {
@@ -43,8 +42,6 @@ body {
     margin: 0;
     border: 0;
 }
-
-
 
 
 h2 {
@@ -287,15 +284,17 @@ footer {
     #body_container .velkomst {
         display: grid;
         width: 100%;
-        max-width: 90vw;
+        max-width: 80vw;
         margin: auto;
+        padding: 2rem;
 
         grid-template-areas:
             " . vh2 . "
-            " vp . vp2 "
+            " vp vp vp "
             " img1 . img2 "
+            "simg simg simg"
             " . sh2 . "
-            " sp . sp2 ";
+            " sp sp sp ";
     }
 
     #body_container .velkomst .velkomst_h2 {
@@ -305,49 +304,66 @@ footer {
         min-width: 15rem;
         font-weight: bold;
         text-transform: uppercase;
+        padding: 2rem;
     }
 
     #body_container .velkomst .velkomst_p {
         grid-area: vp;
-        background-color: red;
+        position: relative;
+        left: 21vw;
         max-width: 30rem;
+        text-align: center;
+        letter-spacing: 2px;
+        line-height: 1.8rem;
+        padding: 2rem;
     }
 
-    #body_container .velkomst .velkomst_p2 {
-        grid-area: vp2;
-        background-color: red;
-        max-width: 30rem;
-    }
+
 
     #body_container .velkomst .img1 {
         grid-area: img1;
-        width: 502px;
+        width: 100%;
+
     }
 
     #body_container .velkomst .img2 {
         grid-area: img2;
-        width: 502px;
+        width: 100%;
 
+
+    }
+
+    #body_container .velkomst .service_img {
+        grid-area: simg;
+        width: 100%;
+        position: relative;
     }
 
     #body_container .velkomst .service_h2 {
         grid-area: sh2;
         background-color: fuchsia;
+        font-size: 36px;
+        min-width: 15rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 2rem;
 
     }
 
     #body_container .velkomst .service_p {
         grid-area: sp;
         background-color: gold;
+        position: relative;
+        left: 22vw;
+        max-width: 30rem;
+        text-align: center;
+        letter-spacing: 2px;
+        line-height: 1.8rem;
+        padding: 2rem;
+
 
     }
-
-    #body_container .velkomst .service_p2 {
-        grid-area: sp2;
-        background-color: gold;
-
-    }
-
 
     .splash .slogan {
         position: relative;
@@ -383,21 +399,6 @@ footer {
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Footer */
