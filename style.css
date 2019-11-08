@@ -95,7 +95,7 @@ header {
 
 footer {
     grid-area: footer;
-    background: lightseagreen;
+    background: #3fb4fd;
 }
 
 #body_container {
@@ -148,10 +148,15 @@ footer {
     padding-top: 50px;
     position: relative;
     list-style-type: none;
-    background-color: #1B84C5;
+    background-color: black;
+    opacity: 80%;
     width: 100vw;
+    height: 80vw;
+    z-index: 2;
+
 
 }
+
 
 #menu a {
     display: flex;
@@ -167,7 +172,6 @@ footer {
 #menu a:hover {
     transform: scale(1.2);
 }
-
 
 
 .topnav a {
