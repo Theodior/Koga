@@ -74,13 +74,13 @@ dropdown {
 /*******            Index.html           ******/
 
 
-.splash .splash_billede {
-    max-width: 30vw;
+#body_container .splash .splash_billede {
+    background-color: aqua;
+    width: auto;
 }
 
-.splash .slogan {
-    position: relative;
-    top: -40rem;
+#body_container .splash .slogan {
+
     text-align: center;
     color: #FAFAFA;
     text-transform: uppercase;
@@ -88,13 +88,13 @@ dropdown {
 }
 
 
-.splash .kontakt_knap {
+#body_container .splash .kontakt_knap {
     display: flex;
     justify-content: center;
 
 }
 
-.splash .button {
+#body_container .splash .button {
     position: absolute;
     top: 25vw;
     background-color: black;
@@ -120,7 +120,6 @@ dropdown {
     margin: auto;
     padding: 2rem;
     text-align: center;
-
     grid-template-areas:
         " vh2  "
         " vp "
@@ -141,7 +140,6 @@ dropdown {
 #body_container .velkomst .velkomst_p {
     grid-area: vp;
     position: relative;
-    left: 0;
     max-width: 30rem;
     text-align: center;
     letter-spacing: 2px;
@@ -184,7 +182,6 @@ dropdown {
 
 #body_container .velkomst .service_p {
     grid-area: sp;
-    left: 0;
     max-width: 30rem;
     text-align: center;
     letter-spacing: 2px;
@@ -352,6 +349,7 @@ dropdown {
 
 }
 
+<<<<<<< HEAD
 
 
 
@@ -364,6 +362,8 @@ dropdown {
 
 
 
+=======
+>>>>>>> origin/master
 /*   DESKTOP   */
 
 @media screen and (min-width:1000px) {
@@ -371,14 +371,9 @@ dropdown {
 
     /*******                  index.html                  ******/
 
-    #body_container .splash_billede {
-        width: 100vw;
-        height: 100vh;
-    }
 
-    .splash .slogan {
-        position: relative;
-        top: -25rem;
+
+    #body_container .splash .slogan {
         text-align: center;
         color: #FAFAFA;
         text-transform: uppercase;
@@ -386,12 +381,12 @@ dropdown {
     }
 
 
-    .splash .kontakt_knap {
+    #body_container .splash .kontakt_knap {
         display: flex;
         justify-content: center;
     }
 
-    .splash .button {
+    #body_container .splash .button {
         position: absolute;
         top: 25vw;
         background-color: black;
@@ -414,7 +409,6 @@ dropdown {
         max-width: 80vw;
         margin: auto;
         padding: 2rem;
-
         grid-template-areas:
             " . vh2 . "
             " vp vp vp "
@@ -447,13 +441,12 @@ dropdown {
 
     #body_container .velkomst .img1 {
         grid-area: img1;
-        width: 100%;
-
+        height: 40vw;
     }
 
     #body_container .velkomst .img2 {
         grid-area: img2;
-        width: 100%;
+        height: 40vw;
 
 
     }
@@ -494,16 +487,13 @@ dropdown {
 
 /******  tablet  *****/
 
-@media screen and (min-width:1000px) {
+@media screen and (min-width:768px) {
 
 
-    .splash .splash_billede {
-        max-width: 30vw;
-    }
 
-    .splash .slogan {
-        position: relative;
-        top: -40rem;
+
+    #body_container .splash .slogan {
+
         text-align: center;
         color: #FAFAFA;
         text-transform: uppercase;
@@ -511,13 +501,13 @@ dropdown {
     }
 
 
-    .splash .kontakt_knap {
+    #body_container .splash .kontakt_knap {
         display: flex;
         justify-content: center;
 
     }
 
-    .splash .button {
+    #body_container .splash .button {
         position: absolute;
         top: 25vw;
         background-color: black;
@@ -545,13 +535,12 @@ dropdown {
         text-align: center;
 
         grid-template-areas:
-            " vh2  "
-            " vp "
-            " img1"
-            "img2"
-            "simg "
-            " sh2  "
-            " sp ";
+            " vh2 vh2  "
+            " vp vp "
+            " img1 img2"
+            " simg simg "
+            " sh2 sh2 "
+            " sp sp ";
     }
 
     #body_container .velkomst .velkomst_h2 {
@@ -591,7 +580,6 @@ dropdown {
         grid-area: simg;
         width: 100%;
         margin-top: 20px;
-
     }
 
     #body_container .velkomst .service_h2 {
@@ -601,8 +589,6 @@ dropdown {
         font-weight: bold;
         text-transform: uppercase;
         text-align: center;
-
-
     }
 
     #body_container .velkomst .service_p {
@@ -614,10 +600,6 @@ dropdown {
         line-height: 1.8rem;
         padding-bottom: 2rem;
     }
-
-
-
-
 }
 
 /************************* MQ-TABLET  *********************************/
