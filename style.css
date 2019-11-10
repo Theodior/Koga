@@ -453,10 +453,6 @@ header {
     }
 */
 
-    #body_container header {
-        position: absolute;
-        right: 0;
-    }
 
     #body_container .velkomst {
         display: grid;
