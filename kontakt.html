@@ -6,7 +6,147 @@
     <title>Kontakt</title>
 
     <style>
-        @media screen and (min-width:700px) {
+        header {
+            grid-area: header;
+        }
+
+        .kontakt {
+            grid-area: indhold;
+            margin-left: 4vw;
+
+        }
+
+
+
+        footer {
+            grid-area: footer;
+
+        }
+
+
+        #kontakt_container {
+            display: grid;
+            grid-template-areas:
+                "header"
+                "indhold"
+                "footer";
+        }
+
+        #kontakt_container .kontakt {
+            padding-top: 5vh;
+            display: grid;
+            width: 100%;
+            max-width: 90vw;
+
+            grid-template-areas:
+                " kh2 "
+                " map "
+                " k_p "
+                " kp1 "
+                " kp2 "
+                " sh2 "
+                " some "
+                " oh2 "
+                " hp "
+                " vp ";
+
+        }
+
+
+        #kontakt_container .kontakt .kontakt_h2 {
+            grid-area: kh2;
+            text-align: center;
+            font-size: 3rem;
+        }
+
+        #kontakt_container .kontakt .kontakt_p1 {
+            grid-area: kp1;
+
+
+
+        }
+
+        #kontakt_container .kontakt .kontakt_p2 {
+            grid-area: kp2;
+
+
+
+        }
+
+        #kontakt_container .kontakt .map {
+            grid-area: map;
+        }
+
+
+
+        #kontakt_container .kontakt .karta_p {
+            grid-area: k_p;
+
+        }
+
+        #kontakt_container .kontakt .social_h2 {
+            grid-area: sh2;
+            text-align: center;
+            font-size: 3rem;
+
+
+        }
+
+
+        #kontakt_container .kontakt .img1 {
+            grid-area: img1;
+            width: 100px;
+            height: 100px;
+        }
+
+        #kontakt_container .kontakt .img2 {
+            grid-area: img2;
+            width: 100px;
+            height: 100px;
+        }
+
+        #kontakt_container .kontakt .img3 {
+            grid-area: img3;
+            width: 100px;
+            height: 100px;
+        }
+
+        #kontakt_container .kontakt .some {
+            grid-area: some;
+            display: flex;
+            justify-content: center;
+            max-width: 95vw;
+
+
+
+        }
+
+        #kontakt_container .kontakt .open_h2 {
+            grid-area: oh2;
+            text-align: center;
+            font-size: 2rem;
+            padding-top: 7vh;
+
+
+        }
+
+        #kontakt_container .kontakt .vardag_p {
+            grid-area: vp;
+            text-align: center;
+
+        }
+
+        #kontakt_container .kontakt .helg_p {
+            grid-area: hp;
+            text-align: center;
+
+        }
+
+
+
+
+
+        @media screen and (min-width:1000px) {
             header {
                 grid-area: header;
             }
@@ -139,7 +279,6 @@
 
 
         }
-
     </style>
 
     <link rel="stylesheet" href="style.css">
@@ -150,7 +289,35 @@
 <body id="kontakt_container">
     <header>
         <nav>
+            <div class="topnav">
+                <!--    <img class="logo" src="">-->
+                <nav class="knapper">
 
+                    <a href="historie.html">Historie om KOGA</a>
+                    <a href="kontakt.html">Kontakt</a>
+                    <div class="dropdown">
+                        <a class="dropbutton" href="cykler.html">Cykler</a>
+                        <div class="dropdown-content">
+                            <a href="">CITYBIKE</a>
+                            <a href="">EL-CYKEL</a>
+                            <a href="">TREKKING</a>
+                            <a href="">RACERCYKEL</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="burgermenu">
+                <nav>
+                    <div id="menuknap">☰</div>
+                    <ul id="menu" class="hidden animationtest">
+                        <li>
+                            <a href="historie.html">Historie om KOGA</a>
+                            <a href="cykler.html">Cykler</a>
+                            <a href="kontakt.html">Kontakt</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
 
         </nav>
     </header>
@@ -196,9 +363,31 @@
     <footer>
 
     </footer>
+    <script>
+        window.addEventListener("load", animer);
 
-    <script src="script.js"></script>
 
-</body>
 
-</html>
+        function animer() {
+            document.querySelector("#menuknap").addEventListener("click", toggleMenu);
+            hentFooter();
+
+        }
+
+
+        function toggleMenu() {
+            console.log("toggleMenu");
+
+            document.querySelector("#menu").classList.toggle("hidden");
+
+            let erSkjult = document.querySelector("#menu").classList.contains("hidden");
+            if (erSkjult == true) {
+                document.querySelector("#menuknap").textContent = "☰";
+            } else {
+                document.querySelector("#menuknap").textContent = "✕";
+            }
+        }
+    </script>
+    <!--    <script src="script.js"></script>-->
+
+</body></html>

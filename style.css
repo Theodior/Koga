@@ -73,56 +73,130 @@ dropdown {
 
 /*******            Index.html           ******/
 
-header {
-    grid-area: header;
+
+.splash .splash_billede {
+    max-width: 30vw;
+}
+
+.splash .slogan {
+    position: relative;
+    top: -40rem;
+    text-align: center;
+    color: #FAFAFA;
+    text-transform: uppercase;
+    font-size: 36px;
+}
+
+
+.splash .kontakt_knap {
+    display: flex;
+    justify-content: center;
+
+}
+
+.splash .button {
+    position: absolute;
+    top: 25vw;
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+
+#body_container header {
     position: absolute;
     right: 0;
-
 }
 
-.splashvideo {
-    grid-area: splash;
-
-}
-
-.splash .button:hover {
-    opacity: 90%;
-}
-
-.velkomst {
-    grid-area: indhold;
-}
-
-footer {
-    grid-area: footer;
-    background: #3fb4fd;
-}
-
-#body_container {
+#body_container .velkomst {
     display: grid;
-    grid-template-areas:
-        "header"
-        "splash"
-        "indhold"
-        "footer";
+    width: 100%;
+    max-width: 90vw;
+    margin: auto;
+    padding: 2rem;
+    text-align: center;
 
+    grid-template-areas:
+        " vh2  "
+        " vp "
+        " img1"
+        "img2"
+        "simg "
+        " sh2  "
+        " sp ";
+}
+
+#body_container .velkomst .velkomst_h2 {
+    grid-area: vh2;
+    font-size: 36px;
+    min-width: 15rem;
+    font-weight: bold;
+}
+
+#body_container .velkomst .velkomst_p {
+    grid-area: vp;
+    position: relative;
+    left: 0;
+    max-width: 30rem;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 1.8rem;
+    padding: 2rem;
+}
+
+
+
+#body_container .velkomst .img1 {
+    grid-area: img1;
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+
+#body_container .velkomst .img2 {
+    grid-area: img2;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#body_container .velkomst .service_img {
+    grid-area: simg;
+    width: 100%;
+    margin-top: 20px;
+
+}
+
+#body_container .velkomst .service_h2 {
+    grid-area: sh2;
+    font-size: 36px;
+    min-width: 15rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+
+
+}
+
+#body_container .velkomst .service_p {
+    grid-area: sp;
+    left: 0;
+    max-width: 30rem;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 1.8rem;
+    padding-bottom: 2rem;
 }
 
 
 
 
 
-
-
-/* Grid i velkomst  */
-
-
-/*
-    .velkomst > div {
-        padding: 3rem;
-    }
-*/
-
+/**********************************************************************/
 
 /** NAV & BURGERMENU **/
 
@@ -141,6 +215,9 @@ footer {
     font-size: 1.5em;
     cursor: pointer;
     color: black;
+    position: absolute;
+    top: 4vw;
+    right: 1vw;
 
 }
 
@@ -153,8 +230,6 @@ footer {
     width: 100vw;
     height: 80vw;
     z-index: 2;
-
-
 }
 
 
@@ -220,7 +295,7 @@ footer {
     position: absolute;
     background-color: white;
     z-index: 1;
-    padding: 0;
+    padding: 0.5rem;
 }
 
 .dropdown-content a {
@@ -231,7 +306,6 @@ footer {
     color: black;
     text-align: left;
     font-size: 1rem;
-    background-color: #1B84C5;
     line-height: 40px;
 }
 
@@ -241,11 +315,26 @@ footer {
 
 /***********************************************************/
 
-
-@media screen and (min-width:960px) {
+@media screen and (min-width:600px) {
     #menuknap {
         display: none;
     }
+}
+
+
+@media screen and (max-width:600px) {
+    .topnav {
+        display: none;
+    }
+}
+
+
+
+
+
+
+@media screen and (min-width:960px) {
+
 
     #menu.hidden {
         transform: translateX(0);
@@ -263,17 +352,17 @@ footer {
 
 }
 
-@media only screen and (max-width: 700px) {
-    .topnav {
-        display: none;
-    }
-
-    #body_container .splash_billede img {
-        width: 100vw;
-    }
 
 
+
+
+
+#body_container .splash_billede {
+    width: 100vw;
+    height: 100vh;
 }
+
+
 
 /*   DESKTOP   */
 
@@ -281,6 +370,38 @@ footer {
 
 
     /*******                  index.html                  ******/
+
+    #body_container .splash_billede {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .splash .slogan {
+        position: relative;
+        top: -25rem;
+        text-align: center;
+        color: #FAFAFA;
+        text-transform: uppercase;
+        font-size: 36px;
+    }
+
+
+    .splash .kontakt_knap {
+        display: flex;
+        justify-content: center;
+    }
+
+    .splash .button {
+        position: absolute;
+        top: 25vw;
+        background-color: black;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-decoration: none;
+        font-size: 16px;
+        cursor: pointer;
+    }
 
     #body_container header {
         position: absolute;
@@ -345,7 +466,6 @@ footer {
 
     #body_container .velkomst .service_h2 {
         grid-area: sh2;
-        background-color: fuchsia;
         font-size: 36px;
         min-width: 15rem;
         font-weight: bold;
@@ -357,7 +477,6 @@ footer {
 
     #body_container .velkomst .service_p {
         grid-area: sp;
-        background-color: gold;
         position: relative;
         left: 22vw;
         max-width: 30rem;
@@ -366,10 +485,25 @@ footer {
         line-height: 1.8rem;
         padding: 2rem;
     }
+}
+
+/**********************************************************/
+
+/************************* MQ-DESKTOP *********************************/
+
+
+/******  tablet  *****/
+
+@media screen and (min-width:1000px) {
+
+
+    .splash .splash_billede {
+        max-width: 30vw;
+    }
 
     .splash .slogan {
         position: relative;
-        top: -25rem;
+        top: -40rem;
         text-align: center;
         color: #FAFAFA;
         text-transform: uppercase;
@@ -396,15 +530,97 @@ footer {
     }
 
 
+
+    #body_container header {
+        position: absolute;
+        right: 0;
+    }
+
+    #body_container .velkomst {
+        display: grid;
+        width: 100%;
+        max-width: 90vw;
+        margin: auto;
+        padding: 2rem;
+        text-align: center;
+
+        grid-template-areas:
+            " vh2  "
+            " vp "
+            " img1"
+            "img2"
+            "simg "
+            " sh2  "
+            " sp ";
+    }
+
+    #body_container .velkomst .velkomst_h2 {
+        grid-area: vh2;
+        font-size: 36px;
+        min-width: 15rem;
+        font-weight: bold;
+    }
+
+    #body_container .velkomst .velkomst_p {
+        grid-area: vp;
+        position: relative;
+        left: 0;
+        max-width: 30rem;
+        text-align: center;
+        letter-spacing: 2px;
+        line-height: 1.8rem;
+        padding: 2rem;
+    }
+
+
+
+    #body_container .velkomst .img1 {
+        grid-area: img1;
+        width: 100%;
+        margin-bottom: 20px;
+
+    }
+
+    #body_container .velkomst .img2 {
+        grid-area: img2;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #body_container .velkomst .service_img {
+        grid-area: simg;
+        width: 100%;
+        margin-top: 20px;
+
+    }
+
+    #body_container .velkomst .service_h2 {
+        grid-area: sh2;
+        font-size: 36px;
+        min-width: 15rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+
+
+    }
+
+    #body_container .velkomst .service_p {
+        grid-area: sp;
+        left: 0;
+        max-width: 30rem;
+        text-align: center;
+        letter-spacing: 2px;
+        line-height: 1.8rem;
+        padding-bottom: 2rem;
+    }
+
+
+
+
 }
 
-/********************************************************************/
-
-
-/******  tablet  *****/
-
-@media screen and (min-width:1000px) {}
-
+/************************* MQ-TABLET  *********************************/
 
 /* Footer */
 
@@ -412,6 +628,7 @@ footer {
     border-top: 2px solid #1b5728;
     /*    background-color: #1b5728;*/
     color: #191E26;
+    background-image: url(img/bgFooter.gif);
 }
 
 
@@ -449,4 +666,4 @@ footer .right {
     text-align: right;
 }
 
-/************************************************************************/
+/*************************** FOOTER ************************************/
