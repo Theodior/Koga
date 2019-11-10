@@ -280,6 +280,9 @@ html {
     font-size: 1.5em;
     cursor: pointer;
     color: black;
+    position: absolute;
+    top: 4vw;
+    right: 1vw;
 
 }
 
@@ -357,7 +360,7 @@ html {
     position: absolute;
     background-color: white;
     z-index: 1;
-    padding: 0;
+    padding: 0.5rem;
 }
 
 .dropdown-content a {
@@ -368,7 +371,6 @@ html {
     color: black;
     text-align: left;
     font-size: 1rem;
-    background-color: #1B84C5;
     line-height: 40px;
 }
 
@@ -378,11 +380,26 @@ html {
 
 /***********************************************************/
 
-
-@media screen and (min-width:960px) {
+@media screen and (min-width:600px) {
     #menuknap {
         display: none;
     }
+}
+
+
+@media screen and (max-width:600px) {
+    .topnav {
+        display: none;
+    }
+}
+
+
+
+
+
+
+@media screen and (min-width:960px) {
+
 
     #menu.hidden {
         transform: translateX(0);
@@ -400,6 +417,21 @@ html {
 
 }
 
+<<<<<<< HEAD
+
+
+
+
+
+#body_container .splash_billede {
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+=======
+>>>>>>> origin/master
 /*   DESKTOP   */
 
 @media screen and (min-width:1000px) {
@@ -648,6 +680,7 @@ footer {
     border-top: 2px solid #1b5728;
     /*    background-color: #1b5728;*/
     color: #191E26;
+    background-image: url(img/bgFooter.gif);
 }
 
 

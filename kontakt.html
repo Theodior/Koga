@@ -279,7 +279,6 @@
 
 
         }
-
     </style>
 
     <link rel="stylesheet" href="style.css">
@@ -290,7 +289,35 @@
 <body id="kontakt_container">
     <header>
         <nav>
+            <div class="topnav">
+                <!--    <img class="logo" src="">-->
+                <nav class="knapper">
 
+                    <a href="historie.html">Historie om KOGA</a>
+                    <a href="kontakt.html">Kontakt</a>
+                    <div class="dropdown">
+                        <a class="dropbutton" href="cykler.html">Cykler</a>
+                        <div class="dropdown-content">
+                            <a href="">CITYBIKE</a>
+                            <a href="">EL-CYKEL</a>
+                            <a href="">TREKKING</a>
+                            <a href="">RACERCYKEL</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="burgermenu">
+                <nav>
+                    <div id="menuknap">☰</div>
+                    <ul id="menu" class="hidden animationtest">
+                        <li>
+                            <a href="historie.html">Historie om KOGA</a>
+                            <a href="cykler.html">Cykler</a>
+                            <a href="kontakt.html">Kontakt</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
 
         </nav>
     </header>
@@ -336,9 +363,31 @@
     <footer>
 
     </footer>
+    <script>
+        window.addEventListener("load", animer);
 
-    <script src="script.js"></script>
 
-</body>
 
-</html>
+        function animer() {
+            document.querySelector("#menuknap").addEventListener("click", toggleMenu);
+            hentFooter();
+
+        }
+
+
+        function toggleMenu() {
+            console.log("toggleMenu");
+
+            document.querySelector("#menu").classList.toggle("hidden");
+
+            let erSkjult = document.querySelector("#menu").classList.contains("hidden");
+            if (erSkjult == true) {
+                document.querySelector("#menuknap").textContent = "☰";
+            } else {
+                document.querySelector("#menuknap").textContent = "✕";
+            }
+        }
+    </script>
+    <!--    <script src="script.js"></script>-->
+
+</body></html>

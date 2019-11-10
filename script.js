@@ -6,17 +6,18 @@
         document.addEventListener("DOMContentLoaded", start);
 
         function start() {
-            hentNav();
+            //            hentNav();
             hentFooter();
             hentJson();
+            animer();
         }
 
-        async function hentNav() {
-            const response = await fetch("inc/nav.html");
-            const inclusion = await response.text();
-            document.querySelector("nav").innerHTML = inclusion;
-            console.log(inclusion);
-        }
+        //        async function hentNav() {
+        //            const response = await fetch("inc/nav.html");
+        //            const inclusion = await response.text();
+        //            document.querySelector("nav").innerHTML = inclusion;
+        //            console.log(inclusion);
+        //        }
 
         async function hentFooter() {
             const response = await fetch("inc/footer.html");
@@ -67,4 +68,24 @@
 
         function lukSingle() {
             document.querySelector("#single").style.display = "none";
+        }
+
+
+        function animer() {
+            document.querySelector("#menuknap").addEventListener("click", toggleMenu);
+
+        }
+
+
+        function toggleMenu() {
+            console.log("toggleMenu");
+
+            document.querySelector("#menu").classList.toggle("hidden");
+
+            let erSkjult = document.querySelector("#menu").classList.contains("hidden");
+            if (erSkjult == true) {
+                document.querySelector("#menuknap").textContent = "☰";
+            } else {
+                document.querySelector("#menuknap").textContent = "✕";
+            }
         }

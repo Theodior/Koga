@@ -41,8 +41,9 @@
 
             footer {
                 grid-area: footer;
-                background: #0176DB;
             }
+
+
 
             #historie_container {
                 display: grid;
@@ -168,6 +169,8 @@
 
         }
 
+
+
         /*Grid -DESKTOP- for historie færdig*/
 
         /*tablet*/
@@ -178,6 +181,8 @@
             #historie_container img {
                 width: 100%;
             }
+
+
 
             #historie_container .splashbillede {
                 width: 100%;
@@ -429,10 +434,15 @@
 
         function animer() {
             document.querySelector("#menuknap").addEventListener("click", toggleMenu);
-            document.querySelector("#menuknap").addEventListener("click", () => {
-                document.querySelector("menu").classList.toggle("animationtest");
-            });
+            hentFooter();
 
+        }
+
+        async function hentFooter() {
+            const response = await fetch("inc/footer.html");
+            const inclusion = await response.text();
+            document.querySelector("footer").innerHTML = inclusion;
+            console.log(inclusion);
         }
 
         function toggleMenu() {
