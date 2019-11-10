@@ -48,7 +48,39 @@
             }
 
 
-            @media screen and (min-width:700px) {}
+            @media screen and (min-width:850px) {
+
+                .gridsingle {
+                    display: grid;
+                    grid-template-columns: 62vw 28vw;
+                    grid-template-rows: 10vw 30vw 15vw;
+                    margin-left: 5vw;
+                    margin-right: 5vw;
+
+                }
+
+                .infoCykler img {
+                    width: 55vw;
+                    height: 40vw;
+                    margin-left: 5vw;
+
+
+
+                }
+
+                p.lang {
+                    grid-row: 3;
+                    grid-column: 1/ span 3;
+                }
+
+                p.pris {
+                    grid-row: 2;
+                    grid-column: 2;
+                    margin: 0;
+                }
+
+
+            }
 
         </style>
         <header>
@@ -71,10 +103,13 @@
             <button class="luk">Tilbage</button>
             <section class="indhold">
                 <article class="infoCykler">
+
                     <h2></h2>
-                    <img src="" alt="">
-                    <p class="lang"></p>
-                    <p class="pris">kr</p>
+                    <div class="gridsingle">
+                        <img src="" alt="">
+                        <p class="lang"></p>
+                        <p class="pris">kr</p>
+                    </div>
 
                 </article>
 
