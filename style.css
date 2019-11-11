@@ -244,6 +244,7 @@ header {
     position: absolute;
     top: 4vw;
     right: 1vw;
+    z-index: 3;
 
 }
 
@@ -256,6 +257,7 @@ header {
     width: 100vw;
     height: 80vw;
     z-index: 2;
+    margin: 0px;
 }
 
 
@@ -584,7 +586,7 @@ header {
 footer {
     border-top: 2px solid #1b5728;
     /*    background-color: #1b5728;*/
-    color: #191E26;
+    color: #fff;
     background-image: url(img/bgFooter.gif);
 }
 
