@@ -3,233 +3,296 @@
 
 
     <head>
-    <meta charset="UTF-8">
-    <title>KOGA Forside</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.typekit.net/zvb6klh.css">
+        <meta charset="UTF-8">
+        <title>KOGA Forside</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://use.typekit.net/zvb6klh.css">
 
-</head>
+    </head>
 
-<body>
-    <style>
-        .infoCykler img {
-            width: 80vw;
-            height: 50vw;
-            margin-left: 10vw;
-            margin-right: 10vw;
-        }
-
-        .infoCykler p {
-            margin-left: 20px;
-            margin-right: 25px;
-
-        }
-
-        .infoCykler h2 {
-            margin-left: 5vw;
-            display: flex;
-            justify-content: center;
-        }
-
-        .infoCykler {}
-
-        p.lang,
-        p.pris {
-            margin-left: 10vw;
-            margin-right: 10vw;
-        }
-
-        button.luk {
-            margin-left: 2vw;
-        }
-
-        div#menuknap {
-            margin-right: 2vw;
-        }
-
-
-        @media screen and (min-width:850px) {
-
-            .gridsingle {
-                display: grid;
-                grid-template-columns: 62vw 28vw;
-                grid-template-rows: 10vw 20vw 15vw;
-                margin-left: 5vw;
-                margin-right: 5vw;
-
+    <body>
+        <style>
+            nav {
+                border-bottom: 4px solid black;
+                ;
+                margin-bottom: 0vw;
             }
+
+            nav.knapper {
+                border-bottom: inherit;
+            }
+
+
+
 
             .infoCykler img {
-                width: 50vw;
-                height: 30vw;
+                width: 80vw;
+                height: 50vw;
+                margin-left: 10vw;
+                margin-right: 10vw;
+            }
+
+            .infoCykler p {
+                margin-left: 20px;
+                margin-right: 25px;
+
+            }
+
+            .luk {
+
+                background-color: dodgerblue;
+                /* Green */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                cursor: pointer;
+                margin-left: 3vw;
+                margin-top: 12vw;
+
+
+            }
+
+            .infoCykler h2 {
                 margin-left: 5vw;
-
-
-
+                display: flex;
+                justify-content: center;
             }
 
-            p.lang {
-                grid-row: 3;
-                grid-column: 1/ span 3;
-            }
+            .infoCykler {}
 
+            p.lang,
             p.pris {
-                grid-row: 2;
-                grid-column: 2;
-                margin: 0;
+                margin-left: 10vw;
+                margin-right: 10vw;
             }
 
 
-        }
-    </style>
-    <header>
-        <nav>
-            <img class="logo" src="img/koga-logo_blue.png" onclick="window.location.href='index.html'" alt="koga logo">
 
-            <div class="topnav">
-                <nav class="knapper">
-
-                    <a href="historie.html">Historie om KOGA</a>
-                    <a href="kontakt.html">Kontakt</a>
-                    <div class="dropdown">
-                        <a class="dropbutton" href="cykler.html">Cykler</a>
-                        <div class="dropdown-content">
-                            <a href="">CITYBIKE</a>
-                            <a href="">EL-CYKEL</a>
-                            <a href="">TREKKING</a>
-                            <a href="">RACERCYKEL</a>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-            <div class="burgermenu">
-                <nav>
-                    <div id="menuknap">☰</div>
-                    <ul id="menu" class="hidden animationtest">
-                        <li>
-                            <a href="historie.html">Historie om KOGA</a>
-                            <a href="cykler.html">Cykler</a>
-                            <a href="kontakt.html">Kontakt</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+            div#menuknap {
+                margin-right: 2vw;
+            }
 
 
-        </nav>
-    </header>
+            @media screen and (min-width:600px) {
 
-    <main>
-        <h1 class="overskrift"></h1>
-        <section class="liste">
-        </section>
+                .luk {
+                    margin-top: 2vw;
+                }
 
+                @media screen and (min-width:800px) {
 
-    </main>
-
-
-    <main id="single">
-        <button class="luk">Tilbage</button>
-        <section class="indhold">
-            <article class="infoCykler">
-
-                <h2></h2>
-                <div class="gridsingle">
-                    <img class="billede" src="" alt="">
-                    <p class="lang"></p>
-                    <p class="pris">kr</p>
-                </div>
-
-            </article>
-
-        </section>
-
-    </main>
-
-    <footer>
-    </footer>
+                    .luk {
+                        margin-top: 1vw;
+                    }
 
 
-    <script>
-        let urlParams = new URLSearchParams(window.location.search);
-        let navn = urlParams.get("navn");
-        let personer;
-
-        document.addEventListener("DOMContentLoaded", start);
-
-        function start() {
-            //            hentNav();
-            getJson();
-            animer();
-        }
-
-        //        async function hentNav() {
-        //            const response = await fetch("inc/nav.html");
-        //            const inclusion = await response.text();
-        //            document.querySelector("nav").innerHTML = inclusion;
-        //            console.log(inclusion);
-        //        }
-
-        async function getJson() {
-
-            let jsondata = await fetch("https://esauka.dk/koga/wordpress/wp-json/wp/v2/koga?per_page=100");
-
-            personer = await jsondata.json();
-            visJson();
 
 
-        }
-
-        function visJson() {
-
-            personer.forEach((person) => {
-
-                if (person.title.rendered == navn) {
-                    document.querySelector("h2").textContent = person.navn;
-
-                    document.querySelector(".billede").src = person.billede.guid;
-                    document.querySelector(".pris").textContent += person.pris;
-
-                    document.querySelector(".lang").innerHTML = person.lang_tekst;
 
                 }
 
-            })
-        }
+                @media screen and (min-width:1160px) {
 
-        document.querySelector(".luk").addEventListener("click", () => {
-            history.back();
-        })
+                    .gridsingle {
+                        display: grid;
+                        grid-template-columns: 62vw 28vw;
+                        grid-template-rows: 5vw 16vw 13vw;
+                        margin-left: 5vw;
+                        margin-right: 5vw;
 
-        function animer() {
-            document.querySelector("#menuknap").addEventListener("click", toggleMenu);
-            hentFooter();
+                    }
 
-        }
-
-        async function hentFooter() {
-            const response = await fetch("inc/footer.html");
-            const inclusion = await response.text();
-            document.querySelector("footer").innerHTML = inclusion;
-            console.log(inclusion);
-        }
-
-        function toggleMenu() {
-            console.log("toggleMenu");
-
-            document.querySelector("#menu").classList.toggle("hidden");
-
-            let erSkjult = document.querySelector("#menu").classList.contains("hidden");
-            if (erSkjult == true) {
-                document.querySelector("#menuknap").textContent = "☰";
-                document.querySelector("#menuknap").classList.remove("whiten");
+                    .infoCykler img {
+                        width: 50vw;
+                        height: 30vw;
+                        margin-left: 5vw;
 
 
-            } else {
-                document.querySelector("#menuknap").textContent = "✕";
-                document.querySelector("#menuknap").classList.add("whiten");
+
+
+                    }
+
+                    p.lang {
+                        grid-row: 2;
+                        grid-column: 2/ span 1;
+                        margin: 0;
+                    }
+
+                    p.pris {
+                        grid-row: 3;
+                        grid-column: 2;
+                        margin: 0;
+                    }
+
+                    .luk {
+                        margin-bottom: 0vw;
+                        margin-left: 3vw;
+                        margin-top: 0vw;
+                    }
+
+                    .infocykler h2 {
+                        margin: 0vw;
+                    }
+
+
+                }
+
+        </style>
+        <header>
+            <nav>
+                <img class="logo" src="img/koga-logo_blue.png" onclick="window.location.href='index.html'" alt="koga logo">
+
+                <div class="topnav">
+                    <nav class="knapper">
+
+                        <a href="historie.html">Historie om KOGA</a>
+                        <a href="kontakt.html">Kontakt</a>
+                        <div class="dropdown">
+                            <a class="dropbutton" href="cykler.html">Cykler</a>
+                            <div class="dropdown-content">
+                                <a href="">CITYBIKE</a>
+                                <a href="">EL-CYKEL</a>
+                                <a href="">TREKKING</a>
+                                <a href="">RACERCYKEL</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="burgermenu">
+                    <nav>
+                        <div id="menuknap">☰</div>
+                        <ul id="menu" class="hidden animationtest">
+                            <li>
+                                <a href="historie.html">Historie om KOGA</a>
+                                <a href="cykler.html">Cykler</a>
+                                <a href="kontakt.html">Kontakt</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+
+            </nav>
+        </header>
+
+        <main>
+            <h1 class="overskrift"></h1>
+            <section class="liste">
+            </section>
+
+
+        </main>
+
+
+        <main id="single">
+            <button class="luk">Tilbage</button>
+            <section class="indhold">
+                <article class="infoCykler">
+
+                    <h2></h2>
+                    <div class="gridsingle">
+                        <img class="billede" src="" alt="">
+                        <p class="lang"></p>
+                        <p class="pris">kr</p>
+                    </div>
+
+                </article>
+
+            </section>
+
+        </main>
+
+        <footer>
+        </footer>
+
+
+        <script>
+            let urlParams = new URLSearchParams(window.location.search);
+            let navn = urlParams.get("navn");
+            let personer;
+
+            document.addEventListener("DOMContentLoaded", start);
+
+            function start() {
+                //            hentNav();
+                getJson();
+                animer();
+            }
+
+            //        async function hentNav() {
+            //            const response = await fetch("inc/nav.html");
+            //            const inclusion = await response.text();
+            //            document.querySelector("nav").innerHTML = inclusion;
+            //            console.log(inclusion);
+            //        }
+
+            async function getJson() {
+
+                let jsondata = await fetch("https://esauka.dk/koga/wordpress/wp-json/wp/v2/koga?per_page=100");
+
+                personer = await jsondata.json();
+                visJson();
+
 
             }
-        }
-    </script>
-</body></html>
+
+            function visJson() {
+
+                personer.forEach((person) => {
+
+                    if (person.title.rendered == navn) {
+                        document.querySelector("h2").textContent = person.navn;
+
+                        document.querySelector(".billede").src = person.billede.guid;
+                        document.querySelector(".pris").textContent += person.pris;
+
+                        document.querySelector(".lang").innerHTML = person.lang_tekst;
+
+                    }
+
+                })
+            }
+
+            document.querySelector(".luk").addEventListener("click", () => {
+                history.back();
+            })
+
+            function animer() {
+                document.querySelector("#menuknap").addEventListener("click", toggleMenu);
+                hentFooter();
+
+            }
+
+            async function hentFooter() {
+                const response = await fetch("inc/footer.html");
+                const inclusion = await response.text();
+                document.querySelector("footer").innerHTML = inclusion;
+                console.log(inclusion);
+            }
+
+            function toggleMenu() {
+                console.log("toggleMenu");
+
+                document.querySelector("#menu").classList.toggle("hidden");
+
+                let erSkjult = document.querySelector("#menu").classList.contains("hidden");
+                if (erSkjult == true) {
+                    document.querySelector("#menuknap").textContent = "☰";
+                    document.querySelector("#menuknap").classList.remove("whiten");
+
+
+                } else {
+                    document.querySelector("#menuknap").textContent = "✕";
+                    document.querySelector("#menuknap").classList.add("whiten");
+
+                }
+            }
+
+        </script>
+    </body>
+
+    </html>
