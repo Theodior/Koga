@@ -241,6 +241,7 @@ header {
     position: absolute;
     right: 80vw;
     top: 0.5vw;
+    cursor: pointer;
 }
 
 .hidden {
@@ -339,7 +340,6 @@ header {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: white;
     z-index: 1;
     padding: 0.5rem;
 }
