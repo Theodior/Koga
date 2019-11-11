@@ -36,6 +36,14 @@
 }
 */
 
+/* class til at gøre menuknap hvid */
+.whiten {
+    color: #ffffff;
+
+}
+
+.animationtest {}
+
 
 body {
     padding: 0;
@@ -99,32 +107,22 @@ header {
 
 
 .splash_billede {
-    background-image: url(img/splash_index.jpg);
+    background-image: url(img/splash_nyt.jpg);
     background-size: cover;
     width: 100vw;
     height: 80vw;
     display: flex;
     justify-content: center;
     align-items: center;
-
-
-    /*
-    height: 50%;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-*/
-
+    background-position: bottom;
+    background-attachment: fixed;
 
 }
 
 
 .splash_text {
-
     text-align: center;
     position: absolute;
-
-
     color: white;
     font-size: 47px;
 
@@ -134,7 +132,8 @@ header {
     border: none;
     display: inline-block;
     padding: 20px 45px;
-    background-color: skyblue;
+    background-color: black;
+    color: #0F7DC7;
     text-align: center;
     cursor: pointer;
     border-radius: 4px;
@@ -142,45 +141,9 @@ header {
 }
 
 .splash_text button:hover {
-    background-color: #fadede;
+    background-color: #0F7DC7;
     color: white;
 }
-
-/*
-#body_container .splash .splash_billede {
-    background-color: aqua;
-    width: auto;
-}
-
-#body_container .splash .slogan {
-
-    text-align: center;
-    color: #FAFAFA;
-    text-transform: uppercase;
-    font-size: 36px;
-}
-
-
-#body_container .splash .kontakt_knap {
-    display: flex;
-    justify-content: center;
-
-}
-
-#body_container .splash .button {
-    position: absolute;
-    top: 25vw;
-    background-color: black;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-decoration: none;
-    font-size: 16px;
-    cursor: pointer;
-}
-*/
-
-
 
 #body_container header {
     position: absolute;
@@ -191,8 +154,8 @@ header {
     display: grid;
     width: 100%;
     max-width: 90vw;
+    padding: 1rem;
     margin: auto;
-    padding: 2rem;
     text-align: center;
     grid-template-areas:
         " vh2  "
@@ -208,13 +171,13 @@ header {
     grid-area: vh2;
     font-size: 36px;
     min-width: 15rem;
-    font-weight: bold;
 }
 
 #body_container .velkomst .velkomst_p {
     grid-area: vp;
     position: relative;
-    max-width: 30rem;
+    max-width: 35rem;
+    margin: auto;
     text-align: center;
     letter-spacing: 2px;
     line-height: 1.8rem;
@@ -247,7 +210,6 @@ header {
     grid-area: sh2;
     font-size: 36px;
     min-width: 15rem;
-    font-weight: bold;
     text-transform: uppercase;
     text-align: center;
 
@@ -256,7 +218,8 @@ header {
 
 #body_container .velkomst .service_p {
     grid-area: sp;
-    max-width: 30rem;
+    max-width: 35rem;
+    margin: auto;
     text-align: center;
     letter-spacing: 2px;
     line-height: 1.8rem;
@@ -269,7 +232,16 @@ header {
 
 /**********************************************************************/
 
+
 /** NAV & BURGERMENU **/
+
+.logo {
+    width: 100px;
+    height: 80px;
+    position: absolute;
+    right: 80vw;
+    top: 0.5vw;
+}
 
 .hidden {
     display: none;
@@ -285,10 +257,11 @@ header {
 #menuknap {
     font-size: 1.5em;
     cursor: pointer;
-    color: black;
+    /*    color: black;*/
     position: absolute;
-    top: 4vw;
-    right: 1vw;
+    top: 3vw;
+    right: 4vw;
+    z-index: 3;
 
 }
 
@@ -299,17 +272,19 @@ header {
     background-color: black;
     opacity: 80%;
     width: 100vw;
-    height: 80vw;
+    height: 100vh;
     z-index: 2;
+    margin: 0px;
 }
 
 
 #menu a {
+    font-size: 2rem;
     display: flex;
     flex-direction: column;
     padding: 20px;
     text-align: center;
-    color: white;
+    color: #fff;
     cursor: pointer;
     text-decoration: none;
 }
@@ -385,6 +360,18 @@ header {
 }
 
 /***********************************************************/
+@media screen and (min-width:768px) {
+    .logo {
+        right: 85vw;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .logo {
+        right: 90vw;
+    }
+}
+
 
 @media screen and (min-width:600px) {
     #menuknap {
@@ -423,11 +410,6 @@ header {
 
 }
 
-
-
-
-
-
 /*   DESKTOP   */
 
 @media screen and (min-width:1000px) {
@@ -436,48 +418,16 @@ header {
     /*******                  index.html                  ******/
 
     .splash_billede {
-
         background-size: cover;
         width: 100vw;
         height: 40vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
-
-    /*
-    #body_container .splash .slogan {
-        text-align: center;
-        color: #FAFAFA;
-        text-transform: uppercase;
-        font-size: 36px;
-    }
-
-
-    #body_container .splash .kontakt_knap {
-        display: flex;
-        justify-content: center;
-    }
-
-    #body_container .splash .button {
-        position: absolute;
-        top: 25vw;
-        background-color: black;
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-decoration: none;
-        font-size: 16px;
-        cursor: pointer;
-    }
-*/
-
 
     #body_container .velkomst {
         display: grid;
         width: 100%;
         max-width: 80vw;
-        margin: auto;
+        /*        margin: auto;*/
         padding: 2rem;
         grid-template-areas:
             " . vh2 . "
@@ -490,21 +440,14 @@ header {
 
     #body_container .velkomst .velkomst_h2 {
         grid-area: vh2;
-        background-color: aqua;
         font-size: 36px;
         min-width: 15rem;
-        font-weight: bold;
+
     }
 
     #body_container .velkomst .velkomst_p {
         grid-area: vp;
-        position: relative;
-        left: 21vw;
-        max-width: 30rem;
-        text-align: center;
-        letter-spacing: 2px;
-        line-height: 1.8rem;
-        padding: 2rem;
+
     }
 
 
@@ -531,7 +474,6 @@ header {
         grid-area: sh2;
         font-size: 36px;
         min-width: 15rem;
-        font-weight: bold;
         text-transform: uppercase;
         text-align: center;
         padding: 2rem;
@@ -540,13 +482,7 @@ header {
 
     #body_container .velkomst .service_p {
         grid-area: sp;
-        position: relative;
-        left: 22vw;
-        max-width: 30rem;
-        text-align: center;
-        letter-spacing: 2px;
-        line-height: 1.8rem;
-        padding: 2rem;
+
     }
 }
 
@@ -564,38 +500,8 @@ header {
         background-size: cover;
         width: 100vw;
         height: 40vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    /*
-    #body_container .splash .slogan {
-
-        text-align: center;
-        color: #FAFAFA;
-        text-transform: uppercase;
-        font-size: 36px;
-    }
-
-
-    #body_container .splash .kontakt_knap {
-        display: flex;
-        justify-content: center;
 
     }
-
-    #body_container .splash .button {
-        position: absolute;
-        top: 25vw;
-        background-color: black;
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-decoration: none;
-        font-size: 16px;
-        cursor: pointer;
-    }*/
 
 
     #body_container header {
@@ -607,7 +513,7 @@ header {
         display: grid;
         width: 100%;
         max-width: 90vw;
-        margin: auto;
+        /*        margin: auto;*/
         padding: 2rem;
         text-align: center;
 
@@ -624,18 +530,12 @@ header {
         grid-area: vh2;
         font-size: 36px;
         min-width: 15rem;
-        font-weight: bold;
+
     }
 
     #body_container .velkomst .velkomst_p {
         grid-area: vp;
-        position: relative;
-        left: 0;
-        max-width: 30rem;
-        text-align: center;
-        letter-spacing: 2px;
-        line-height: 1.8rem;
-        padding: 2rem;
+
     }
 
 
@@ -663,19 +563,14 @@ header {
         grid-area: sh2;
         font-size: 36px;
         min-width: 15rem;
-        font-weight: bold;
+
         text-transform: uppercase;
         text-align: center;
     }
 
     #body_container .velkomst .service_p {
         grid-area: sp;
-        left: 0;
-        max-width: 30rem;
-        text-align: center;
-        letter-spacing: 2px;
-        line-height: 1.8rem;
-        padding-bottom: 2rem;
+
     }
 }
 
@@ -686,7 +581,7 @@ header {
 footer {
     border-top: 2px solid #1b5728;
     /*    background-color: #1b5728;*/
-    color: #191E26;
+    color: #fff;
     background-image: url(img/bgFooter.gif);
 }
 
@@ -723,6 +618,10 @@ footer .right {
     flex-basis: 300px;
     padding: 0px 20px 20px 20px;
     text-align: right;
+}
+
+footer p {
+    font-weight: 100;
 }
 
 /*************************** FOOTER ************************************/
