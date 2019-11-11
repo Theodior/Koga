@@ -620,4 +620,8 @@ footer .right {
     text-align: right;
 }
 
+footer p {
+    font-weight: 100;
+}
+
 /*************************** FOOTER ************************************/
