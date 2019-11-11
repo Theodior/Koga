@@ -36,6 +36,14 @@
 }
 */
 
+/* class til at gøre menuknap hvid */
+.whiten {
+    color: #ffffff;
+
+}
+
+.animationtest {}
+
 
 body {
     padding: 0;
@@ -106,17 +114,15 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-position: 70% 0%;
+    background-position: bottom;
+    background-attachment: fixed;
 
 }
 
 
 .splash_text {
-
     text-align: center;
     position: absolute;
-
-
     color: white;
     font-size: 47px;
 
@@ -202,7 +208,7 @@ header {
     grid-area: sh2;
     font-size: 36px;
     min-width: 15rem;
-    font-weight: bold;
+
     text-transform: uppercase;
     text-align: center;
 
@@ -240,7 +246,7 @@ header {
 #menuknap {
     font-size: 1.5em;
     cursor: pointer;
-    color: black;
+    /*    color: black;*/
     position: absolute;
     top: 4vw;
     right: 1vw;
@@ -421,7 +427,7 @@ header {
         grid-area: vh2;
         font-size: 36px;
         min-width: 15rem;
-        font-weight: bold;
+
     }
 
     #body_container .velkomst .velkomst_p {
@@ -459,7 +465,6 @@ header {
         grid-area: sh2;
         font-size: 36px;
         min-width: 15rem;
-        font-weight: bold;
         text-transform: uppercase;
         text-align: center;
         padding: 2rem;
@@ -524,7 +529,7 @@ header {
         grid-area: vh2;
         font-size: 36px;
         min-width: 15rem;
-        font-weight: bold;
+
     }
 
     #body_container .velkomst .velkomst_p {
@@ -563,7 +568,7 @@ header {
         grid-area: sh2;
         font-size: 36px;
         min-width: 15rem;
-        font-weight: bold;
+
         text-transform: uppercase;
         text-align: center;
     }
