@@ -132,7 +132,8 @@ header {
     border: none;
     display: inline-block;
     padding: 20px 45px;
-    background-color: skyblue;
+    background-color: black;
+    color: #0F7DC7;
     text-align: center;
     cursor: pointer;
     border-radius: 4px;
@@ -140,7 +141,7 @@ header {
 }
 
 .splash_text button:hover {
-    background-color: #fadede;
+    background-color: #0F7DC7;
     color: white;
 }
 
@@ -153,8 +154,8 @@ header {
     display: grid;
     width: 100%;
     max-width: 90vw;
-    /*    margin: auto;*/
-    padding: 2rem;
+    padding: 1rem;
+    margin: auto;
     text-align: center;
     grid-template-areas:
         " vh2  "
@@ -208,7 +209,6 @@ header {
     grid-area: sh2;
     font-size: 36px;
     min-width: 15rem;
-
     text-transform: uppercase;
     text-align: center;
 
@@ -618,6 +618,10 @@ footer .right {
     flex-basis: 300px;
     padding: 0px 20px 20px 20px;
     text-align: right;
+}
+
+footer p {
+    font-weight: 100;
 }
 
 /*************************** FOOTER ************************************/
