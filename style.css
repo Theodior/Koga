@@ -99,13 +99,14 @@ header {
 
 
 .splash_billede {
-    background-image: url(img/splash_index.jpg);
+    background-image: url(img/splash_nyt.jpg);
     background-size: cover;
     width: 100vw;
     height: 80vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-position: 70% 0%;
 
 
     /*
@@ -490,7 +491,6 @@ header {
 
     #body_container .velkomst .velkomst_h2 {
         grid-area: vh2;
-        background-color: aqua;
         font-size: 36px;
         min-width: 15rem;
         font-weight: bold;
