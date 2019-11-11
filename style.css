@@ -250,8 +250,8 @@ header {
     cursor: pointer;
     /*    color: black;*/
     position: absolute;
-    top: 4vw;
-    right: 1vw;
+    top: 3vw;
+    right: 4vw;
     z-index: 3;
 
 }
@@ -263,18 +263,19 @@ header {
     background-color: black;
     opacity: 80%;
     width: 100vw;
-    height: 80vw;
+    height: 100vh;
     z-index: 2;
     margin: 0px;
 }
 
 
 #menu a {
+    font-size: 2rem;
     display: flex;
     flex-direction: column;
     padding: 20px;
     text-align: center;
-    color: white;
+    color: #fff;
     cursor: pointer;
     text-decoration: none;
 }
