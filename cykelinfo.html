@@ -84,8 +84,9 @@
     </style>
     <header>
         <nav>
+            <img class="logo" src="img/koga-logo_blue.png" onclick="window.location.href='index.html'" alt="koga logo">
+
             <div class="topnav">
-                <!--    <img class="logo" src="">-->
                 <nav class="knapper">
 
                     <a href="historie.html">Historie om KOGA</a>
@@ -134,7 +135,7 @@
 
                 <h2></h2>
                 <div class="gridsingle">
-                    <img src="" alt="">
+                    <img class="billede" src="" alt="">
                     <p class="lang"></p>
                     <p class="pris">kr</p>
                 </div>
@@ -186,7 +187,7 @@
                 if (person.title.rendered == navn) {
                     document.querySelector("h2").textContent = person.navn;
 
-                    document.querySelector("img").src = person.billede.guid;
+                    document.querySelector(".billede").src = person.billede.guid;
                     document.querySelector(".pris").textContent += person.pris;
 
                     document.querySelector(".lang").innerHTML = person.lang_tekst;
