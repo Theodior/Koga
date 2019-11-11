@@ -16,6 +16,11 @@
 
         }
 
+        iframe {
+            width: 90vw
+
+        }
+
 
 
         footer {
@@ -71,10 +76,12 @@
 
 
 
+
         }
 
         #kontakt_container .kontakt .map {
             grid-area: map;
+
         }
 
 
@@ -142,6 +149,97 @@
 
         }
 
+        #form {
+            width: 95%;
+
+        }
+
+            input {
+                font-family: futura-pt, sans-serif;
+                font-size: 1rem;
+                width: 90%;
+                height: 50px;
+                padding: 0px 15px 0px 15px;
+
+                background: transparent;
+                outline: none;
+                color: #000000;
+
+                border: solid 1px #000000;
+                margin-top: 10px;
+
+                transition: all 0.3s ease-in-out;
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -ms-transition: all 0.3s ease-in-out;
+        }
+
+
+
+            input:hover {
+                background: #1F92BF;
+                color: #000000;
+        }
+
+
+            #message {
+                width: 90%;
+                height: 110px;
+                max-height: 110px;
+                padding: 15px;
+
+                background: transparent;
+                outline: none;
+
+                color: #000000;
+                font-family: futura-pt, sans-serif;
+                font-size: 1rem;
+
+                border: solid 1px #000000;
+
+                transition: all 0.3s ease-in-out;
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -ms-transition: all 0.3s ease-in-out;
+        }
+
+            textarea:hover {
+                background: #1F92BF;
+                color: #000000;
+        }
+
+            #message:hover {
+                background: #1F92BF;
+                color: #000000;
+        }
+
+            #message {
+                height: 100px;
+        }
+
+
+
+            #submit {
+                width: 20vw;
+                padding: 0;
+                margin: 10px 0 0 0;
+
+
+                font-family: futura-pt, sans-serif;
+                font-size: 1rem;
+                color: #000000;
+
+                outline: none;
+                cursor: pointer;
+
+                border: solid 1px #000000;
+
+        }
+
+            #submit:hover {
+                color: #000000;
+        }
+
 
 
 
@@ -159,6 +257,9 @@
 
             }
 
+            iframe {
+                width: 30vw;
+            }
 
 
             footer {
@@ -182,14 +283,14 @@
                 max-width: 90vw;
 
                 grid-template-areas:
-                    " . . . kh2 . "
+                    " kh2 kh2 kh2 kh2 kh2 "
                     " kp1 . . . k_p "
                     " kp2 . . . map "
-                    " . . . sh2 . "
-                    " . . . some . "
-                    " . . . oh2 . "
-                    " . . . vp . "
-                    " . . . hp . ";
+                    " sh2 sh2 sh2 sh2 sh2 "
+                    " . . some . . "
+                    " oh2 oh2 oh2 oh2 oh2 "
+                    " vp vp vp vp vp "
+                    " hp hp hp hp hp ";
 
             }
 
@@ -207,23 +308,28 @@
 
             #kontakt_container .kontakt .kontakt_p2 {
                 grid-area: kp2;
+                justify-content: center;
+
 
 
 
             }
 
             #kontakt_container .kontakt .map {
+                margin-left: 20vw;
                 grid-area: map;
             }
 
 
 
             #kontakt_container .kontakt .karta_p {
+                margin-left: 20vw;
                 grid-area: k_p;
 
             }
 
             #kontakt_container .kontakt .social_h2 {
+                font-size: 3rem;
                 text-align: center;
                 grid-area: sh2;
 
@@ -253,14 +359,16 @@
                 grid-area: some;
                 display: flex;
                 justify-content: space-between;
-                max-width: 50vw;
+                /*max-width: 50vw;*/
                 align-content: center;
 
             }
 
+
             #kontakt_container .kontakt .open_h2 {
                 grid-area: oh2;
                 text-align: center;
+                padding-top: 7vh;
 
             }
 
@@ -277,8 +385,98 @@
             }
 
 
+            #form {
+                width: 100%;
 
-        }
+            }
+
+            input {
+                font-family: futura-pt, sans-serif;
+                font-size: 0.8rem;
+                width: 100%;
+                height: 50px;
+                padding: 0px 15px 0px 15px;
+
+                background: transparent;
+                outline: none;
+                color: #000000;
+
+                border: solid 1px #000000;
+                margin-top: 10px;
+
+                transition: all 0.3s ease-in-out;
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -ms-transition: all 0.3s ease-in-out;
+            }
+
+
+
+            input:hover {
+                background: #1F92BF;
+                color: #000000;
+            }
+
+
+            #message {
+                width: 100%;
+                height: 110px;
+                max-height: 110px;
+                padding: 15px;
+
+                background: transparent;
+                outline: none;
+
+                color: #000000;
+                font-family: futura-pt, sans-serif;
+                font-size: 1rem;
+
+                border: solid 1px #000000;
+
+                transition: all 0.3s ease-in-out;
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -ms-transition: all 0.3s ease-in-out;
+            }
+
+            textarea:hover {
+                background: #1F92BF;
+                color: #000000;
+            }
+
+            #message:hover {
+                background: #1F92BF;
+                color: #000000;
+            }
+
+            #message {
+                height: 100px;
+            }
+
+
+
+            #submit {
+                width: 15vw;
+                padding: 0;
+                margin: 10px 0 0 0;
+
+                font-family: futura-pt, sans-serif;
+                font-size: 1rem;
+                color: #000000;
+
+                outline: none;
+                cursor: pointer;
+
+                border: solid 1px #000000;
+
+            }
+
+            #submit:hover {
+                color: #000000;
+            }
+
+
+}
     </style>
 
     <link rel="stylesheet" href="style.css">
@@ -330,9 +528,18 @@
             Telefon:
             +45 38 86 43 25</p>
 
-        <p class="kontakt_p2">
-            E-mail:
-            Info@kogacenter.dk </p>
+        <div class="kontakt_p2">
+            <form id="form" class="topBefore">
+
+                <input id="name" type="text" placeholder="Navn">
+                <input id="email" type="text" placeholder="E-mail">
+                <input id="message" type="text" placeholder="Besked">
+                <div class="prove">
+                    <input id="submit" type="submit" value="Send">
+                </div>
+
+            </form>
+        </div>
 
 
 
@@ -345,10 +552,10 @@
 
         <h2 class="social_h2">Social Media</h2>
         <div class="some">
+
             <img class="img1" src="img/facebook.png" alt="facebook">
             <img class="img2" src="img/instagram.png" alt="instagram">
             <img class="img3" src="img/email.png" alt="email">
-
         </div>
 
 
@@ -390,4 +597,6 @@
     </script>
     <!--    <script src="script.js"></script>-->
 
-</body></html>
+</body>
+
+</html>
