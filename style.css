@@ -176,7 +176,8 @@ header {
 #body_container .velkomst .velkomst_p {
     grid-area: vp;
     position: relative;
-    max-width: 30rem;
+    max-width: 35rem;
+    margin: auto;
     text-align: center;
     letter-spacing: 2px;
     line-height: 1.8rem;
@@ -217,7 +218,8 @@ header {
 
 #body_container .velkomst .service_p {
     grid-area: sp;
-    max-width: 30rem;
+    max-width: 35rem;
+    margin: auto;
     text-align: center;
     letter-spacing: 2px;
     line-height: 1.8rem;
@@ -445,13 +447,7 @@ header {
 
     #body_container .velkomst .velkomst_p {
         grid-area: vp;
-        position: relative;
-        left: 21vw;
-        max-width: 30rem;
-        text-align: center;
-        letter-spacing: 2px;
-        line-height: 1.8rem;
-        padding: 2rem;
+
     }
 
 
@@ -486,13 +482,7 @@ header {
 
     #body_container .velkomst .service_p {
         grid-area: sp;
-        position: relative;
-        left: 22vw;
-        max-width: 30rem;
-        text-align: center;
-        letter-spacing: 2px;
-        line-height: 1.8rem;
-        padding: 2rem;
+
     }
 }
 
@@ -545,13 +535,7 @@ header {
 
     #body_container .velkomst .velkomst_p {
         grid-area: vp;
-        position: relative;
-        left: 0;
-        max-width: 30rem;
-        text-align: center;
-        letter-spacing: 2px;
-        line-height: 1.8rem;
-        padding: 2rem;
+
     }
 
 
@@ -586,12 +570,7 @@ header {
 
     #body_container .velkomst .service_p {
         grid-area: sp;
-        left: 0;
-        max-width: 30rem;
-        text-align: center;
-        letter-spacing: 2px;
-        line-height: 1.8rem;
-        padding-bottom: 2rem;
+
     }
 }
 
