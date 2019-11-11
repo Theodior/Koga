@@ -202,7 +202,7 @@ header {
     grid-area: sh2;
     font-size: 36px;
     min-width: 15rem;
-    font-weight: bold;
+
     text-transform: uppercase;
     text-align: center;
 
@@ -421,7 +421,7 @@ header {
         grid-area: vh2;
         font-size: 36px;
         min-width: 15rem;
-        font-weight: bold;
+
     }
 
     #body_container .velkomst .velkomst_p {
@@ -459,7 +459,6 @@ header {
         grid-area: sh2;
         font-size: 36px;
         min-width: 15rem;
-        font-weight: bold;
         text-transform: uppercase;
         text-align: center;
         padding: 2rem;
@@ -524,7 +523,7 @@ header {
         grid-area: vh2;
         font-size: 36px;
         min-width: 15rem;
-        font-weight: bold;
+
     }
 
     #body_container .velkomst .velkomst_p {
@@ -563,7 +562,7 @@ header {
         grid-area: sh2;
         font-size: 36px;
         min-width: 15rem;
-        font-weight: bold;
+
         text-transform: uppercase;
         text-align: center;
     }
