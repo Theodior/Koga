@@ -241,6 +241,7 @@ header {
     position: absolute;
     right: 80vw;
     top: 0.5vw;
+    cursor: pointer;
 }
 
 .hidden {
