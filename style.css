@@ -36,6 +36,14 @@
 }
 */
 
+/* class til at gøre menuknap hvid */
+.whiten {
+    color: #ffffff;
+
+}
+
+.animationtest {}
+
 
 body {
     padding: 0;
@@ -240,7 +248,7 @@ header {
 #menuknap {
     font-size: 1.5em;
     cursor: pointer;
-    color: black;
+    /*    color: black;*/
     position: absolute;
     top: 4vw;
     right: 1vw;
