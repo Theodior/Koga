@@ -43,7 +43,7 @@
             cykler.forEach(cykel => {
                 const klon = skabelon.cloneNode(true).content;
                 klon.querySelector(".title").textContent = cykel.navn;
-                klon.querySelector(".pris").textContent += cykel.pris;
+
                 klon.querySelector("img").src = cykel.billede.guid;
                 klon.querySelector("img").alt = "billede af" + cykel.title.rendered;
                 klon.querySelector(".beskrivelse").innerHTML = cykel.kort_tekst;
@@ -85,11 +85,7 @@
             let erSkjult = document.querySelector("#menu").classList.contains("hidden");
             if (erSkjult == true) {
                 document.querySelector("#menuknap").textContent = "☰";
-                document.querySelector("#menuknap").classList.remove("whiten");
-
             } else {
                 document.querySelector("#menuknap").textContent = "✕";
-                document.querySelector("#menuknap").classList.add("whiten");
-
             }
         }
