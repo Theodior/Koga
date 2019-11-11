@@ -230,7 +230,16 @@ header {
 
 /**********************************************************************/
 
+
 /** NAV & BURGERMENU **/
+
+.logo {
+    width: 100px;
+    height: 80px;
+    position: absolute;
+    right: 80vw;
+    top: 0.5vw;
+}
 
 .hidden {
     display: none;
@@ -349,6 +358,18 @@ header {
 }
 
 /***********************************************************/
+@media screen and (min-width:768px) {
+    .logo {
+        right: 85vw;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .logo {
+        right: 90vw;
+    }
+}
+
 
 @media screen and (min-width:600px) {
     #menuknap {
