@@ -114,17 +114,15 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-position: 70% 0%;
+    background-position: bottom;
+    background-attachment: fixed;
 
 }
 
 
 .splash_text {
-
     text-align: center;
     position: absolute;
-
-
     color: white;
     font-size: 47px;
 
