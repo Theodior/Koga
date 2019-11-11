@@ -108,15 +108,6 @@ header {
     align-items: center;
     background-position: 70% 0%;
 
-
-    /*
-    height: 50%;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-*/
-
-
 }
 
 
@@ -147,42 +138,6 @@ header {
     color: white;
 }
 
-/*
-#body_container .splash .splash_billede {
-    background-color: aqua;
-    width: auto;
-}
-
-#body_container .splash .slogan {
-
-    text-align: center;
-    color: #FAFAFA;
-    text-transform: uppercase;
-    font-size: 36px;
-}
-
-
-#body_container .splash .kontakt_knap {
-    display: flex;
-    justify-content: center;
-
-}
-
-#body_container .splash .button {
-    position: absolute;
-    top: 25vw;
-    background-color: black;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-decoration: none;
-    font-size: 16px;
-    cursor: pointer;
-}
-*/
-
-
-
 #body_container header {
     position: absolute;
     right: 0;
@@ -209,7 +164,6 @@ header {
     grid-area: vh2;
     font-size: 36px;
     min-width: 15rem;
-    font-weight: bold;
 }
 
 #body_container .velkomst .velkomst_p {
@@ -446,34 +400,6 @@ header {
         align-items: center;
     }
 
-    /*
-    #body_container .splash .slogan {
-        text-align: center;
-        color: #FAFAFA;
-        text-transform: uppercase;
-        font-size: 36px;
-    }
-
-
-    #body_container .splash .kontakt_knap {
-        display: flex;
-        justify-content: center;
-    }
-
-    #body_container .splash .button {
-        position: absolute;
-        top: 25vw;
-        background-color: black;
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-decoration: none;
-        font-size: 16px;
-        cursor: pointer;
-    }
-*/
-
-
     #body_container .velkomst {
         display: grid;
         width: 100%;
@@ -568,34 +494,6 @@ header {
         justify-content: center;
         align-items: center;
     }
-
-    /*
-    #body_container .splash .slogan {
-
-        text-align: center;
-        color: #FAFAFA;
-        text-transform: uppercase;
-        font-size: 36px;
-    }
-
-
-    #body_container .splash .kontakt_knap {
-        display: flex;
-        justify-content: center;
-
-    }
-
-    #body_container .splash .button {
-        position: absolute;
-        top: 25vw;
-        background-color: black;
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-decoration: none;
-        font-size: 16px;
-        cursor: pointer;
-    }*/
 
 
     #body_container header {
