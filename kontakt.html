@@ -68,6 +68,8 @@
 
 
 
+
+
         }
 
         #kontakt_container .kontakt .kontakt_p2 {
@@ -122,6 +124,15 @@
             display: flex;
             justify-content: center;
             max-width: 95vw;
+
+
+
+        }
+
+        #kontakt_container .kontakt .img4 {
+                grid-area: img4;
+                width: 50px;
+                height: 50px;
 
 
 
@@ -258,6 +269,7 @@
 
             iframe {
                 width: 30vw;
+
             }
 
 
@@ -283,14 +295,12 @@
 
                 grid-template-areas:
                     " kh2 kh2 kh2 kh2 kh2 "
-                    " kp1 . . . k_p "
                     " kp2 . . . map "
-                    " oh2 oh2 oh2 oh2 oh2 "
-                    " vp vp vp vp vp "
-                    " hp hp hp hp hp "
+                    " oh2 . . . . "
+                    " vp . . . kp1 "
+                    " hp . . . k_p "
                     " sh2 sh2 sh2 sh2 sh2 "
-                    " some some some some some "
-                ;
+                    " some some some some some ";
 
             }
 
@@ -301,6 +311,7 @@
 
             #kontakt_container .kontakt .kontakt_p1 {
                 grid-area: kp1;
+                margin-left: 20vw;
 
 
 
@@ -309,9 +320,6 @@
             #kontakt_container .kontakt .kontakt_p2 {
                 grid-area: kp2;
                 justify-content: center;
-
-
-
 
             }
 
@@ -358,6 +366,7 @@
                 padding-left: 2rem;
             }
 
+
             #kontakt_container .kontakt .some {
                 grid-area: some;
                 display: flex;
@@ -366,23 +375,30 @@
 
             }
 
+            /*#kontakt_container .kontakt .img4 {
+                grid-area: img4;
+                width: 50px;
+                height: 50px;
+
+            }*/
+
 
             #kontakt_container .kontakt .open_h2 {
                 grid-area: oh2;
-                text-align: center;
+                /*text-align: center;*/
                 padding-top: 7vh;
 
             }
 
             #kontakt_container .kontakt .vardag_p {
                 grid-area: vp;
-                text-align: center;
+
 
             }
 
             #kontakt_container .kontakt .helg_p {
                 grid-area: hp;
-                text-align: center;
+
 
             }
 
@@ -528,8 +544,12 @@
     <section class="kontakt">
         <h2 class="kontakt_h2">Kontakt</h2>
         <p class="kontakt_p1">
-            Telefon:
-            +45 38 86 43 25</p>
+
+            +45 38 86 43 25
+        </p>
+
+        <!-- HERE ESAU<img class="img4" src="img/phone_1.png" alt="phone"--->
+
 
         <div class="kontakt_p2">
             <form id="form" class="topBefore">
@@ -553,6 +573,7 @@
             Adresse:
             Peter Bangsvej 18, 2000 Frederiksberg </p>
 
+
         <h2 class="social_h2">Social Media</h2>
         <div class="some">
 
@@ -570,9 +591,9 @@
     </section>
 
 
-    <footer>
+    <!--<footer>
 
-    </footer>
+    </footer>-->
     <script>
         window.addEventListener("load", animer);
 
@@ -601,7 +622,10 @@
 
             }
         }
+
     </script>
     <!--    <script src="script.js"></script>-->
 
-</body></html>
+</body>
+
+</html>
