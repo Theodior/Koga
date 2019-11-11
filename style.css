@@ -153,7 +153,7 @@ header {
     display: grid;
     width: 100%;
     max-width: 90vw;
-    margin: auto;
+    /*    margin: auto;*/
     padding: 2rem;
     text-align: center;
     grid-template-areas:
@@ -387,11 +387,6 @@ header {
 
 }
 
-
-
-
-
-
 /*   DESKTOP   */
 
 @media screen and (min-width:1000px) {
@@ -400,20 +395,16 @@ header {
     /*******                  index.html                  ******/
 
     .splash_billede {
-
         background-size: cover;
         width: 100vw;
         height: 40vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     #body_container .velkomst {
         display: grid;
         width: 100%;
         max-width: 80vw;
-        margin: auto;
+        /*        margin: auto;*/
         padding: 2rem;
         grid-template-areas:
             " . vh2 . "
@@ -498,9 +489,7 @@ header {
         background-size: cover;
         width: 100vw;
         height: 40vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+
     }
 
 
@@ -513,7 +502,7 @@ header {
         display: grid;
         width: 100%;
         max-width: 90vw;
-        margin: auto;
+        /*        margin: auto;*/
         padding: 2rem;
         text-align: center;
 
