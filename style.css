@@ -132,7 +132,7 @@ header {
     border: none;
     display: inline-block;
     padding: 20px 45px;
-    background-color: black;
+    background-color: white;
     color: #0F7DC7;
     text-align: center;
     cursor: pointer;
@@ -226,10 +226,6 @@ header {
     line-height: 1.8rem;
     padding-bottom: 2rem;
 }
-
-
-
-
 
 /**********************************************************************/
 
@@ -467,7 +463,7 @@ header {
     #body_container .velkomst .service_img {
         grid-area: simg;
         width: 100%;
-        height: 40vw;
+        height: 50vw;
     }
 
     #body_container .velkomst .service_h2 {
