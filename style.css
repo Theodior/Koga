@@ -99,23 +99,35 @@ header {
 
 
 .splash_billede {
+    background-image: url(img/splash_index.jpg);
+    background-size: cover;
+    width: 100vw;
+    height: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    /*
     height: 50%;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
+*/
+
 
 }
 
 
 .splash_text {
+
     text-align: center;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+
     color: white;
     font-size: 47px;
+
 }
 
 .splash_text button {
@@ -125,6 +137,8 @@ header {
     background-color: skyblue;
     text-align: center;
     cursor: pointer;
+    border-radius: 4px;
+    transition-duration: 0.2s;
 }
 
 .splash_text button:hover {
@@ -409,14 +423,11 @@ header {
 
 }
 
-<<<<<<< HEAD #body_container .splash_billede {
-    width: 100vw;
-    height: 100vh;
-}
 
 
 
-======= > > > > > > > origin/master
+
+
 /*   DESKTOP   */
 
 @media screen and (min-width:1000px) {
@@ -424,7 +435,15 @@ header {
 
     /*******                  index.html                  ******/
 
+    .splash_billede {
 
+        background-size: cover;
+        width: 100vw;
+        height: 40vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     /*
     #body_container .splash .slogan {
@@ -540,8 +559,15 @@ header {
 
 @media screen and (min-width:768px) {
 
+    .splash_billede {
 
-
+        background-size: cover;
+        width: 100vw;
+        height: 40vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     /*
     #body_container .splash .slogan {
