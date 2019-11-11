@@ -155,6 +155,7 @@ header {
     width: 100%;
     max-width: 90vw;
     padding: 1rem;
+    margin: auto;
     text-align: center;
     grid-template-areas:
         " vh2  "
