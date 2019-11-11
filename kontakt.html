@@ -18,7 +18,6 @@
 
         iframe {
             width: 90vw
-
         }
 
 
@@ -49,11 +48,11 @@
                 " k_p "
                 " kp1 "
                 " kp2 "
-                " sh2 "
-                " some "
                 " oh2 "
                 " hp "
-                " vp ";
+                " vp "
+                " sh2 "
+                " some ";
 
         }
 
@@ -154,94 +153,94 @@
 
         }
 
-            input {
-                font-family: futura-pt, sans-serif;
-                font-size: 1rem;
-                width: 90%;
-                height: 50px;
-                padding: 0px 15px 0px 15px;
+        input {
+            font-family: futura-pt, sans-serif;
+            font-size: 1rem;
+            width: 90%;
+            height: 50px;
+            padding: 0px 15px 0px 15px;
 
-                background: transparent;
-                outline: none;
-                color: #000000;
+            background: transparent;
+            outline: none;
+            color: #000000;
 
-                border: solid 1px #000000;
-                margin-top: 10px;
+            border: solid 1px #000000;
+            margin-top: 10px;
 
-                transition: all 0.3s ease-in-out;
-                -webkit-transition: all 0.3s ease-in-out;
-                -moz-transition: all 0.3s ease-in-out;
-                -ms-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
         }
 
 
 
-            input:hover {
-                background: #1F92BF;
-                color: #000000;
+        input:hover {
+            background: #1F92BF;
+            color: #000000;
         }
 
 
-            #message {
-                width: 90%;
-                height: 110px;
-                max-height: 110px;
-                padding: 15px;
+        #message {
+            width: 90%;
+            height: 110px;
+            max-height: 110px;
+            padding: 15px;
 
-                background: transparent;
-                outline: none;
+            background: transparent;
+            outline: none;
 
-                color: #000000;
-                font-family: futura-pt, sans-serif;
-                font-size: 1rem;
+            color: #000000;
+            font-family: futura-pt, sans-serif;
+            font-size: 1rem;
 
-                border: solid 1px #000000;
+            border: solid 1px #000000;
 
-                transition: all 0.3s ease-in-out;
-                -webkit-transition: all 0.3s ease-in-out;
-                -moz-transition: all 0.3s ease-in-out;
-                -ms-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
         }
 
-            textarea:hover {
-                background: #1F92BF;
-                color: #000000;
+        textarea:hover {
+            background: #1F92BF;
+            color: #000000;
         }
 
-            #message:hover {
-                background: #1F92BF;
-                color: #000000;
+        #message:hover {
+            background: #1F92BF;
+            color: #000000;
         }
 
-            #message {
-                height: 100px;
-        }
-
-
-
-            #submit {
-                width: 20vw;
-                padding: 0;
-                margin: 10px 0 0 0;
-
-
-                font-family: futura-pt, sans-serif;
-                font-size: 1rem;
-                color: #000000;
-
-                outline: none;
-                cursor: pointer;
-
-                border: solid 1px #000000;
-
-        }
-
-            #submit:hover {
-                color: #000000;
+        #message {
+            height: 100px;
         }
 
 
 
+        #submit {
+            width: 20vw;
+            padding: 0;
+            margin: 10px 0 0 0;
+
+
+            font-family: futura-pt, sans-serif;
+            font-size: 1rem;
+            color: #000000;
+
+            outline: none;
+            cursor: pointer;
+
+            border: solid 1px #000000;
+
+        }
+
+        #submit:hover {
+            color: #000000;
+        }
+
+
+        /***********   DESKTOP *********/
 
 
         @media screen and (min-width:1000px) {
@@ -286,11 +285,12 @@
                     " kh2 kh2 kh2 kh2 kh2 "
                     " kp1 . . . k_p "
                     " kp2 . . . map "
-                    " sh2 sh2 sh2 sh2 sh2 "
-                    " . . some . . "
                     " oh2 oh2 oh2 oh2 oh2 "
                     " vp vp vp vp vp "
-                    " hp hp hp hp hp ";
+                    " hp hp hp hp hp "
+                    " sh2 sh2 sh2 sh2 sh2 "
+                    " some some some some some "
+                ;
 
             }
 
@@ -341,25 +341,27 @@
                 grid-area: img1;
                 width: 100px;
                 height: 100px;
+
             }
 
             #kontakt_container .kontakt .img2 {
                 grid-area: img2;
                 width: 100px;
                 height: 100px;
+                padding-left: 2rem;
             }
 
             #kontakt_container .kontakt .img3 {
                 grid-area: img3;
                 width: 100px;
                 height: 100px;
+                padding-left: 2rem;
             }
 
             #kontakt_container .kontakt .some {
                 grid-area: some;
                 display: flex;
-                justify-content: space-between;
-                /*max-width: 50vw;*/
+                padding: 3rem;
                 align-content: center;
 
             }
@@ -476,7 +478,7 @@
             }
 
 
-}
+        }
     </style>
 
     <link rel="stylesheet" href="style.css">
@@ -602,6 +604,4 @@
     </script>
     <!--    <script src="script.js"></script>-->
 
-</body>
-
-</html>
+</body></html>
