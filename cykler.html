@@ -25,6 +25,9 @@
 
     }
 
+    footer img {
+        margin: 0vw;
+    }
 
     .splash_text {
         text-align: center;
@@ -64,6 +67,7 @@
     .liste {
         display: grid;
         grid-template-columns: 80vw;
+        grid-auto-rows: 85vw;
         margin-left: 10vw;
         margin-right: 10vw;
         background-color: white;
@@ -119,11 +123,13 @@
         line-height: 30px;
         margin: 0vw;
         margin-bottom: 4vw;
+        text-align: center;
     }
 
     div.beskrivelse {
         letter-spacing: 1px;
         line-height: 20px;
+        text-align: center;
     }
 
     .mereknap {
@@ -138,10 +144,13 @@
         display: inline-block;
         font-size: 16px;
         cursor: pointer;
-        margin-left: 22vw;
-        margin-bottom: 2vw;
 
 
+
+    }
+
+    .meremere {
+        text-align: center;
     }
 
 
@@ -191,10 +200,7 @@
             margin-bottom: 2vw;
         }
 
-        .mereknap {
-            margin-left: 24vw;
-            margin-bottom: 2vw;
-        }
+
 
     }
 
@@ -204,8 +210,8 @@
             display: grid;
 
             grid-template-columns: 45vw 45vw;
-            grid-template-rows: 40vw;
-
+            grid-template-rows: 50vw;
+            grid-auto-rows: 50vw;
             margin-left: 5vw;
             margin-right: 5vw;
             margin-top: 3vw;
@@ -215,6 +221,10 @@
 
 
 
+        }
+
+        .meremere {
+            margin-top: 2vw;
         }
 
 
@@ -231,6 +241,16 @@
             margin-left: 2vw;
             margin-right: 2vw;
             margin-bottom: 0;
+            text-align: center;
+        }
+
+        h2.title {
+            font-size: 2em;
+            letter-spacing: 1px;
+            line-height: 30px;
+            margin: 0vw;
+            margin-bottom: 2vw;
+            text-align: center;
         }
 
     }
@@ -243,7 +263,7 @@
             display: grid;
 
             grid-template-columns: 30vw 30vw 30vw;
-            grid-template-rows: 33vw 33vw 33vw 33vw 33vw 33vw 33vw 33vw;
+            grid-template-rows: 35vw 35vw 35vw 35vw 35vw 35vw 35vw 35vw;
             margin-left: 5vw;
             margin-right: 5vw;
             margin-top: 3vw;
@@ -257,6 +277,10 @@
 
         }
 
+        .meremere {
+            margin-top: 2vw;
+        }
+
         h2.title,
         p.pris,
         div.beskrivelse {
@@ -265,9 +289,20 @@
             margin-bottom: 0;
         }
 
+        div.beskrivelse {
+            letter-spacing: 1px;
+            line-height: 20px;
+        }
+
         h2.title {
-            display: flex;
-            justify-content: center;
+
+
+            font-size: 2em;
+            letter-spacing: 1px;
+            line-height: 30px;
+            margin: 0vw;
+            margin-bottom: 2vw;
+            text-align: center;
         }
 
 
@@ -294,11 +329,7 @@
 
         }
 
-        .mereknap {
-            margin-left: 8vw;
-            margin-bottom: 22vw;
-            margin-top: 2vw;
-        }
+
 
         .splash_billede {
             background-image: url(img/historie_splash4.jpg);
@@ -353,12 +384,11 @@
 
 
     }
-
 </style>
 
 <body id="cykler_container">
     <header>
-        <img class="logo" src="img/koga-logo_blue.png" onclick="window.location.href='index.html'" alt="koga logo">
+        <img class="logo" src="img/1x/logoblue.png" onclick="window.location.href='index.html'" alt="koga logo">
 
         <nav>
             <div class="topnav">
@@ -431,7 +461,9 @@
 
                 <div class="beskrivelse"></div>
 
-                <button class="mereknap">Mere info</button>
+                <div class="meremere">
+                    <button class="mereknap">Mere info</button>
+                </div>
 
             </div>
 
@@ -445,6 +477,4 @@
     </footer>
 
     <script src="script.js"></script>
-</body>
-
-</html>
+</body></html>

@@ -233,10 +233,10 @@ header {
 /** NAV & BURGERMENU **/
 
 .logo {
-    width: 100px;
-    height: 80px;
+    width: 75px;
+    height: 75px;
     position: absolute;
-    right: 80vw;
+    right: 82vw;
     top: 0.5vw;
     cursor: pointer;
 }
@@ -363,13 +363,17 @@ header {
 /***********************************************************/
 @media screen and (min-width:768px) {
     .logo {
-        right: 85vw;
+        right: 89vw;
+        width: 75px;
+        height: 75px;
     }
 }
 
 @media screen and (min-width:1000px) {
     .logo {
-        right: 90vw;
+        right: 93vw;
+        width: 75px;
+        height: 75px;
     }
 }
 
