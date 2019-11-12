@@ -241,12 +241,20 @@ header {
 /** NAV & BURGERMENU **/
 
 .logo {
-    width: 75px;
-    height: 75px;
+    width: 65px;
+    height: 65px;
     position: absolute;
-    right: 82vw;
+    right: 85vw;
     top: 0.5vw;
     cursor: pointer;
+}
+
+#body_container nav a {
+    color: white;
+}
+
+#body_container nav a:hover {
+    color: red;
 }
 
 .logo:hover {
