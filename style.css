@@ -241,6 +241,14 @@ header {
     cursor: pointer;
 }
 
+#body_container nav a {
+    color: white;
+}
+
+#body_container nav a:hover {
+    color: red;
+}
+
 .logo:hover {
     transform: scale(1.1);
     filter: brightness(1.1);
