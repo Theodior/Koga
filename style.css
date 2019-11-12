@@ -233,16 +233,25 @@ header {
 /** NAV & BURGERMENU **/
 
 .logo {
-    width: 100px;
-    height: 80px;
+    width: 75px;
+    height: 75px;
     position: absolute;
-    right: 80vw;
+    right: 82vw;
     top: 0.5vw;
     cursor: pointer;
 }
 
+#body_container nav a {
+    color: white;
+}
+
+#body_container nav a:hover {
+    color: red;
+}
+
 .logo:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
+    filter: brightness(1.1);
 }
 
 
@@ -363,13 +372,17 @@ header {
 /***********************************************************/
 @media screen and (min-width:768px) {
     .logo {
-        right: 85vw;
+        right: 89vw;
+        width: 75px;
+        height: 75px;
     }
 }
 
 @media screen and (min-width:1000px) {
     .logo {
-        right: 90vw;
+        right: 93vw;
+        width: 75px;
+        height: 75px;
     }
 }
 
