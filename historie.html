@@ -16,6 +16,12 @@
             right: 0;
         }
 
+        .splash_baggrund {
+            background-color: #0084CC;
+            width: 100%;
+            height: 70vw;
+        }
+
 
 
         /*DESKTOP*/
@@ -23,6 +29,10 @@
         @media screen and (min-width:1000px) {
 
             /*Desktop mediaquerry*/
+              .splash_baggrund {
+
+            height: 40vw;
+        }
             #historie_container header {
                 grid-area: op;
                 position: absolute;
@@ -32,6 +42,7 @@
             .splash_historie {
                 grid-area: splashbillede;
                 max-width: 100%;
+                text-align: center;
 
             }
 
@@ -188,10 +199,20 @@
             /*Tablet mediaquerry*/
 
 
+             .splash_historie {
+
+                text-align: center;
+
+            }
 
 
+.splash_baggrund {
+
+            height: 40vw;
+
+            }
             #historie_container .splashbillede {
-                width: 100vw;
+                width: 70vw;
                 height: 40vw;
             }
 
@@ -276,7 +297,10 @@
 
 
             #historie_container .splashbillede {
-                width: 100vw;
+                background-position: 50% 0%;
+                background-size: cover;
+                background-attachment: fixed;
+                width: 100%;
                 height: 80vw;
             }
 
@@ -365,6 +389,12 @@
             <img class="logo" src="img/1x/logowhite.png" onclick="window.location.href='index.html'" alt="koga logo">
 
             <nav>
+
+
+
+
+
+
                 <div class="topnav">
 
                     <nav class="knapper">
@@ -398,13 +428,18 @@
             </nav>
         </header>
 
+       <div class="splash_baggrund">
+
+
+
         <div class="splash_historie">
 
 
-            <img class="splashbillede" src="img/splash_historie6.jpg" alt="">
+            <img class="splashbillede" src="img/svg/KOGAhist.svg" alt="">
 
 
         </div>
+       </div>
 
         <section class="historie">
             <h2 class="historie_h2">Historie</h2>
