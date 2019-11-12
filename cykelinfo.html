@@ -213,6 +213,8 @@
                         <img class="billede" src="" alt="">
                         <p class="lang"></p>
                         <p class="pris">Pris: </p>
+                        <p class="farver"> </p>
+                        <p class="kg"> </p>
                     </div>
 
                 </article>
@@ -264,8 +266,9 @@
 
                         document.querySelector(".billede").src = person.billede.guid;
                         document.querySelector(".pris").textContent += person.pris += ",-";
-
                         document.querySelector(".lang").innerHTML = person.lang_tekst;
+                        document.querySelector(".farver").textContent += person.farver;
+                        document.querySelector(".kg").textContent += person.kilo += " kg";
 
                     }
 
