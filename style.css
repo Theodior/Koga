@@ -267,10 +267,9 @@ header {
     padding-top: 50px;
     position: relative;
     list-style-type: none;
-    background-color: black;
-    opacity: 80%;
+    background-color: #0d0c1d;
     width: 100vw;
-    height: 100vh;
+    height: 20000px;
     z-index: 2;
     margin: 0px;
 }
