@@ -42,9 +42,6 @@
 
 }
 
-.animationtest {}
-
-
 body {
     padding: 0;
     margin: 0;
@@ -173,6 +170,7 @@ header {
     grid-area: vh2;
     font-size: 36px;
     min-width: 15rem;
+    margin-top: 75px;
 }
 
 #body_container .velkomst .velkomst_p {
@@ -184,6 +182,8 @@ header {
     letter-spacing: 2px;
     line-height: 1.8rem;
     padding: 2rem;
+    margin-top: 50px;
+    margin-bottom: 100px;
 }
 
 
@@ -192,24 +192,28 @@ header {
     grid-area: img1;
     width: 100%;
     margin-bottom: 20px;
-
+    width: 30rem;
+    margin: auto;
 }
 
 #body_container .velkomst .img2 {
     grid-area: img2;
     width: 100%;
     margin-bottom: 20px;
+    width: 30rem;
+    margin: auto;
 }
 
 #body_container .velkomst .service_img {
     grid-area: simg;
     width: 100%;
-    height: 40vw;
+    height: 80vw;
     background-image: url(img/ny_service.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-top: 120px;
 
 
 }
@@ -220,6 +224,7 @@ header {
     min-width: 15rem;
     text-transform: uppercase;
     text-align: center;
+    margin-top: 75px;
 
 
 }
@@ -232,6 +237,8 @@ header {
     letter-spacing: 2px;
     line-height: 1.8rem;
     padding-bottom: 2rem;
+    margin-top: 50px;
+    margin-bottom: 75px;
 }
 
 /**********************************************************************/
@@ -453,7 +460,7 @@ header {
         grid-template-areas:
             " . vh2 . "
             " vp vp vp "
-            " img1 img2 img2 "
+            " img1 img1 img2 "
             "simg simg simg"
             " . sh2 . "
             " sp sp sp ";
@@ -476,12 +483,15 @@ header {
     #body_container .velkomst .img1 {
         grid-area: img1;
         height: 40vw;
+        width: 40rem;
+        margin: auto;
     }
 
     #body_container .velkomst .img2 {
         grid-area: img2;
         height: 40vw;
-
+        width: 40rem;
+        margin: auto;
     }
 
     #body_container .velkomst .service_img {
@@ -500,7 +510,7 @@ header {
         min-width: 15rem;
         text-transform: uppercase;
         text-align: center;
-        padding: 2rem;
+
 
     }
 
@@ -566,15 +576,19 @@ header {
 
     #body_container .velkomst .img1 {
         grid-area: img1;
-        width: 100%;
-        margin-bottom: 20px;
+        margin: auto;
+
+
 
     }
 
     #body_container .velkomst .img2 {
         grid-area: img2;
-        width: 100%;
-        margin-bottom: 20px;
+        margin: auto;
+
+
+
+
     }
 
     #body_container .velkomst .service_img {
@@ -606,7 +620,7 @@ header {
 /* Footer */
 
 footer {
-    border-top: 2px solid #1b5728;
+    /*    border-top: 2px solid #1b5728;*/
     /*    background-color: #1b5728;*/
     color: #fff;
     background-image: url(img/bgFooter.gif);
@@ -626,9 +640,11 @@ footer img {
     cursor: pointer;
 }
 
+/*
 footer img:hover {
     transform: scale(1.2);
 }
+*/
 
 footer .tekst {
     display: flex;
