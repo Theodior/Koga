@@ -35,6 +35,10 @@
 
     }
 
+    h1 {
+        font-family: futura-pt, sans-serif;
+    }
+
     footer img {
         margin: 0vw;
     }
@@ -403,6 +407,7 @@
 
 
     }
+
 </style>
 
 <body id="cykler_container">
@@ -453,6 +458,14 @@
         </div>
     </div>
 
+    <div class="cykel_filter">
+        <button class="filter valgt" data-kategori="Alle">Alle</button>
+        <button class="filter" data-kategori="Citybike">Citybike</button>
+        <button class="filter" data-kategori="Electric-bike">EL-Cykel</button>
+        <button class="filter" data-kategori="Trekking">Trekking</button>
+        <button class="filter" data-kategori="Racercykel">Racercykel</button>
+    </div>
+    <h1>Alle</h1>
 
     <div id="single">
         <section class="liste">
@@ -493,4 +506,6 @@
     </footer>
 
     <script src="script.js"></script>
-</body></html>
+</body>
+
+</html>

@@ -1,5 +1,6 @@
         let cykler = [];
         const url = "https://esauka.dk/koga/wordpress/wp-json/wp/v2/koga?per_page=100";
+        let filter = "Alle";
 
         const liste = document.querySelector(".liste");
 
@@ -10,6 +11,7 @@
             hentFooter();
             hentJson();
             animer();
+            addEventListenersToButtons();
         }
 
         //        async function hentNav() {
@@ -40,18 +42,20 @@
 
             liste.innerHTML = "";
 
-            cykler.forEach(cykel => {
-                const klon = skabelon.cloneNode(true).content;
-                klon.querySelector(".title").textContent = cykel.navn;
+            cykler.forEach((cykel) => {
+                if (filter == "Alle" || filter == cykel.kategori) {
+                    const klon = skabelon.cloneNode(true).content;
+                    klon.querySelector(".title").textContent = cykel.navn;
 
-                klon.querySelector("img").src = cykel.billede.guid;
-                klon.querySelector("img").alt = "billede af" + cykel.title.rendered;
-                klon.querySelector(".beskrivelse").innerHTML = cykel.kort_tekst;
-                liste.appendChild(klon);
-                liste.lastElementChild.addEventListener("click", () => {
-                    location.href = `cykelinfo.html?navn=${cykel.navn}`
-                });
-            });
+                    klon.querySelector("img").src = cykel.billede.guid;
+                    klon.querySelector("img").alt = "billede af" + cykel.title.rendered;
+                    klon.querySelector(".beskrivelse").innerHTML = cykel.kort_tekst;
+                    liste.appendChild(klon);
+                    liste.lastElementChild.addEventListener("click", () => {
+                        location.href = `cykelinfo.html?navn=${cykel.navn}`
+                    });
+                }
+            })
 
 
 
@@ -92,4 +96,20 @@
                 document.querySelector("#menuknap").classList.add("whiten");
 
             }
+        }
+
+        function addEventListenersToButtons() {
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.addEventListener("click", filtrering);
+            })
+        }
+
+        function filtrering() {
+            filter = this.dataset.kategori;
+            document.querySelector("h1").textContent = this.textContent;
+            document.querySelectorAll(".cykel_filter").forEach(elm => {
+                elm.classList.remove("valgt");
+            })
+            this.classList.add("valgt");
+            vis();
         }
