@@ -51,9 +51,8 @@ function vis() {
                 klon.querySelector(".beskrivelse").innerHTML = cykel.kort_tekst;
                 liste.appendChild(klon);
                 liste.lastElementChild.addEventListener("click", () => {
-                    location.href = cykelinfo.html ? navn = $ {
-                        cykel.navn
-                    }
+                    location.href = `cykelinfo.html?navn=${
+                        cykel.navn}`
                 });
             }
         })
