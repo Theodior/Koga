@@ -682,9 +682,10 @@ footer p {
 
 @media screen and (min-width:1000px) {
     footer .left {
-    padding: 0px 20px 20px 20px;
-    flex-grow: 1;
-    flex-basis: 30px;
+        padding: 0px 20px 20px 20px;
+        flex-grow: 1;
+        flex-basis: 30px;
+    }
 }
-}
+
 /*************************** FOOTER ************************************/
