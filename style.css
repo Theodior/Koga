@@ -79,6 +79,11 @@ dropdown {
 /*******            Index.html           ******/
 
 
+#body_container {
+    display: none;
+}
+
+
 header {
     grid-area: header;
     z-index: 1;
