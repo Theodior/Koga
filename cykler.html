@@ -20,6 +20,46 @@
 </head>
 
 <style>
+    .oscykler h1 {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        font-size: 2em;
+        font-family: futura-pt, sans-serif;
+    }
+
+
+    .cykel_filter {
+        display: flex;
+        justify-content: center;
+    }
+
+    .cykel_filter button {
+        border: none;
+        display: inline-block;
+        padding: 20px 50px;
+        background-color: royalblue;
+        color: whitesmoke;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 20px;
+        transition-duration: 0.2s;
+        margin: 20px;
+        justify-content: center;
+    }
+
+    .cykel_filter button:hover {
+        color: whitesmoke;
+        background-color: blueviolet;
+    }
+
+
+
+
+
+
+
+
     .splash_billede {
         background-image: url(img/historie_splash4.jpg);
         background-size: cover;
@@ -463,6 +503,11 @@
         </div>
     </div>
 
+    <div class="oscykler">
+        <h1>CYKLER</h1>
+    </div>
+
+
     <div class="cykel_filter">
         <button class="filter valgt" data-kategori="Alle">Alle</button>
         <button class="filter" data-kategori="Citybike">Citybike</button>
@@ -470,7 +515,7 @@
         <button class="filter" data-kategori="Trekking">Trekking</button>
         <button class="filter" data-kategori="Racercykel">Racercykel</button>
     </div>
-    <h1>Alle</h1>
+
 
     <div id="single">
         <section class="liste">
