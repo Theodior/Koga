@@ -2,7 +2,7 @@
         const url = "https://esauka.dk/koga/wordpress/wp-json/wp/v2/koga?per_page=100";
         let filter = "Alle";
 
-        const liste = document.querySelector(".liste");
+        // const liste = document.querySelector(".liste");
 
         document.addEventListener("DOMContentLoaded", start);
 
@@ -25,7 +25,6 @@
             const response = await fetch("inc/footer.html");
             const inclusion = await response.text();
             document.querySelector("footer").innerHTML = inclusion;
-            console.log(inclusion);
         }
 
         async function hentJson() {
@@ -39,26 +38,24 @@
         function vis() {
             const skabelon = document.querySelector("template");
             const liste = document.querySelector(".liste");
+            if (liste) {
+                liste.innerHTML = "";
 
-            liste.innerHTML = "";
+                cykler.forEach((cykel) => {
+                    if (filter == "Alle" || filter == cykel.kategori) {
+                        const klon = skabelon.cloneNode(true).content;
+                        klon.querySelector(".title").textContent = cykel.navn;
 
-            cykler.forEach((cykel) => {
-                if (filter == "Alle" || filter == cykel.kategori) {
-                    const klon = skabelon.cloneNode(true).content;
-                    klon.querySelector(".title").textContent = cykel.navn;
-
-                    klon.querySelector("img").src = cykel.billede.guid;
-                    klon.querySelector("img").alt = "billede af" + cykel.title.rendered;
-                    klon.querySelector(".beskrivelse").innerHTML = cykel.kort_tekst;
-                    liste.appendChild(klon);
-                    liste.lastElementChild.addEventListener("click", () => {
-                        location.href = `cykelinfo.html?navn=${cykel.navn}`
-                    });
-                }
-            })
-
-
-
+                        klon.querySelector("img").src = cykel.billede.guid;
+                        klon.querySelector("img").alt = "billede af" + cykel.title.rendered;
+                        klon.querySelector(".beskrivelse").innerHTML = cykel.kort_tekst;
+                        liste.appendChild(klon);
+                        liste.lastElementChild.addEventListener("click", () => {
+                            location.href = `cykelinfo.html?navn=${cykel.navn}`
+                        });
+                    }
+                })
+            }
         }
 
         function visSingle(bike) {
