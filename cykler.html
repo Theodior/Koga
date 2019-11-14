@@ -85,6 +85,7 @@
         margin-left: 10vw;
         margin-right: 10vw;
         background-color: white;
+
     }
 
 
@@ -275,6 +276,10 @@
             text-align: center;
         }
 
+        .cykler {
+            background-color: white;
+        }
+
     }
 
 
@@ -285,12 +290,13 @@
             display: grid;
 
             grid-template-columns: 30vw 30vw 30vw;
-            grid-template-rows: 35vw 35vw 35vw 35vw 35vw 35vw 35vw 35vw;
+            grid-template-rows: 35vw;
+            grid-auto-rows: 35vw;
             margin-left: 5vw;
             margin-right: 5vw;
             margin-top: 3vw;
 
-            background-color: white;
+            background-color: inherit;
 
 
 
@@ -407,7 +413,6 @@
 
 
     }
-
 </style>
 
 <body id="cykler_container">
@@ -434,7 +439,7 @@
             <div class="burgermenu">
                 <nav>
                     <div id="menuknap">☰</div>
-                    <ul id="menu" class="hidden animationtest">
+                    <ul id="menu" class="hidden">
                         <li>
                             <a href="index.html">Forside</a>
                             <a href="historie.html">Historie om KOGA</a>
@@ -506,6 +511,4 @@
     </footer>
 
     <script src="script.js"></script>
-</body>
-
-</html>
+</body></html>
