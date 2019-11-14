@@ -79,6 +79,11 @@ dropdown {
 /*******            Index.html           ******/
 
 
+#body_container {
+    display: none;
+}
+
+
 header {
     grid-area: header;
     z-index: 1;
@@ -635,11 +640,14 @@ footer {
 .footer_billeder {
     display: flex;
     justify-content: center;
+    position: relative;
+    top: 3.5vw;
+
 }
 
 footer img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border: 0px;
     padding: 5px;
     cursor: pointer;
@@ -672,4 +680,11 @@ footer p {
     font-weight: 100;
 }
 
+@media screen and (min-width:1000px) {
+    footer .left {
+    padding: 0px 20px 20px 20px;
+    flex-grow: 1;
+    flex-basis: 30px;
+}
+}
 /*************************** FOOTER ************************************/
