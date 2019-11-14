@@ -60,6 +60,7 @@
             grid-template-areas:
                 " kh2 "
                 " map "
+                " if2 "
                 " k_p "
                 " kp1 "
                 " kp2 "
@@ -161,6 +162,15 @@
 
         #kontakt_container .kontakt .open_h2 {
             grid-area: oh2;
+            text-align: center;
+            font-size: 2rem;
+            padding-top: 7vh;
+
+
+        }
+
+        #kontakt_container .kontakt .info_h2 {
+            grid-area: if2;
             text-align: center;
             font-size: 2rem;
             padding-top: 7vh;
@@ -317,7 +327,7 @@
                 grid-template-areas:
                     " kh2 kh2 kh2 kh2 kh2 "
                     " kp2 . . . map "
-                    " oh2 . . . . "
+                    " oh2 . . . if2 "
                     " vp . . . kp1 "
                     " hp . . . k_p "
                     " sh2 sh2 sh2 sh2 sh2 "
@@ -397,16 +407,17 @@
 
             }
 
-            /*#kontakt_container .kontakt .img4 {
-                grid-area: img4;
-                width: 50px;
-                height: 50px;
-
-            }*/
 
 
             #kontakt_container .kontakt .open_h2 {
                 grid-area: oh2;
+                /*text-align: center;*/
+                padding-top: 7vh;
+
+            }
+
+            #kontakt_container .kontakt .info_h2 {
+                grid-area: if2;
                 /*text-align: center;*/
                 padding-top: 7vh;
 
@@ -585,8 +596,10 @@
 
         <p class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.562423351001!2d12.514784315861364!3d55.67920900513303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465253c0f812fc99%3A0xbad7fb89d5bd5f06!2sKOGA%20Center%20Copenhagen!5e0!3m2!1sda!2sdk!4v1573113883137!5m2!1sda!2sdk" width="500" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe></p>
 
+        <h2 class="info_h2">Info</h2>
+
         <p class="karta_p">
-            Adresse:
+
             Peter Bangsvej 18, 2000 Frederiksberg </p>
 
 
@@ -639,6 +652,7 @@
 
             }
         }
+
     </script>
     <!--    <script src="script.js"></script>-->
 
