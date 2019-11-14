@@ -92,6 +92,10 @@ header {
     grid-area: indhold;
 }
 
+footer {
+    grid-area: footer;
+}
+
 
 
 #body_container {
@@ -99,7 +103,8 @@ header {
     grid-template-areas:
         "header"
         "splash"
-        "indhold";
+        "indhold"
+        "footer";
 }
 
 
