@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>KOGA Forside</title>
+    <title>KOGA Cykler</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/zvb6klh.css">
     <!--                           FAVION                           -->
@@ -20,6 +20,53 @@
 </head>
 
 <style>
+    .oscykler h1 {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        font-size: 2em;
+        font-family: futura-pt, sans-serif;
+        background-color: whitesmoke;
+        height: 5vw;
+        margin: 0vw;
+        align-items: center;
+    }
+
+
+    .cykel_filter {
+        display: flex;
+        justify-content: center;
+    }
+
+    .cykel_filter button {
+        border: none;
+        display: inline-block;
+        padding: 20px 50px;
+        background-color: #1F92BF;
+        color: whitesmoke;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 4px;
+        transition-duration: 0.2s;
+        margin: 20px;
+        margin-bottom: 0px;
+        justify-content: center;
+        margin-bottom: 0vw;
+
+    }
+
+    .cykel_filter button:hover {
+        color: black;
+        background-color: whitesmoke;
+    }
+
+
+
+
+
+
+
+
     .splash_billede {
         background-image: url(img/historie_splash4.jpg);
         background-size: cover;
@@ -422,18 +469,11 @@
         <nav>
             <div class="topnav">
                 <nav class="knapper">
+                    <a href="cykler.html">Cykler</a>
 
                     <a href="historie.html">Historie om KOGA</a>
                     <a href="kontakt.html">Kontakt</a>
-                    <div class="dropdown">
-                        <a class="dropbutton" href="cykler.html">Cykler</a>
-                        <div class="dropdown-content">
-                            <a href="cykler.html">CITYBIKE</a>
-                            <a href="cykler.html">EL-CYKEL</a>
-                            <a href="cykler.html">TREKKING</a>
-                            <a href="cykler.html">RACERCYKEL</a>
-                        </div>
-                    </div>
+
                 </nav>
             </div>
             <div class="burgermenu">
@@ -463,6 +503,11 @@
         </div>
     </div>
 
+    <div class="oscykler">
+        <h1>CYKLER</h1>
+    </div>
+
+
     <div class="cykel_filter">
         <button class="filter valgt" data-kategori="Alle">Alle</button>
         <button class="filter" data-kategori="Citybike">Citybike</button>
@@ -470,7 +515,7 @@
         <button class="filter" data-kategori="Trekking">Trekking</button>
         <button class="filter" data-kategori="Racercykel">Racercykel</button>
     </div>
-    <h1>Alle</h1>
+
 
     <div id="single">
         <section class="liste">
