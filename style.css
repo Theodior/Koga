@@ -269,7 +269,7 @@ footer {
 
 #body_container nav a:hover {
     color: white;
-  text-shadow: 0 0 0.6px white;
+    text-shadow: 0 0 0.6px white;
 }
 
 }
@@ -339,8 +339,9 @@ footer {
 }
 
 .topnav a:hover {
-color: black;
-  text-shadow: 0 0 0.5px black;}
+    color: black;
+    text-shadow: 0 0 0.5px black;
+}
 
 .burgermenu {
     display: flex;
@@ -653,11 +654,9 @@ footer img {
     cursor: pointer;
 }
 
-/*
 footer img:hover {
     transform: scale(1.2);
 }
-*/
 
 footer .tekst {
     display: flex;
