@@ -12,6 +12,8 @@ function start() {
     hentJson();
     animer();
     addEventListenersToButtons();
+
+    // Timeout i 2 sekunder for at vise hjulet
     setTimeout(showPage, 2000);
 }
 
@@ -34,7 +36,7 @@ async function hentJson() {
     console.log(cykler);
     vis();
 }
-
+// Loading hjul
 function showPage() {
     document.querySelector("#hjul_container").style.display = "none";
     document.querySelector("#body_container").style.display = "block";

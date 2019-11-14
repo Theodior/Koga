@@ -1,40 +1,3 @@
-.hjul {
-    animation-name: rotation_kf;
-    animation-duration: 4s;
-    animation-iteration-count: 1;
-
-
-}
-
-@keyframes rotation_kf {
-
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(1080deg);
-    }
-
-}
-
-#hjul_container {
-    position: absolute;
-    top: 1vw;
-    left: 26vw;
-    z-index: 1;
-
-}
-
-.hjul_sprite {
-    background-image: url(hjul.png);
-    width: 50vw;
-    height: 50vw;
-    background-size: 100%;
-    cursor: pointer;
-}
-
-
 /* class til at gøre menuknap hvid */
 .whiten {
     color: #ffffff;
@@ -75,11 +38,45 @@ dropdown {
     font-style: normal;
 }
 
+/*                     Loading Hjul                     */
+
+.hjul {
+    animation-name: rotation_kf;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+
+
+}
+
+@keyframes rotation_kf {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+#hjul_container {
+    position: absolute;
+    top: 15%;
+    left: 10vw;
+    z-index: 1;
+
+}
+
+.hjul_sprite {
+    background-image: url(hjul.png);
+    width: 400px;
+    height: 400px;
+    background-size: 100%;
+}
+
+
 /*******            Index.html           ******/
-
-
-#body_container {}
-
 
 header {
     grid-area: header;
@@ -107,6 +104,7 @@ footer {
         "splash"
         "indhold"
         "footer";
+    /*  for at indsætte loading som efterfølgende kalder body_container */
     display: none;
 }
 
@@ -456,6 +454,26 @@ footer {
 
     /*******                  index.html                  ******/
 
+
+    #hjul_container {
+        position: absolute;
+        top: 15%;
+        left: 35vw;
+
+
+
+    }
+
+    .hjul_sprite {
+
+        width: 500px;
+        height: 500px;
+
+    }
+
+
+
+
     .splash_billede {
         background-size: cover;
         width: 100vw;
@@ -540,8 +558,9 @@ footer {
 
 @media screen and (min-width:768px) {
 
-    .splash_billede {
 
+
+    .splash_billede {
         background-size: cover;
         width: 100vw;
         height: 40vw;
@@ -588,18 +607,11 @@ footer {
     #body_container .velkomst .img1 {
         grid-area: img1;
         margin: auto;
-
-
-
     }
 
     #body_container .velkomst .img2 {
         grid-area: img2;
         margin: auto;
-
-
-
-
     }
 
     #body_container .velkomst .service_img {
