@@ -12,6 +12,7 @@ function start() {
     hentJson();
     animer();
     addEventListenersToButtons();
+    setTimeout(showPage, 2000);
 }
 
 //        async function hentNav() {
@@ -34,6 +35,11 @@ async function hentJson() {
     vis();
 }
 
+function showPage() {
+    document.querySelector("#hjul_container").style.display = "none";
+    document.querySelector("#body_container").style.display = "block";
+}
+
 
 function vis() {
     const skabelon = document.querySelector("template");
@@ -51,9 +57,8 @@ function vis() {
                 klon.querySelector(".beskrivelse").innerHTML = cykel.kort_tekst;
                 liste.appendChild(klon);
                 liste.lastElementChild.addEventListener("click", () => {
-                    location.href = cykelinfo.html ? navn = $ {
-                        cykel.navn
-                    }
+                    location.href = `cykelinfo.html?navn=${
+                        cykel.navn}`
                 });
             }
         })
