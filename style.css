@@ -1,4 +1,3 @@
-/*
 .hjul {
     animation-name: rotation_kf;
     animation-duration: 4s;
@@ -27,14 +26,14 @@
 
 }
 
-#hjul_sprite {
+.hjul_sprite {
     background-image: url(hjul.png);
     width: 50vw;
     height: 50vw;
     background-size: 100%;
     cursor: pointer;
 }
-*/
+
 
 /* class til at gøre menuknap hvid */
 .whiten {
@@ -79,9 +78,7 @@ dropdown {
 /*******            Index.html           ******/
 
 
-#body_container {
-    display: none;
-}
+#body_container {}
 
 
 header {
@@ -110,6 +107,7 @@ footer {
         "splash"
         "indhold"
         "footer";
+    display: none;
 }
 
 
@@ -684,9 +682,10 @@ footer p {
 
 @media screen and (min-width:1000px) {
     footer .left {
-    padding: 0px 20px 20px 20px;
-    flex-grow: 1;
-    flex-basis: 30px;
+        padding: 0px 20px 20px 20px;
+        flex-grow: 1;
+        flex-basis: 30px;
+    }
 }
-}
+
 /*************************** FOOTER ************************************/

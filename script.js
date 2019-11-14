@@ -12,6 +12,7 @@ function start() {
     hentJson();
     animer();
     addEventListenersToButtons();
+    setTimeout(showPage, 2000);
 }
 
 //        async function hentNav() {
@@ -32,6 +33,11 @@ async function hentJson() {
     cykler = await response.json();
     console.log(cykler);
     vis();
+}
+
+function showPage() {
+    document.querySelector("#hjul_container").style.display = "none";
+    document.querySelector("#body_container").style.display = "block";
 }
 
 
