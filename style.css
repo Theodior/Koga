@@ -79,6 +79,11 @@ dropdown {
 /*******            Index.html           ******/
 
 
+#body_container {
+    display: none;
+}
+
+
 header {
     grid-area: header;
     z-index: 1;
@@ -265,7 +270,10 @@ footer {
 }
 
 #body_container nav a:hover {
-    color: red;
+    color: white;
+  text-shadow: 0 0 2px white;
+}
+
 }
 
 .logo:hover {
@@ -636,7 +644,7 @@ footer {
     display: flex;
     justify-content: center;
     position: relative;
-    top: 3.5vw;
+    top: 3vw;
 
 }
 
