@@ -268,7 +268,10 @@ footer {
 }
 
 #body_container nav a:hover {
-    color: red;
+    color: white;
+  text-shadow: 0 0 1px white;
+}
+
 }
 
 .logo:hover {
@@ -330,15 +333,14 @@ footer {
 
 .topnav a {
     cursor: pointer;
-    color: black;
     text-decoration: none;
     padding-left: 20px;
     line-height: 80px;
 }
 
 .topnav a:hover {
-    color: red;
-}
+color: black;
+  text-shadow: 0 0 0.6px black;}
 
 .burgermenu {
     display: flex;
@@ -639,7 +641,7 @@ footer {
     display: flex;
     justify-content: center;
     position: relative;
-    top: 3.5vw;
+    top: 3vw;
 
 }
 
