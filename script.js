@@ -4,7 +4,7 @@ let filter = "Alle";
 
 // const liste = document.querySelector(".liste");
 
-document.addEventListener("DOMContentLoaded", start);
+window.addEventListener("load", start);
 
 function start() {
     //            hentNav();
@@ -13,8 +13,8 @@ function start() {
     animer();
     addEventListenersToButtons();
 
-    // Timeout i 2 sekunder for at vise hjulet
-    setTimeout(showPage, 2000);
+
+    // showPage();
 }
 
 //        async function hentNav() {
