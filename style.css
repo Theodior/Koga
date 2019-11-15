@@ -65,8 +65,8 @@ dropdown {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
+
 
 .hjul_sprite {
     background-image: url(nytnythjul.png);
