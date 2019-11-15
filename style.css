@@ -76,7 +76,7 @@ dropdown {
 .hjul {
     animation-name: rotation_kf;
     animation-duration: 2s;
-    animation-iteration-count: 1;
+    animation-iteration-count: 10;
 
 
 }
@@ -102,7 +102,7 @@ dropdown {
 }
 
 .hjul_sprite {
-    background-image: url(nythjul-8.png);
+    background-image: url(nytnythjul.png);
     width: 250px;
     height: 249px;
     background-size: 100%;
