@@ -252,13 +252,15 @@ footer {
 
 /** NAV & BURGERMENU **/
 
+
 .logo {
     width: 65px;
     height: 65px;
-    position: absolute;
+    position: fixed;
     right: 85vw;
     top: 0.5vw;
     cursor: pointer;
+
 }
 
 #body_container nav a {
