@@ -1,3 +1,36 @@
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0px;
+        opacity: 1
+    }
+}
+
+@keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+
 /* class til at gøre menuknap hvid */
 .whiten {
     color: #ffffff;
@@ -42,8 +75,8 @@ dropdown {
 
 .hjul {
     animation-name: rotation_kf;
-    animation-duration: 4s;
-    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-iteration-count: 10;
 
 
 }
@@ -61,17 +94,17 @@ dropdown {
 }
 
 #hjul_container {
-    position: absolute;
-    top: 15%;
-    left: 10vw;
-    z-index: 1;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
 .hjul_sprite {
-    background-image: url(hjul.png);
-    width: 400px;
-    height: 400px;
+    background-image: url(nytnythjul.png);
+    width: 250px;
+    height: 249px;
     background-size: 100%;
 }
 
@@ -252,13 +285,15 @@ footer {
 
 /** NAV & BURGERMENU **/
 
+
 .logo {
     width: 65px;
     height: 65px;
-    position: absolute;
+    position: fixed;
     right: 85vw;
     top: 0.5vw;
     cursor: pointer;
+
 }
 
 #body_container nav a {
@@ -356,58 +391,9 @@ footer {
 
 }
 
-.dropdown {
-    float: left;
-    overflow: hidden;
-}
-
-.dropdown .dropbutton {
-    background-color: inherit;
-    font-size: 16px;
-    border: none;
-    outline: none;
-    line-height: 80px;
-    display: flex;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    padding: 0.5rem;
-}
-
-.dropdown-content a {
-    padding: 0px;
-    margin: 0px;
-    float: none;
-    display: block;
-    color: black;
-    text-align: left;
-    font-size: 1rem;
-    line-height: 40px;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
 /***********************************************************/
-@media screen and (min-width:768px) {
-    .logo {
-        right: 89vw;
-        width: 75px;
-        height: 75px;
-    }
-}
 
-@media screen and (min-width:1000px) {
-    .logo {
-        right: 93vw;
-        width: 75px;
-        height: 75px;
-    }
-}
+
 
 
 @media screen and (min-width:600px) {
@@ -422,11 +408,6 @@ footer {
         display: none;
     }
 }
-
-
-
-
-
 
 @media screen and (min-width:960px) {
 
@@ -454,25 +435,11 @@ footer {
 
     /*******                  index.html                  ******/
 
-
-    #hjul_container {
-        position: absolute;
-        top: 15%;
-        left: 35vw;
-
-
-
+    .logo {
+        right: 93vw;
+        width: 75px;
+        height: 75px;
     }
-
-    .hjul_sprite {
-
-        width: 500px;
-        height: 500px;
-
-    }
-
-
-
 
     .splash_billede {
         background-size: cover;
@@ -547,6 +514,15 @@ footer {
         grid-area: sp;
 
     }
+
+    /******* FOOTER *************/
+    footer .left {
+        padding: 0px 20px 20px 20px;
+        flex-grow: 1;
+        flex-basis: 30px;
+    }
+
+
 }
 
 /**********************************************************/
@@ -558,7 +534,11 @@ footer {
 
 @media screen and (min-width:768px) {
 
-
+    .logo {
+        right: 89vw;
+        width: 75px;
+        height: 75px;
+    }
 
     .splash_billede {
         background-size: cover;
@@ -636,6 +616,9 @@ footer {
         grid-area: sp;
 
     }
+
+    /***** FOOTER *****/
+
 }
 
 /************************* MQ-TABLET  *********************************/
@@ -691,12 +674,5 @@ footer p {
     font-weight: 100;
 }
 
-@media screen and (min-width:1000px) {
-    footer .left {
-        padding: 0px 20px 20px 20px;
-        flex-grow: 1;
-        flex-basis: 30px;
-    }
-}
 
 /*************************** FOOTER ************************************/

@@ -4,7 +4,7 @@ let filter = "Alle";
 
 // const liste = document.querySelector(".liste");
 
-document.addEventListener("DOMContentLoaded", start);
+window.addEventListener("load", start);
 
 function start() {
     //            hentNav();
@@ -12,9 +12,7 @@ function start() {
     hentJson();
     animer();
     addEventListenersToButtons();
-
-    // Timeout i 2 sekunder for at vise hjulet
-    setTimeout(showPage, 2000);
+    showPage();
 }
 
 //        async function hentNav() {
@@ -112,7 +110,7 @@ function addEventListenersToButtons() {
 
 function filtrering() {
     filter = this.dataset.kategori;
-    document.querySelector("h1").textContent = this.textContent;
+    document.querySelector("h2").textContent = this.textContent;
     document.querySelectorAll(".cykel_filter").forEach(elm => {
         elm.classList.remove("valgt");
     })
