@@ -1,24 +1,12 @@
-.animate-bottom {
+.easein {
     position: relative;
-    -webkit-animation-name: animatebottom;
-    -webkit-animation-duration: 1s;
-    animation-name: animatebottom;
+    animation-name: easein;
     animation-duration: 1s
 }
 
-@-webkit-keyframes animatebottom {
-    from {
-        bottom: -100px;
-        opacity: 0
-    }
 
-    to {
-        bottom: 0px;
-        opacity: 1
-    }
-}
 
-@keyframes animatebottom {
+@keyframes easein {
     from {
         bottom: -100px;
         opacity: 0
