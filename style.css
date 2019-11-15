@@ -61,10 +61,10 @@ dropdown {
 }
 
 #hjul_container {
-    position: absolute;
-    top: 15%;
-    left: 10vw;
-    z-index: 1;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -455,16 +455,6 @@ footer {
 
 
     /*******                  index.html                  ******/
-
-
-    #hjul_container {
-        position: absolute;
-        top: 15%;
-        left: 35vw;
-
-
-
-    }
 
     .hjul_sprite {
 
