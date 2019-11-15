@@ -21,316 +21,390 @@
 </head>
 
 <body>
-    <style>
-        nav {
-            border-bottom: 2px solid black;
-            ;
-            margin-bottom: 0vw;
-        }
+    <div id="hjul_container" class="hjul">
 
-        nav.knapper {
-            border-bottom: inherit;
-        }
+        <div class="hjul_sprite"></div>
+    </div>
+    <div id="ci">
+        <style>
+            /*                     Loading Hjul                     */
 
-        nav a {
-            color: black;
-        }
+            .hjul {
+                animation-name: rotation_kf;
+                animation-duration: 2s;
+                animation-iteration-count: 10;
 
 
-
-
-
-
-        .infoCykler img {
-            width: 80vw;
-            height: 50vw;
-            margin-left: 10vw;
-            margin-right: 10vw;
-        }
-
-        .infoCykler p {
-            margin-left: 20px;
-            margin-right: 25px;
-
-        }
-
-
-        .luk {
-            background-color: #0F7DC7;
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            border-radius: 4px;
-            text-align: center;
-            font-size: 16px;
-            cursor: pointer;
-            margin-left: 3vw;
-            margin-top: 12vw;
-        }
-
-        .luk:hover {
-            color: black;
-            background-color: whitesmoke;
-        }
-
-        .infoCykler h2 {
-            margin-left: 5vw;
-            margin-bottom: 1vw;
-            margin-top: 1vw;
-
-            display: flex;
-            justify-content: center;
-            font-size: 3em;
-        }
-
-        .infoCykler {}
-
-        p.lang,
-        p.pris {
-            margin-left: 10vw;
-            margin-right: 10vw;
-        }
-
-        p.lang {
-            letter-spacing: 1px;
-            line-height: 20px;
-            word-spacing: 2px;
-        }
-
-        p.farver {
-            margin-left: 10vw;
-            margin-right: 10vw;
-        }
-
-        p.kg {
-            margin-left: 10vw;
-            margin-right: 10vw;
-        }
-
-
-
-        div#menuknap {
-            margin-right: 2vw;
-        }
-
-
-
-
-        @media screen and (min-width:800px) {
-
-            .luk {
-                margin-top: 1vw;
             }
 
-        }
+            @keyframes rotation_kf {
 
-        @media screen and (min-width:1160px) {
+                0% {
+                    transform: rotate(0deg);
+                }
 
-            .gridsingle {
-                display: grid;
-                grid-template-columns: 59vw 31vw;
-                grid-template-rows: 5vw 18vw 3vw 3vw 3vw;
-                margin-left: 5vw;
-                margin-right: 5vw;
+                100% {
+                    transform: rotate(360deg);
+                }
 
             }
+
+            #hjul_container {
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            .hjul_sprite {
+                background-image: url(nytnythjul.png);
+                width: 250px;
+                height: 249px;
+                background-size: 100%;
+            }
+
+            .easein {
+                position: relative;
+                animation-name: easein;
+                animation-duration: 1s
+            }
+
+
+
+            @keyframes easein {
+                from {
+                    bottom: -100px;
+                    opacity: 0
+                }
+
+                to {
+                    bottom: 0;
+                    opacity: 1
+                }
+            }
+
+            #ci {
+                display: none;
+            }
+
+
+            nav {
+                border-bottom: 2px solid black;
+                ;
+                margin-bottom: 0vw;
+            }
+
+            nav.knapper {
+                border-bottom: inherit;
+            }
+
+            nav a {
+                color: black;
+            }
+
+
+
+
+
 
             .infoCykler img {
-                width: 50vw;
-                height: 30vw;
+                width: 80vw;
+                height: 50vw;
+                margin-left: 10vw;
+                margin-right: 10vw;
+            }
+
+            .infoCykler p {
+                margin-left: 20px;
+                margin-right: 25px;
+
+            }
+
+
+            .luk {
+                background-color: #0F7DC7;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                border-radius: 4px;
+                text-align: center;
+                font-size: 16px;
+                cursor: pointer;
+                margin-left: 3vw;
+                margin-top: 12vw;
+            }
+
+            .luk:hover {
+                color: black;
+                background-color: whitesmoke;
+            }
+
+            .infoCykler h2 {
                 margin-left: 5vw;
+                margin-bottom: 1vw;
+                margin-top: 1vw;
 
+                display: flex;
+                justify-content: center;
+                font-size: 3em;
+            }
 
+            .infoCykler {}
 
-
+            p.lang,
+            p.pris {
+                margin-left: 10vw;
+                margin-right: 10vw;
             }
 
             p.lang {
-                grid-row: 2;
-                grid-column: 2/ span 1;
-                margin: 0vw;
                 letter-spacing: 1px;
                 line-height: 20px;
-            }
-
-            p.pris {
-                grid-row: 3;
-                grid-column: 2;
-                margin: 0vw;
-                font-size: 1em;
-                letter-spacing: 1px;
+                word-spacing: 2px;
             }
 
             p.farver {
-                margin: 0vw;
-                grid-column: 2;
-                grid-row: 4;
+                margin-left: 10vw;
+                margin-right: 10vw;
             }
 
             p.kg {
-                margin: 0vw;
-                grid-column: 2;
-                grid-row: 5;
-            }
-
-            .luk {
-                margin-bottom: 0vw;
-                margin-left: 3vw;
-                margin-top: 0vw;
-            }
-
-            .infocykler h2 {
-                margin: 0vw;
-
+                margin-left: 10vw;
+                margin-right: 10vw;
             }
 
 
-        }
-    </style>
-    <header>
-        <nav>
-            <img class="logo" src="img/1x/logoblue.png" onclick="window.location.href='index.html'" alt="koga logo">
 
-            <div class="topnav">
-                <nav class="knapper">
-                    <a href="cykler.html">Cykler</a>
-
-                    <a href="historie.html">Historie</a>
-                    <a href="kontakt.html">Kontakt</a>
-
-                </nav>
-            </div>
-            <div class="burgermenu">
-                <nav>
-                    <div id="menuknap">☰</div>
-                    <ul id="menu" class="hidden">
-                        <li>
-                            <a href="historie.html">Historie</a>
-                            <a href="cykler.html">Cykler</a>
-                            <a href="kontakt.html">Kontakt</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+            div#menuknap {
+                margin-right: 2vw;
+            }
 
 
-        </nav>
-    </header>
-
-    <main>
-        <h1 class="overskrift"></h1>
-        <section class="liste">
-        </section>
 
 
-    </main>
+            @media screen and (min-width:800px) {
 
+                .luk {
+                    margin-top: 1vw;
+                }
 
-    <main id="single">
-        <button class="luk">Tilbage</button>
-        <section class="indhold">
-            <article class="infoCykler">
+            }
 
-                <h2></h2>
-                <div class="gridsingle">
-                    <img class="billede" src="" alt="">
-                    <p class="lang"></p>
-                    <p class="pris">Pris: </p>
-                    <p class="farver">Farve: </p>
-                    <p class="kg">Vægt: </p>
-                </div>
+            @media screen and (min-width:1160px) {
 
-            </article>
-
-        </section>
-
-    </main>
-
-    <footer>
-    </footer>
-
-
-    <script>
-        let urlParams = new URLSearchParams(window.location.search);
-        let navn = urlParams.get("navn");
-        let personer;
-
-        document.addEventListener("DOMContentLoaded", start);
-
-        function start() {
-            //            hentNav();
-            getJson();
-            animer();
-        }
-
-        //        async function hentNav() {
-        //            const response = await fetch("inc/nav.html");
-        //            const inclusion = await response.text();
-        //            document.querySelector("nav").innerHTML = inclusion;
-        //            console.log(inclusion);
-        //        }
-
-        async function getJson() {
-
-            let jsondata = await fetch("https://esauka.dk/koga/wordpress/wp-json/wp/v2/koga?per_page=100");
-
-            personer = await jsondata.json();
-            visJson();
-
-
-        }
-
-        function visJson() {
-
-            personer.forEach((person) => {
-
-                if (person.title.rendered == navn) {
-                    document.querySelector("h2").textContent = person.navn;
-
-                    document.querySelector(".billede").src = person.billede.guid;
-                    document.querySelector(".pris").textContent += person.pris += ",-";
-                    document.querySelector(".lang").innerHTML = person.lang_tekst;
-                    document.querySelector(".farver").textContent += person.farver;
-                    document.querySelector(".kg").textContent += person.kilo += " kg";
+                .gridsingle {
+                    display: grid;
+                    grid-template-columns: 59vw 31vw;
+                    grid-template-rows: 5vw 18vw 3vw 3vw 3vw;
+                    margin-left: 5vw;
+                    margin-right: 5vw;
 
                 }
 
-            })
-        }
-
-        document.querySelector(".luk").addEventListener("click", () => {
-            history.back();
-        })
-
-        function animer() {
-            document.querySelector("#menuknap").addEventListener("click", toggleMenu);
-            hentFooter();
-
-        }
-
-        async function hentFooter() {
-            const response = await fetch("inc/footer.html");
-            const inclusion = await response.text();
-            document.querySelector("footer").innerHTML = inclusion;
-            console.log(inclusion);
-        }
-
-        function toggleMenu() {
-            console.log("toggleMenu");
-
-            document.querySelector("#menu").classList.toggle("hidden");
-
-            let erSkjult = document.querySelector("#menu").classList.contains("hidden");
-            if (erSkjult == true) {
-                document.querySelector("#menuknap").textContent = "☰";
-                document.querySelector("#menuknap").classList.remove("whiten");
+                .infoCykler img {
+                    width: 50vw;
+                    height: 30vw;
+                    margin-left: 5vw;
 
 
-            } else {
-                document.querySelector("#menuknap").textContent = "✕";
-                document.querySelector("#menuknap").classList.add("whiten");
+
+
+                }
+
+                p.lang {
+                    grid-row: 2;
+                    grid-column: 2/ span 1;
+                    margin: 0vw;
+                    letter-spacing: 1px;
+                    line-height: 20px;
+                }
+
+                p.pris {
+                    grid-row: 3;
+                    grid-column: 2;
+                    margin: 0vw;
+                    font-size: 1em;
+                    letter-spacing: 1px;
+                }
+
+                p.farver {
+                    margin: 0vw;
+                    grid-column: 2;
+                    grid-row: 4;
+                }
+
+                p.kg {
+                    margin: 0vw;
+                    grid-column: 2;
+                    grid-row: 5;
+                }
+
+                .luk {
+                    margin-bottom: 0vw;
+                    margin-left: 3vw;
+                    margin-top: 0vw;
+                }
+
+                .infocykler h2 {
+                    margin: 0vw;
+
+                }
+
 
             }
-        }
-    </script>
+        </style>
+        <header>
+            <nav>
+                <img class="logo" src="img/1x/logoblue.png" onclick="window.location.href='index.html'" alt="koga logo">
+
+                <div class="topnav">
+                    <nav class="knapper">
+                        <a href="cykler.html">Cykler</a>
+
+                        <a href="historie.html">Historie</a>
+                        <a href="kontakt.html">Kontakt</a>
+
+                    </nav>
+                </div>
+                <div class="burgermenu">
+                    <nav>
+                        <div id="menuknap">☰</div>
+                        <ul id="menu" class="hidden">
+                            <li>
+                                <a href="historie.html">Historie</a>
+                                <a href="cykler.html">Cykler</a>
+                                <a href="kontakt.html">Kontakt</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+
+            </nav>
+        </header>
+
+        <main>
+            <h1 class="overskrift"></h1>
+            <section class="liste">
+            </section>
+
+
+        </main>
+
+
+        <main id="single">
+            <button class="luk">Tilbage</button>
+            <section class="indhold">
+                <article class="infoCykler">
+
+                    <h2></h2>
+                    <div class="gridsingle">
+                        <img class="billede" src="" alt="">
+                        <p class="lang"></p>
+                        <p class="pris">Pris: </p>
+                        <p class="farver">Farve: </p>
+                        <p class="kg">Vægt: </p>
+                    </div>
+
+                </article>
+
+            </section>
+
+        </main>
+
+        <footer>
+        </footer>
+
+
+        <script>
+            let urlParams = new URLSearchParams(window.location.search);
+            let navn = urlParams.get("navn");
+            let personer;
+
+            window.addEventListener("load", start);
+
+            function start() {
+                //            hentNav();
+                getJson();
+                animer();
+                showPage();
+            }
+
+            //        async function hentNav() {
+            //            const response = await fetch("inc/nav.html");
+            //            const inclusion = await response.text();
+            //            document.querySelector("nav").innerHTML = inclusion;
+            //            console.log(inclusion);
+            //        }
+
+            async function getJson() {
+
+                let jsondata = await fetch("https://esauka.dk/koga/wordpress/wp-json/wp/v2/koga?per_page=100");
+
+                personer = await jsondata.json();
+                visJson();
+
+
+            }
+
+            function showPage() {
+                document.querySelector("#hjul_container").style.display = "none";
+                document.querySelector("#ci").style.display = "block";
+            }
+
+            function visJson() {
+
+                personer.forEach((person) => {
+
+                    if (person.title.rendered == navn) {
+                        document.querySelector("h2").textContent = person.navn;
+
+                        document.querySelector(".billede").src = person.billede.guid;
+                        document.querySelector(".pris").textContent += person.pris += ",-";
+                        document.querySelector(".lang").innerHTML = person.lang_tekst;
+                        document.querySelector(".farver").textContent += person.farver;
+                        document.querySelector(".kg").textContent += person.kilo += " kg";
+
+                    }
+
+                })
+            }
+
+            document.querySelector(".luk").addEventListener("click", () => {
+                history.back();
+            })
+
+            function animer() {
+                document.querySelector("#menuknap").addEventListener("click", toggleMenu);
+                hentFooter();
+
+            }
+
+            async function hentFooter() {
+                const response = await fetch("inc/footer.html");
+                const inclusion = await response.text();
+                document.querySelector("footer").innerHTML = inclusion;
+                console.log(inclusion);
+            }
+
+            function toggleMenu() {
+                console.log("toggleMenu");
+
+                document.querySelector("#menu").classList.toggle("hidden");
+
+                let erSkjult = document.querySelector("#menu").classList.contains("hidden");
+                if (erSkjult == true) {
+                    document.querySelector("#menuknap").textContent = "☰";
+                    document.querySelector("#menuknap").classList.remove("whiten");
+
+
+                } else {
+                    document.querySelector("#menuknap").textContent = "✕";
+                    document.querySelector("#menuknap").classList.add("whiten");
+
+                }
+            }
+        </script>
+    </div>
 </body></html>
