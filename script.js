@@ -12,9 +12,7 @@ function start() {
     hentJson();
     animer();
     addEventListenersToButtons();
-
-
-    // showPage();
+    showPage();
 }
 
 //        async function hentNav() {
