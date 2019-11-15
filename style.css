@@ -69,9 +69,9 @@ dropdown {
 }
 
 .hjul_sprite {
-    background-image: url(hjul.png);
+    background-image: url(hjul.svg);
     width: 400px;
-    height: 400px;
+    height: 399px;
     background-size: 100%;
 }
 
@@ -455,17 +455,6 @@ footer {
 
 
     /*******                  index.html                  ******/
-
-    .hjul_sprite {
-
-        width: 500px;
-        height: 500px;
-
-    }
-
-
-
-
     .splash_billede {
         background-size: cover;
         width: 100vw;
