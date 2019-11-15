@@ -112,7 +112,7 @@ function addEventListenersToButtons() {
 
 function filtrering() {
     filter = this.dataset.kategori;
-    document.querySelector("h1").textContent = this.textContent;
+    document.querySelector("h2").textContent = this.textContent;
     document.querySelectorAll(".cykel_filter").forEach(elm => {
         elm.classList.remove("valgt");
     })
