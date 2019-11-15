@@ -56,22 +56,21 @@
 
 
         .luk {
-
             background-color: #0F7DC7;
-            /* Green */
             border: none;
             color: white;
             padding: 15px 32px;
             border-radius: 4px;
             text-align: center;
-            text-decoration: none;
-            display: inline-block;
             font-size: 16px;
             cursor: pointer;
             margin-left: 3vw;
             margin-top: 12vw;
+        }
 
-
+        .luk:hover {
+            color: black;
+            background-color: whitesmoke;
         }
 
         .infoCykler h2 {
@@ -115,86 +114,78 @@
         }
 
 
-        @media screen and (min-width:600px) {
+
+
+        @media screen and (min-width:800px) {
 
             .luk {
-                margin-top: 2vw;
+                margin-top: 1vw;
             }
 
-            @media screen and (min-width:800px) {
+        }
 
-                .luk {
-                    margin-top: 1vw;
-                }
+        @media screen and (min-width:1160px) {
 
-
-
-
+            .gridsingle {
+                display: grid;
+                grid-template-columns: 59vw 31vw;
+                grid-template-rows: 5vw 18vw 3vw 3vw 3vw;
+                margin-left: 5vw;
+                margin-right: 5vw;
 
             }
 
-            @media screen and (min-width:1160px) {
-
-                .gridsingle {
-                    display: grid;
-                    grid-template-columns: 59vw 31vw;
-                    grid-template-rows: 5vw 18vw 3vw 3vw 3vw;
-                    margin-left: 5vw;
-                    margin-right: 5vw;
-
-                }
-
-                .infoCykler img {
-                    width: 50vw;
-                    height: 30vw;
-                    margin-left: 5vw;
+            .infoCykler img {
+                width: 50vw;
+                height: 30vw;
+                margin-left: 5vw;
 
 
-
-
-                }
-
-                p.lang {
-                    grid-row: 2;
-                    grid-column: 2/ span 1;
-                    margin: 0vw;
-                    letter-spacing: 1px;
-                    line-height: 20px;
-                }
-
-                p.pris {
-                    grid-row: 3;
-                    grid-column: 2;
-                    margin: 0vw;
-                    font-size: 1em;
-                    letter-spacing: 1px;
-                }
-
-                p.farver {
-                    margin: 0vw;
-                    grid-column: 2;
-                    grid-row: 4;
-                }
-
-                p.kg {
-                    margin: 0vw;
-                    grid-column: 2;
-                    grid-row: 5;
-                }
-
-                .luk {
-                    margin-bottom: 0vw;
-                    margin-left: 3vw;
-                    margin-top: 0vw;
-                }
-
-                .infocykler h2 {
-                    margin: 0vw;
-
-                }
 
 
             }
+
+            p.lang {
+                grid-row: 2;
+                grid-column: 2/ span 1;
+                margin: 0vw;
+                letter-spacing: 1px;
+                line-height: 20px;
+            }
+
+            p.pris {
+                grid-row: 3;
+                grid-column: 2;
+                margin: 0vw;
+                font-size: 1em;
+                letter-spacing: 1px;
+            }
+
+            p.farver {
+                margin: 0vw;
+                grid-column: 2;
+                grid-row: 4;
+            }
+
+            p.kg {
+                margin: 0vw;
+                grid-column: 2;
+                grid-row: 5;
+            }
+
+            .luk {
+                margin-bottom: 0vw;
+                margin-left: 3vw;
+                margin-top: 0vw;
+            }
+
+            .infocykler h2 {
+                margin: 0vw;
+
+            }
+
+
+        }
     </style>
     <header>
         <nav>
