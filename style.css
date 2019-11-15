@@ -1,3 +1,36 @@
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0px;
+        opacity: 1
+    }
+}
+
+@keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+
 /* class til at gøre menuknap hvid */
 .whiten {
     color: #ffffff;
@@ -42,7 +75,7 @@ dropdown {
 
 .hjul {
     animation-name: rotation_kf;
-    animation-duration: 4s;
+    animation-duration: 2s;
     animation-iteration-count: 1;
 
 
@@ -69,9 +102,9 @@ dropdown {
 }
 
 .hjul_sprite {
-    background-image: url(hjul.svg);
-    width: 400px;
-    height: 399px;
+    background-image: url(nythjul-8.png);
+    width: 250px;
+    height: 249px;
     background-size: 100%;
 }
 
@@ -401,12 +434,6 @@ footer {
 
 
     /*******                  index.html                  ******/
-    .hjul_sprite {
-
-        width: 500px;
-        height: 500px;
-
-    }
 
     .logo {
         right: 93vw;
