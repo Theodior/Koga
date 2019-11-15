@@ -261,7 +261,7 @@ footer {
     grid-area: sh2;
     font-size: 36px;
     min-width: 15rem;
-    text-transform: uppercase;
+
     text-align: center;
     margin-top: 75px;
 
@@ -504,7 +504,6 @@ footer {
         grid-area: sh2;
         font-size: 36px;
         min-width: 15rem;
-        text-transform: uppercase;
         text-align: center;
 
 
@@ -608,7 +607,7 @@ footer {
         grid-area: sh2;
         font-size: 36px;
         min-width: 15rem;
-        text-transform: uppercase;
+
         text-align: center;
     }
 
