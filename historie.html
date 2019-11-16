@@ -20,17 +20,18 @@
     <style>
         /*******            historie.html           ******/
 
+
+         #menuknap {
+        color: white;
+    }
+
+
         #historie_container header {
             grid-area: op;
             position: absolute;
             right: 0;
         }
 
-        .splash_baggrund {
-            background-color: #0084CC;
-            width: 100%;
-            height: 70vw;
-        }
 
         #historie_container nav a {
             color: white;
@@ -41,17 +42,40 @@
             text-shadow: 0 0 0.6px white;
         }
 
+.splashbillede .splash_text1 {
+    text-align: center;
+    color: white;
+position: absolute;
+    text-shadow: 0 0 9px black;
+width: 57.9vw;
+
+    font-size: 35px;
+    top: 25%;
+    left: 50%;
+transform: translate(-50%, -50%);
+}
+
+        .splashbillede .splash_text2 {
+    text-align: center;
+    color: white;
+position: absolute;
+    text-shadow: 0 0 2px black;
+    font-size: 25px;
+    top: 35%;
+    left: 50%;
+transform: translate(-50%, -50%);
+              font-style: italic;
+
+}
+
 
 
         /*DESKTOP*/
 
         @media screen and (min-width:1000px) {
 
-            /*Desktop mediaquerry*/
-            .splash_baggrund {
 
-                height: 40vw;
-            }
+
 
             #historie_container header {
                 grid-area: op;
@@ -60,9 +84,11 @@
             }
 
             .splash_historie {
-                grid-area: splashbillede;
-                max-width: 100%;
-                text-align: center;
+                          background-image: url(img/splash_historie1.jpg);
+
+                background-size: cover;
+        width: 100vw;
+        height: 40vw;
 
             }
 
@@ -215,27 +241,35 @@
 
         /*tablet*/
 
+
+
+
+
+
         @media screen and (min-width:768px) {
 
             /*Tablet mediaquerry*/
 
 
+
+
+
+
             .splash_historie {
+                          background-image: url(img/splash_historie1.jpg);
 
-                text-align: center;
-
-            }
-
-
-            .splash_baggrund {
-
-                height: 40vw;
+       background-size: cover;
+        width: 100vw;
+        height: 40vw;
 
             }
+
+
 
             #historie_container .splashbillede {
-                width: 70vw;
+                width: 100vw;
                 height: 40vw;
+
             }
 
             #historie_container .billede3 {
@@ -319,12 +353,31 @@
 
 
             #historie_container .splashbillede {
-                background-position: 50% 0%;
-                background-size: cover;
-                background-attachment: fixed;
-                width: 100%;
-                height: 80vw;
+          background-image: url(img/splash_historie1.jpg);
+    background-size: cover;
+    width: 100vw;
+    height: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: 53%;
+    background-attachment: fixed;
+
+
             }
+
+
+            .splashbillede .splash_text1 {
+                font-size: 25px;
+                width: 70vw;
+
+}
+
+                 .splashbillede .splash_text2 {
+                font-size: 20px;
+                width: 70vw;
+
+}
 
             #historie_container .billede3 {
                 width: 100vw;
@@ -443,18 +496,28 @@
             </nav>
         </header>
 
-        <div class="splash_baggrund">
+
 
 
 
             <div class="splash_historie">
 
 
-                <img class="splashbillede" src="img/peter_winnen.jpeg" alt="">
 
+                <div class="splashbillede">
+                    <div class="splash_text1">
+                    <p>"I was very bad and had the choice: go back to home or to provide me with the Koga"</p>
 
-            </div>
-        </div>
+                </div>
+
+                 <div class="splash_text2">
+                    <p>-Peter Winnen</p>
+
+                </div>
+                </div>
+
+                        </div>
+
 
         <section class="historie">
             <h2 class="historie_h2">Historie</h2>
