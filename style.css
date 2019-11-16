@@ -148,7 +148,9 @@ footer {
     text-align: center;
     position: absolute;
     color: white;
-    font-size: 47px;
+    font-size: 45px;
+        text-shadow: 0 0 9px black;
+
 
 }
 
