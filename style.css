@@ -357,7 +357,9 @@ footer {
 .topnav a {
     cursor: pointer;
     text-decoration: none;
-    padding-left: 20px;
+    padding-left: 25px;
+        padding-right: 2px;
+
     line-height: 80px;
 }
 
@@ -377,7 +379,7 @@ footer {
     overflow: hidden;
     justify-content: flex-end;
     display: flex;
-    margin-right: 40px;
+    margin-right: 50px;
 
 }
 
