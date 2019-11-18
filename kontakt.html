@@ -580,11 +580,11 @@
 
 
         <div class="kontakt_p2">
-            <form id="form" class="topBefore">
+            <form id="form" class="topBefore" action="mail.php" method="POST">
 
-                <input id="name" type="text" placeholder="Navn">
-                <input id="email" type="text" placeholder="E-mail">
-                <input id="message" type="text" placeholder="Besked">
+                <input id="name" name="name" type="text" placeholder="Navn">
+                <input id="email" type="text" name="email" placeholder="E-mail">
+                <input id="message" type="text" name="message" placeholder="Besked">
                 <div class="prove">
                     <input id="submit" type="submit" value="Send">
                 </div>
@@ -648,6 +648,7 @@
 
             }
         }
+
     </script>
     <!--    <script src="script.js"></script>-->
 
