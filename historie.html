@@ -128,13 +128,17 @@
             #historie_container .historie {
                 display: grid;
                 width: 100%;
-                grid-auto-columns: 1fr;
                 grid-template-areas:
-                    ". . Historie_h2 . ."
-                    ". historie_p . historie_p2 ."
-                    ". pic1 . pic2 ."
-                    ". . timeline_h2 . ."
-                    ". timeline_p . timeline_p2 .";
+                    "  Historie_h2 Historie_h2 "
+                    "  historie_p historie_p"
+                    "historie_p2 historie_p2"
+                    " pic1 pic2 "
+                    "  timeline_h2 timeline_h2 "
+                    " timeline_p timeline_p "
+                    " timeline_p2 timeline_p2";
+                margin: auto;
+                max-width: 80vw;
+
 
             }
 
@@ -151,14 +155,14 @@
             #historie_container .historie .historie_p {
                 grid-area: historie_p;
                 line-height: 1.6;
-                grid-column: 2;
+
                 letter-spacing: 1px;
             }
 
             #historie_container .historie .historie_p2 {
                 grid-area: historie_p2;
                 line-height: 1.6;
-                grid-column: 4;
+
                 letter-spacing: 1px;
             }
 
@@ -187,14 +191,14 @@
             #historie_container .historie .timeline_p {
                 grid-area: timeline_p;
                 line-height: 1.6;
-                grid-column: 2;
+
                 letter-spacing: 1px;
             }
 
             #historie_container .historie .timeline_p2 {
                 grid-area: timeline_p2;
                 line-height: 1.6;
-                grid-column: 4;
+
                 letter-spacing: 1px;
             }
 
