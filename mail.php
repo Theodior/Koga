@@ -9,9 +9,4 @@ $mailheader = "From: $email \r\n";
 mail($recipient, $subject, $formcontent, $mailheader) or die ("Error!");
 echo "MANGE TAK SKAL HAVE MIN VEN";
 
-
-
-
-
-
 ?>
