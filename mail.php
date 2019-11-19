@@ -3,14 +3,9 @@ $name = $_POST ['name'];
 $email = $_POST ['email'];
 $message = $_POST ['message'];
 $formcontent="From: $name \n Message: $message";
-$recipient = "esaukallan@gmail.com";
+$recipient = "info@esauka.dk";
 $subject = "Contact Form";
-$mailheader = "From: $email \r\n";
+$mailheader = "From: $name \r\n";
 mail($recipient, $subject, $formcontent, $mailheader) or die ("Error!");
 echo "MANGE TAK SKAL HAVE MIN VEN";
-
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
 ?>
