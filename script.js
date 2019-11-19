@@ -1,6 +1,8 @@
 let cykler = [];
 const url = "https://esauka.dk/koga/wordpress/wp-json/wp/v2/koga?per_page=100";
 let filter = "Alle";
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get("id");
 
 // const liste = document.querySelector(".liste");
 
@@ -12,7 +14,7 @@ function start() {
     hentJson();
     animer();
     addEventListenersToButtons();
-    showPage();
+    setTimeout(showPage, 2000)
 }
 
 //        async function hentNav() {
@@ -44,6 +46,7 @@ function showPage() {
 function vis() {
     const skabelon = document.querySelector("template");
     const liste = document.querySelector(".liste");
+    filtr = urlParams.get("kategori");
     if (liste) {
         liste.innerHTML = "";
 
@@ -57,8 +60,8 @@ function vis() {
                 klon.querySelector(".beskrivelse").innerHTML = cykel.kort_tekst;
                 liste.appendChild(klon);
                 liste.lastElementChild.addEventListener("click", () => {
-                    location.href = `cykelinfo.html?navn=${
-                        cykel.navn}`
+                    location.href = `cykelinfo.html?navn=${cykel.navn}&id=${cykel.id}`;
+
                 });
             }
         })
