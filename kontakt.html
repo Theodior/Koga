@@ -15,11 +15,83 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/30c21ac8e0.js"></script>
+
+
+
+
+
 
     <style>
         header {
             grid-area: header;
         }
+
+        @charset "utf-8";
+        /* CSS Document */
+
+        a {
+            color: #282425 !important;
+        }
+
+        .containerfaq p {
+            font-size: 1.2rem;
+
+        }
+
+        ul.nav.nav-tabs>li {
+            display: inline-block;
+            line-height: 50px;
+            height: 100%;
+            text-transform: uppercase;
+        }
+
+        ul.nav.nav-tabs>li a {
+            display: block;
+            padding: 15px;
+            color: #282425 !important;
+
+        }
+
+        ul.nav.nav-tabs>li a:hover,
+        ul.nav.nav-tabs>li:hover {
+            background: #FB282F;
+            color: #fff !important;
+            text-decoration: none !important;
+        }
+
+        ul.nav.nav-tabs>li a.active {
+            background: #282425;
+            color: #fff !important;
+            text-decoration: none !important;
+        }
+
+        .card-header {
+            background-color: rgb(245, 245, 245, 0.3) !important;
+            border-radius: 0 !important;
+        }
+
+        .card {
+            border-radius: 0 !important;
+        }
+
+        .card>.card-header a::before {
+            font-family: fontawesome;
+            content: "\f067 ";
+            color: #282425;
+            float: right;
+            margin-right: 15px;
+            font-weight: 400;
+            position: absolute;
+            right: 0;
+        }
+
+
+
 
         .kontakt {
             grid-area: indhold;
@@ -67,6 +139,8 @@
                 " oh2 "
                 " vp "
                 " hp "
+                " faq2 "
+                " faq "
                 " some ";
 
         }
@@ -80,6 +154,16 @@
             padding-bottom: 5vh;
             padding-top: 7vh;
 
+        }
+
+        #kontakt_container .kontakt .containerfaq {
+            grid-area: faq;
+            margin-bottom: 1em;
+        }
+
+        #kontakt_container .kontakt .faq_h2 {
+            grid-area: faq2;
+            text-align: center;
         }
 
         #kontakt_container .kontakt .kontakt_p1 {
@@ -134,6 +218,11 @@
             grid-area: img3;
             width: 130px;
             height: 130px;
+        }
+
+        #kontakt_container .kontakt img:hover {
+            transform: scale(1.1);
+            filter: brightness(1.1);
         }
 
         #kontakt_container .kontakt .some {
@@ -327,8 +416,22 @@
                     " oh2 . . . if2 "
                     " vp . . . kp1 "
                     " hp . . . k_p "
-                    " some some some some some ";
+                    " some some some some some "
+                    " faq2 faq2 faq2 faq2 faq2 "
+                    " faq faq faq faq faq "
+                ;
 
+            }
+
+            #kontakt_container .kontakt .containerfaq {
+                grid-area: faq;
+                margin-bottom: 1em;
+            }
+
+            #kontakt_container .kontakt .faq_h2 {
+                grid-area: faq2;
+                text-align: center;
+                padding-top: 20px;
             }
 
             #kontakt_container .kontakt .kontakt_h2 {
@@ -336,6 +439,15 @@
                 font-size: 3rem;
                 border-bottom: 1px solid black;
                 padding-top: 0;
+                margin-bottom: 1.5em;
+
+            }
+
+            div.col-sm-12 {
+                margin-right: 12em;
+                margin-left: 12em;
+                flex: 0%;
+                padding: 40px 0px 100px 0px;
             }
 
             #kontakt_container .kontakt .kontakt_p1 {
@@ -385,14 +497,13 @@
                 grid-area: img2;
                 width: 130px;
                 height: 130px;
-                padding-left: 2rem;
             }
 
             #kontakt_container .kontakt .img3 {
                 grid-area: img3;
                 width: 130px;
                 height: 130px;
-                padding-left: 2rem;
+
             }
 
 
@@ -523,6 +634,8 @@
             }
 
 
+
+
         }
     </style>
 
@@ -614,7 +727,107 @@
         <p class="vardag_p">Man-Fre 11.00-18.00</p>
         <p class="helg_p">Lørdag 09.00-14.00</p>
 
+
+        <h2 class="faq_h2">FAQ</h2>
+        <div class="containerfaq">
+
+
+            <div class="row">
+                <div class="col-sm-12">
+
+                    <div class="tab-content">
+                        <div id="tab1" class="tab-pane fade show active">
+                            <div class="accordion">
+                                <div class="card">
+                                    <div class="card-header" id="infraOne">
+                                        <a href="#collapseOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                            <p class="mb-0">
+                                                Har jeres hjemmeside en webshop?
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <div id="collapseOne" class="collapse" aria-labelledby="infraOne" data-parent="#accordion">
+                                        <div class="card-body">
+                                            Nej, vi tilbyder udelukkende køb af vores produkter i vores fysiske butik på Frederiksberg.
+                                        </div>
+                                    </div>
+                                </div><!-- close card-->
+                                <div class="card">
+                                    <div class="card-header" id="infraTwo">
+                                        <a href="#collapseTwo" class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            <p class="mb-0">Hvilken service følger der med ved køb af jeres produkter?</p>
+                                        </a>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="infraTwo" data-parent="#accordion">
+                                        <div class="card-body">
+                                            Når du køber et Kogaprodukt, følger der en livslang serviceaftale med i købet. Det er garanteret, at reservedele til pågældende cykel, kan skaffes i 10 år efter salgsdatoen.
+                                        </div>
+                                    </div>
+                                </div><!-- card-->
+                                <div class="card">
+                                    <div class="card-header" id="infraThree">
+                                        <a href="#collapseThree" class="collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            <p class="mb-0">Hvilken relation har I til Koga?</p>
+                                        </a>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" aria-labelledby="infraThree" data-parent="#accordion">
+                                        <div class="card-body">
+                                            Vi har et tæt samarbejde med Koga, hvor vi månedligt korresponderer med hinanden om evt. tekniske updateringer på nye modeller samt import af reservedele og selve cyklerne.
+                                        </div>
+                                    </div>
+                                </div><!-- card-->
+                            </div><!-- accordion-->
+                        </div><!-- tab 1-->
+                        <div id="tab2" class="tab-pane fade">
+                            <div class="accordion">
+                                <div class="card">
+                                    <div class="card-header" id="aboutOne">
+                                        <a href="#collapseFour" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseOne">
+                                            <p class="mb-0">What are the benefits of Solodev CMS?</p>
+                                        </a>
+                                    </div>
+                                    <div id="collapseFour" class="collapse" aria-labelledby="aboutOne" data-parent="#accordion">
+                                        <div class="card-body">
+                                            With Solodev CMS, you and your visitors will benefit from a finely-tuned technology stack that drives the highest levels of site performance, speed and engagement - and contributes more to your bottom line.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="aboutTwo">
+                                        <a href="#collapseFive" class="collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseTwo">
+                                            <p class="mb-0">How easy is it to build a website with Solodev CMS?</p>
+                                        </a>
+                                    </div>
+                                    <div id="collapseFive" class="collapse" aria-labelledby="aboutTwo" data-parent="#accordion">
+                                        <div class="card-body">
+                                            Building a website is extremely easy. With a working knowledge of HTML and CSS you will be able to have a site up and running in no time.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="aboutThree">
+                                        <a href="#collapseSix" class="collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseThree">
+                                            <p class="mb-0">Can I get a personalized demonstration of Solodev CMS?</p>
+                                        </a>
+                                    </div>
+                                    <div id="collapseSix" class="collapse" aria-labelledby="aboutThree" data-parent="#accordion">
+                                        <div class="card-body">
+                                            Yes, click here to request a demo and one of our representatives will contact you shortly to setup a time convenient to you.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- accordion-->
+                        </div><!-- tab2 -->
+                    </div><!-- tab content-->
+                </div>
+            </div>
+        </div>
+
+
     </section>
+
+
+
 
     <script>
         window.addEventListener("load", animer);
