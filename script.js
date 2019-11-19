@@ -14,7 +14,7 @@ function start() {
     hentJson();
     animer();
     addEventListenersToButtons();
-    showPage();
+    setTimeout(showPage, 2000)
 }
 
 //        async function hentNav() {
