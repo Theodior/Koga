@@ -4,6 +4,12 @@ let filter = "Alle";
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
 
+if (urlParams.get("filter")) {
+    filter = urlParams.get("filter");
+    document.querySelector("h2").textContent = filter;
+    //filtrering();
+}
+
 // const liste = document.querySelector(".liste");
 
 window.addEventListener("load", start);
@@ -60,7 +66,7 @@ function vis() {
                 klon.querySelector(".beskrivelse").innerHTML = cykel.kort_tekst;
                 liste.appendChild(klon);
                 liste.lastElementChild.addEventListener("click", () => {
-                    location.href = `cykelinfo.html?navn=${cykel.navn}&id=${cykel.id}`;
+                    location.href = `cykelinfo.html?navn=${cykel.navn}&id=${cykel.id}&filter=${filter}`;
 
                 });
             }
@@ -114,9 +120,7 @@ function addEventListenersToButtons() {
 function filtrering() {
     filter = this.dataset.kategori;
     document.querySelector("h2").textContent = this.textContent;
-    document.querySelectorAll(".cykel_filter").forEach(elm => {
-        elm.classList.remove("valgt");
-    })
+    document.querySelector(".valgt").classList.remove("valgt");
     this.classList.add("valgt");
     vis();
 }
