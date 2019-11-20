@@ -641,7 +641,7 @@ footer img {
 }
 
 footer img:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 footer .tekst {
@@ -674,3 +674,8 @@ footer p {
         width: 75px;
         height: 75px;
     }
+footer .left {
+    padding: 0px 200px 20px 20px;
+    flex-grow: 1;
+    flex-basis: 150px;
+}
